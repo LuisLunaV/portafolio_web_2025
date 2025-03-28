@@ -1,35 +1,68 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root{
+  --amarillo: #ffd25a;
+  --morado:#be8dfb;
+  --naranja:#ff8589;
+  --azul:#87b6fa;
+  --negro:#464546;
+  --fondoAmarillo:linear-gradient(62deg, #f0db4f 0%, #ffc52d 100%);
+  --fondoNegroMate: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Utils */
+.amarillo-mate{
+  background-color: var(--amarillo);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.negro-mate{
+  background-image: var(--fondoNegroMate);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.nombre-logo {
+  color: red;
+  /* font-size: 4rem; */
+  text-shadow: -3px 2px 0 white, -14px 7px 0 rgba(0, 0, 0, 0.5);
+  margin-left: 2rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500 !important;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700 !important;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+

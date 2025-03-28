@@ -1,3 +1,3 @@
 <template>
-  <h1>portafolio</h1>
+<RouterView />
 </template>
