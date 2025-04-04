@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url(./css/animaciones.css);
+@import url(./css/inicio.css);
+@import url(./css//tecnologias.css);
 :root{
   --amarillo: #ffd25a;
   --morado:#be8dfb;
@@ -9,11 +11,34 @@
   --fondoAmarillo:linear-gradient(62deg, #f0db4f 0%, #ffc52d 100%);
   --fondoNegroMate: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 img {
   max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   display: block;
+  object-fit: cover;
+}
+
+.principal{
+  padding: 0;
 }
 /* Utils */
+
+.truncar-txt{
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.color-negro{
+  color:var(--negro)
+}
 .amarillo-mate{
   background-color: var(--amarillo);
 }
@@ -21,13 +46,8 @@ img {
 .negro-mate{
   background-image: var(--fondoNegroMate);
 }
-
-.nombre-logo {
-  color: red;
-  /* font-size: 4rem; */
-  text-shadow: -3px 2px 0 white, -14px 7px 0 rgba(0, 0, 0, 0.5);
-  margin-left: 2rem;
-  font-family: "Ubuntu", sans-serif;
+.fondo-negro{
+  background-color: var(--negro);
 }
 
 .poppins-light {

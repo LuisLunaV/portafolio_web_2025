@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PortafolioLayout from '@/modules/portafolio/layout/PortafolioLayout.vue';
 import InicioView from '@/modules/portafolio/views/InicioView.vue';
-import SobreMiView from '@/modules/portafolio/views/SobreMiView.vue';
 import TecnologiasView from '@/modules/portafolio/views/TecnologiasView.vue';
 import ProyectosView from '@/modules/portafolio/views/ProyectosView.vue';
 import MisServiciosView from '@/modules/portafolio/views/MisServiciosView.vue';
@@ -18,10 +17,6 @@ const router = createRouter({
             path:'/inicio',
             name:'inicio',
             component:InicioView
-        },{
-            path:'/sobre_mi',
-            name:'sobre_mi',
-            component:SobreMiView
         },{
             path:'/tecnologias',
             name:'tecnologias',

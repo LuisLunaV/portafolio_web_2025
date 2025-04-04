@@ -1,0 +1,90 @@
+.box {
+  animation: slideIn 1s ease-out forwards; /* Aplicar la animación */
+}
+
+/* Definición de la animación */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-10%); /* Comienza con una escala negativa */
+    opacity: 0; /* Opcional: Puedes agregar efectos adicionales como opacidad */
+  }
+  100% {
+    transform: translateX(0%); /* Vuelve a la escala normal */
+    opacity: 1; /* Opcional: Hacer visible completamente */
+  }
+}
+
+
+.box-right{
+  animation: slideInRight 1s ease-out forwards; /* Aplicar la animación */
+}
+
+/* Definición de la animación */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(10%); /* Comienza con una escala negativa */
+    opacity: 0; /* Opcional: Puedes agregar efectos adicionales como opacidad */
+  }
+  100% {
+    transform: translateX(0%); /* Vuelve a la escala normal */
+    opacity: 1; /* Opcional: Hacer visible completamente */
+  }
+}
+
+.box-bottom{
+  animation: slideInBottom 1s ease-out forwards; /* Aplicar la animación */
+}
+
+/* Definición de la animación */
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+.closeBox{
+opacity: 0;
+overflow: hidden;
+animation: cerrarCaja 1s ease-out forwards;
+
+}
+
+.openBox{
+overflow: hidden;
+animation: abrirCaja 3s ease-out forwards;
+}
+
+@keyframes cerrarCaja{
+  0%{
+    height:100%;
+  }
+  100%{
+    height: 0%;
+  }
+}
+@keyframes abrirCaja{
+  0%{
+    height:2%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+/* Boton subir-bajar */
+
+@keyframes subir-bajar {
+
+  50% {
+
+    transform: translateY(-10%);
+
+  }
+
+}

@@ -1,0 +1,106 @@
+.nombre-logo {
+  color: red;
+  /* font-size: 4rem; */
+  text-shadow: -3px 2px 0 white, -14px 7px 0 rgba(0, 0, 0, 0.5);
+  margin-left: 2rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.cont-img {
+  max-width: 40%;
+  width: 100%;
+  height: auto;
+  /* overflow: hidden; */
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-sobre-mi{
+  color: red;
+  font-size: 1rem;
+  text-shadow: -3px 2px 0 white;
+  margin: 0;
+}
+
+.sobre-mi-msg{
+  position: absolute;
+  z-index: 3;
+  bottom:283px;
+  background-color: var(--amarillo);
+  width: 100%;
+  padding:10px;
+}
+.div-btn-cv{
+max-width: 45%;
+width: 100%;
+margin: 0 auto;
+}
+.btn-cv{
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  transition: all 400ms ease;
+  border: solid var(--negro) 3px;
+  animation: subir-bajar 1s infinite;
+}
+
+.btn-cv:hover{
+  background-color: #ffffff;
+  color: var(--negro);
+  animation: none;
+}
+@media (min-width: 100px) and (max-width: 375px) {
+
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+  /* Globales */
+
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+  /* Globales */
+
+}
+@media (min-width: 972px) and (max-width: 1032px) {
+  /* Globales */
+  .sobre-mi-msg{
+    top:198px;
+    max-width: 350px;
+    max-height: 170px;
+    height: 100%;
+  }
+
+}
+/* //Resolcion para pc de escritorio: */
+@media (min-width: 1033px) and (max-width: 1375px) {
+  .sobre-mi-msg{
+    max-width: 400px;
+    top:179px;
+    max-height: 195px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1375px){
+
+  .sobre-mi-msg{
+    max-width: 450px;
+    top:210px;
+    max-height: 217px;
+    height: 100%;
+
+  }
+
+ }

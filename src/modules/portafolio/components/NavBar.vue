@@ -20,9 +20,6 @@
             <RouterLink class="nav-link poppins-bold" :to="{ name: 'inicio' }"> Inicio </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'sobre_mi' }"> Sobre mi </RouterLink>
-          </li>
-          <li class="nav-item">
             <RouterLink class="nav-link poppins-bold" :to="{ name: 'tecnologias' }"> Tecnologias </RouterLink>
           </li>
           <li class="nav-item">

@@ -14,9 +14,4 @@ import NavBar from '@/modules/portafolio/components/NavBar.vue';
 
 </script>
 
-<style scoped>
-.principal{
-    /* background-color: #f1f1f1; */
-    padding: 7% 0;
-}
-</style>
+
