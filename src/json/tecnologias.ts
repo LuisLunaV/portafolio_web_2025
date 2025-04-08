@@ -17,7 +17,8 @@ const tecnologias: IResponseData = {
         img: 'html.svg',
         name: 'HTML',
         information:
-          'Lenguaje de marcado de hiper texto, se utiliza para estructurarpaginas web y su contenido.',
+          `Lenguaje de marcado de hiper texto, se utiliza para estructurar
+           paginas web permitiendo organizar texto, imágenes, enlaces y otros elementos en una página. Es la base de cualquier sitio web.`,
       },
       {
         img: 'css.svg',
@@ -39,24 +40,17 @@ const tecnologias: IResponseData = {
               objetos, imperativo, debilmente tipado y dinamico.`,
       },
       {
-        img: 'git.svg',
-        name: 'Git',
-        information: `Es un software de control de versiones pensando en la eficiencia,
-              la confiabilidad y la compatibilidad de un gran numero de archivos
-              de codigo fuente.`,
+        img: 'TS.svg',
+        name: 'TypeScript',
+        information: `TypeScript mejora la escalabilidad, mantenibilidad y seguridad del
+              código JavaScript a través de datos tipados, interfaces,
+              clases, etc.`,
       },
       {
-        img: 'github.svg',
-        name: 'GitHub',
-        information: `Es un servicio de hosting para alojar proyectos y codigo fuente
-              utilizando el sistema de control de versiones Git.`,
-      },
-      {
-        img: 'mysql.svg',
-        name: 'MySQL',
-        information: `Sistema de gestion de base de datos relacional, es uno de los
-              gestores de datos mas popular del mundo, todo para entornos de
-              desarrollo web.`,
+        img: 'vue.svg',
+        name: 'Vue.js',
+        information: `Vue.js es un framework JavaScript progresivo para construir interfaces modernas y dinámicas. Fácil de integrar, escalable, ideal para
+        aplicaciones web interactivas`,
       },
       {
         img: 'node.svg',
@@ -66,11 +60,9 @@ const tecnologias: IResponseData = {
               el lado del servidor.`,
       },
       {
-        img: 'TS.svg',
-        name: 'TypeScript',
-        information: `TypeScript mejora la escalabilidad, mantenibilidad y seguridad del
-              código JavaScript a través de datos tipados, interfaces,
-              clases, etc.`,
+        img: 'express.svg',
+        name: 'Express.js',
+        information: `Express.js es un framework minimalista y flexible para Node.js, ideal para crear APIs y aplicaciones web rápidas y escalables con enrutamiento y middleware eficientes.`,
       },
       {
         img: 'php.svg',
@@ -84,22 +76,31 @@ const tecnologias: IResponseData = {
         information: `Laravel es un framework PHP moderno y elegante, ideal para crear aplicaciones web con enrutamiento, autenticación y bases de datos simplificados.`,
       },
       {
-        img: 'vue.svg',
-        name: 'Vue.js',
-        information: `Vue.js es un framework JavaScript progresivo para construir interfaces modernas y dinámicas. Fácil de integrar, escalable, ideal para
-        aplicaciones web interactivas`,
+        img: 'mysql.svg',
+        name: 'MySQL',
+        information: `Sistema de gestion de base de datos relacional, es uno de los
+              gestores de datos mas popular del mundo, todo para entornos de
+              desarrollo web.`,
       },
       {
-        img: 'express.svg',
-        name: 'Express.js',
-        information: `Express.js es un framework minimalista y flexible para Node.js, ideal para crear APIs y aplicaciones web rápidas y escalables con enrutamiento y middleware eficientes.`,
+        img: 'sqlserver.svg',
+        name: 'SQL Server',
+        information: `SQL Server es un sistema de gestión de bases de datos relacional creado por Microsoft, diseñado para almacenar, recuperar y analizar datos de manera eficiente y segura ideal para aplicaciones empresariales.`,
+      },
+      {
+        img: 'git.svg',
+        name: 'Git',
+        information: `Es un software de control de versiones pensando en la eficiencia,
+              la confiabilidad y la compatibilidad de un gran numero de archivos
+              de codigo fuente.`,
+      },
+      {
+        img: 'github.svg',
+        name: 'GitHub',
+        information: `Es una plataforma de desarrollo colaborativo basada en Git, que permite alojar, gestionar y compartir proyectos de código, facilitando el trabajo en equipo, el control de versiones y la integración continua.`,
       },
     ],
   },
 }
 
-export{
-  tecnologias,
-  type ITecnologia,
-  type IResponseData
-}
+export { tecnologias, type ITecnologia, type IResponseData }

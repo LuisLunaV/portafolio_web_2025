@@ -1,7 +1,6 @@
 .mis-tecnologias {
-  overflow: scroll;
   height: auto;
-  padding: 7% 2% 2% 0;
+  padding: 12% 2% 2% 0;
   display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,33 +12,21 @@
 }
 
 .contenedor-de-tecnologias {
-  /* padding: 25% 2% 5% 2%;
-  margin: 0 15px; */
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
 }
-.informacion-tecnologia {
-  border-radius: 15px;
-  background: linear-gradient(62deg, #b3b6b7 0%, #f8f9f9 100%);
-  box-shadow: 1px 1px 6px 5px rgba(0, 0, 0, 0.5);
-  max-width: 250px;
-  max-height: 250px;
-
-  padding: 10px;
+.card-skills{
   overflow: hidden;
-  position: relative;
+  border: 3px solid var(--negro) !important;
+  border-radius: 10px !important;
+  box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
 }
 
-.informacion-tecnologia img {
-  width: 100%;
-  height: 100%;
-  transition: all 500ms ease-out;
-}
-.informacion-tecnologia .info {
+.card-skills .card-skills-bootom {
   padding: 0.7rem;
   font-size: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -49,46 +36,68 @@
   opacity: 0;
   visibility: hidden;
   text-align: center;
-  transition: all 500ms ease-out;
+  transition: all 1s ease-out;
 }
-.informacion-tecnologia:hover > .info {
+
+.card-skills:hover > .card-skills-bootom{
   opacity: 1;
   visibility: visible;
 }
 
-.informacion-tecnologia .info h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 20px !important;
-  color: #181719;
-  margin-bottom: 120px;
+.card-skills-bootom h5 {
+  margin-bottom: 12rem;
   transition: all 500ms ease-out;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
-.informacion-tecnologia .info p {
-  font-family: "Poppins", sans-serif;
-  text-align:justify;
-  font-size: 14px;
-  font-weight: 700;
+.card-skills-bootom p {
   line-height: 1.5;
-  width: 80%;
-  max-width: 220px;
+  width: 100%;
+  max-width: 22rem;
+  margin: auto;
+  text-align: start;
+}
+
+.card-skills:hover > .card-skills-bootom h5 {
+  margin-top: 25%;
+  margin-bottom: 0.5rem;
+}
+
+.card-skills:hover > .card-skills-bootom p {
+  line-height: 1.5;
+  width: 100%;
+  max-width: 22rem;
   margin: auto;
 }
 
-.informacion-tecnologia:hover > .info h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 5px;
+/* .card-skills-bootom{
+  background-color: var(--negro);
+  color:#ffffff !important;
+} */
+
+@media (min-width: 972px) and (max-width: 1032px) {
+  .contenedor-de-tecnologias {
+    grid-template-columns: repeat(2, 1fr);
+}
+.mis-tecnologias {
+  padding: 9% 7% 2% 7%;
+  }
+}
+@media (min-width: 1033px) and (max-width: 1375px) {
+  .contenedor-de-tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+}
+.mis-tecnologias {
+  padding: 7% 2% 2% 0;
+  }
 }
 
-.informacion-tecnologia:hover > .info p {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5;
-  width: 80%;
-  max-width: 220px;
-  margin: auto;
-}
+@media (min-width: 1375px){
+  .contenedor-de-tecnologias {
+        grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mis-tecnologias {
+    padding: 7% 2% 2% 0;
+    }
+ }

@@ -1,7 +1,7 @@
 <template>
-  <div class="d-flex flex-row h-100 px-3">
+  <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
     <div class="cont-inicio ps-5 d-flex flex-column justify-content-center">
-      <h1 class="box ps-2">
+      <div class="box ps-2">
         <span
           :class="[
             'poppins-extrabold fondo-negro color-blanco px-1',
@@ -10,19 +10,31 @@
               'fs-1': dispositivo == 'mediano',
               'fs-2': dispositivo == 'pequeno',
               'fs-3': dispositivo == 'expequeno',
-            },
+            }
           ]"
         >
-          Hola, Soy Luis Luna Villa.
+          Hola, Soy Luis Luna Villa
         </span>
-      </h1>
-      <h2 class="box ps-2 pt-2">
-        <span class="poppins-semibold color-negro"> Front-End y Back-End </span>
-        <!-- <span class="poppins-semibold color-negro"> Front-End y Back-End </span> -->
-      </h2>
+      </div>
+      <div class="box ps-2">
+        <span :class="['poppins-semibold color-negro',{
+              'fs-1': dispositivo == 'grande',
+              'fs-2': dispositivo == 'mediano',
+              'fs-3': dispositivo == 'pequeno',
+              'fs-4': dispositivo == 'expequeno',
+            }]"> Desarrollo Web </span>
+      </div>
+      <div class="box ps-2">
+        <span :class="['poppins-semibold color-negro',{
+              'fs-1': dispositivo == 'grande',
+              'fs-2': dispositivo == 'mediano',
+              'fs-3': dispositivo == 'pequeno',
+              'fs-4': dispositivo == 'expequeno',
+            }]"> Front-End y Back-End </span>
+      </div>
       <button
         @click="mostrarSobreMi"
-        class="box fs-5 button-contact color-blanco fondo-negro rounded-3 poppins-bold mt-3 py-2"
+        class="box fs-5 button-contact color-blanco fondo-negro rounded-3 poppins-bold mt-4 py-2"
       >
         Sobre mi
       </button>
@@ -40,8 +52,7 @@
             {
               'fs-2': dispositivo == 'grande',
               'fs-3': dispositivo == 'mediano',
-              'fs-4': dispositivo == 'pequeno',
-              'fs-4': dispositivo == 'expequeno',
+              'fs-4': dispositivo == 'pequeno'||'expequeno',
             },
           ]"
         >
@@ -53,13 +64,14 @@
         </p>
         <div class="div-btn-cv">
           <button
-          class="button-animacion btn-cv color-negro amarillo-mate rounded-3 poppins-bold">
+          class="button-animacion btn-cv rounded-3 poppins-bold">
             Descarga mi CV
           </button>
         </div>
       </div>
     </div>
   </div>
+  <!-- <div class="inicio-footer"></div> -->
 </template>
 
 <script lang="ts" setup>
@@ -85,18 +97,20 @@ const mostrarSobreMi = () => {
   text-align: center;
   transition: all 400ms ease;
   border: solid var(--negro) 3px;
+    animation: subir-bajar 1s infinite;
 }
 
 .button-contact:hover {
   background-color: #f1f1f1;
   color: var(--negro);
+  animation: none;
 }
 
 .sombra-img {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 .tamano-principal {
-  font-size: 50px;
+  font-size: 65px;
 }
 .tamano-secundaria {
   font-size: 50px;

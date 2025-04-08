@@ -1,15 +1,19 @@
 <template>
-  <li
-    v-for="({ information, name, img }, index) in filtrarSkill"
-    :key="index"
-    class="box-bottom informacion-tecnologia"
+
+  <li v-for="({ information, name, img }, index) in filtrarSkill"
+  :key="index"
+  class="card card-skills box-bottom"
+  style="width: 20rem;"
   >
-    <img :src="getImages(img)" :alt="name" />
-    <div class="info">
-      <h2>{{ name }}</h2>
-      <p>{{ information }}</p>
-    </div>
-  </li>
+  <div class="card-skills-img">
+    <img :src="getImages(img)" :alt="name"  class="card-img-top" />
+  </div>
+  <div class="card-body card-skills-bootom">
+    <h5 class="card-title poppins-bold">{{name}}</h5>
+    <p class="card-text poppins-medium">{{information}}</p>
+  </div>
+</li>
+
 </template>
 
 <script lang="ts" setup>

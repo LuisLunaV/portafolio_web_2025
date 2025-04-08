@@ -45,7 +45,9 @@ margin: 0 auto;
   text-align: center;
   transition: all 400ms ease;
   border: solid var(--negro) 3px;
-  animation: subir-bajar 1s infinite;
+  background-color: var(--negro);
+  color: #ffffff;
+  /* animation: subir-bajar 1s infinite; */
 }
 
 .btn-cv:hover{

@@ -10,6 +10,15 @@
 <script lang="ts" setup>
 import TecnologiaInfo from '@/modules/portafolio/components/tecnologias/TecnologiaInfo.vue';
 import { useFetch } from '@/modules/composables/useFetch';
+import { useWindowSize } from '@/modules/composables/useWindowSize';
+import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
+import { onMounted } from 'vue';
+
 const { fetchData } = useFetch();
 const skills = fetchData();
+const ventanaStore = useVentanaStore();
+onMounted(()=>{
+  const{ nombreVentana } = useWindowSize();
+  ventanaStore.setNombreVentana( nombreVentana() );
+});
 </script>
