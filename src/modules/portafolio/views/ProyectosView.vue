@@ -1,4 +1,5 @@
 <template>
+<ModalPortafolio v-if="isVisible"/>
   <div class="contenedor-de-tarjetas amarillo-mate">
 
     <div class="tarjeta">
@@ -13,7 +14,10 @@
         <div class="informacion-proyecto centrar-column-flex">
           <span class="poppins-bold centrar-texto pt-3" style="color:#ffffff"> Pokedex </span>
           <div class="py-3">
-            <button class="btn btn-info-proyect poppins-bold py-2 rounded-3">
+            <button
+            class="btn btn-info-proyect poppins-bold py-2 rounded-3"
+            @click="mostrarModal"
+            >
               Ver información
             </button>
           </div>
@@ -24,11 +28,17 @@
   </div>
 </template>
 <script lang="ts" setup>
+import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import { useWindowSize } from '@/modules/composables/useWindowSize'
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store'
 import { onMounted } from 'vue'
-const ventanaStore = useVentanaStore()
+import { ref } from 'vue';
+const ventanaStore = useVentanaStore();
+const isVisible = ref<boolean>(true);
 
+const mostrarModal=()=>{
+  isVisible.value = !isVisible.value;
+}
 onMounted(() => {
   const { nombreVentana } = useWindowSize()
   ventanaStore.setNombreVentana(nombreVentana())

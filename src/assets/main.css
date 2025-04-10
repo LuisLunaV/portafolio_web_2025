@@ -3,7 +3,7 @@
 @import url(./css/inicio.css);
 @import url(./css/tecnologias.css);
 @import url(./css/proyectos.css);
-
+@import url(./css/modal.css);
 :root{
   --amarillo: #ffd25a;
   --morado:#be8dfb;
@@ -42,6 +42,9 @@ img {
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.color-blanco{
+  color: #ffffff !important;
 }
 .color-negro{
   color:var(--negro)

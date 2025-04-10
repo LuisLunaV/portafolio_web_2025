@@ -1,0 +1,116 @@
+
+/* utils */
+/* .posicion{
+  position: fixed;
+  bottom: 0;
+} */
+.mostrar{
+  visibility: visible;
+}
+.ocultar{
+  visibility: hidden;
+}
+
+.tranformY-0{
+  /* contenedor */
+  transform: translateY(0%) !important;
+}
+
+.fondo-modal {
+  z-index: 3;
+  position: fixed;
+  align-self: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s;
+
+}
+
+.dialog-modal{
+/* border: solid red 5px; */
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contenedor-modal{
+  overflow: hidden;
+  height: auto;
+  max-width: 1140px;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+.modal-body{
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.modal-body-technology{
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Este bloque controla el desplazamiento y tamano de las imagenes del carrusel */
+.modal-body-images img{
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.btn-cerrar {
+  max-height: 36px;
+  height: 100%;
+  max-width: 36px;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-cerrar:hover {
+  transform: scale(1.1);
+}
+
+
+
+.scale-up-center {
+  animation: scale-up-center 1s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale-down-center {
+  animation: scale-down-center 1s;
+}
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+
+
