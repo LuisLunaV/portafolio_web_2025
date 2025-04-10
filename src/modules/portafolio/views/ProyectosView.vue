@@ -1,5 +1,5 @@
 <template>
-<ModalPortafolio v-if="isVisible"/>
+<ModalPortafolio v-if="isVisible" @close="cerrarModal"/>
   <div class="contenedor-de-tarjetas amarillo-mate">
 
     <div class="tarjeta">
@@ -34,10 +34,14 @@ import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store'
 import { onMounted } from 'vue'
 import { ref } from 'vue';
 const ventanaStore = useVentanaStore();
-const isVisible = ref<boolean>(true);
+const isVisible = ref<boolean>(false);
 
 const mostrarModal=()=>{
-  isVisible.value = !isVisible.value;
+  isVisible.value = true;
+}
+
+const cerrarModal=()=>{
+  isVisible.value = false;
 }
 onMounted(() => {
   const { nombreVentana } = useWindowSize()
