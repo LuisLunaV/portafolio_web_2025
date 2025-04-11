@@ -33,11 +33,28 @@
   width: 100%;
   padding:10px;
 }
+
+.button-contact {
+  width: 30%;
+  text-decoration: none;
+  text-align: center;
+  transition: all 400ms ease;
+  border: solid var(--negro) 3px;
+    animation: subir-bajar 1s infinite;
+}
+
+.button-contact:hover {
+  background-color: #f1f1f1;
+  color: var(--negro) !important;
+  animation: none;
+}
+
 .div-btn-cv{
 max-width: 45%;
 width: 100%;
 margin: 0 auto;
 }
+
 .btn-cv{
   padding: 10px 0;
   width: 100%;

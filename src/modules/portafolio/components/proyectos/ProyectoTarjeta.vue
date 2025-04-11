@@ -1,26 +1,30 @@
 <template>
-          <div class="tarjeta">
-          <div class="contenedor-tarjeta centrar-column-flex">
-            <div class="imagen-proyecto">
-              <a href="https://luislunav.github.io/PokedexApi/" target="_blank">
-                <img
-                  src="https://res.cloudinary.com/luisluna1991/image/upload/v1642313432/m6w7kqyjeykgnace1rok.jpg"
-                  alt="imagen-proyecto"
-                />
-              </a>
-            </div>
-            <div class="informacion-proyecto">
-              <h3
-                class="tamaño-de-fuente-3 color-blanco fuente-ubuntu centrar-texto sombre-de-texto"
-              >
-                Pokedex
-              </h3>
-              <p class="color-blanco fuente-open-sans centrar-texto">
-                Ingresa el nombre del pokemon, presiona el boton azul y recibe
-                la informacion necesaria directamente de la API 'pokeapi.co'
-              </p>
-            </div>
- <!-- Tecnologias -->
+    <div class="tarjeta">
+      <div class="contenedor-tarjeta centrar-column-flex">
+        <div class="imagen-proyecto">
+          <img
+            src="https://res.cloudinary.com/luisluna1991/image/upload/v1642313432/m6w7kqyjeykgnace1rok.jpg"
+            alt="imagen-proyecto"
+          />
+        </div>
+
+        <div class="informacion-proyecto centrar-column-flex">
+          <span class="poppins-bold centrar-texto pt-3" style="color:#ffffff"> Pokedex </span>
+          <div class="py-3">
+            <button
+            class="btn btn-info-proyect poppins-bold py-2 rounded-3"
+            @click="$emit('abrir')"
+            >
+              Ver información
+            </button>
           </div>
         </div>
+      </div>
+    </div>
 </template>
+
+<script lang="ts" setup>
+
+defineEmits(['abrir']);
+
+</script>

@@ -1,7 +1,7 @@
 <template>
 <div class="fondo-modal">
   <div class="dialog-modal">
-    <div class="contenedor-modal rounded-3">
+    <div class="contenedor-modal rounded-3 box-top">
       <div class="modal-header px-3 py-2">
         <h3 class="modal-title color-blanco">Modal title</h3>
         <!-- Aqui va el slot -->
@@ -19,6 +19,13 @@
             <i class="color-blanco fab fa-css3-alt fa-3x"></i>
             <i class="color-blanco fab fa-js fa-3x"></i>
             <i class="color-blanco fab fa-github fa-3x"></i>
+            <i class="color-blanco fab fa-vuejs fa-3x"></i>
+            <i class="color-blanco fab fa-node-js fa-3x"></i>
+            <i class="color-blanco fab fa-laravel fa-3x"></i>
+            <i class="color-blanco fab fa-php fa-3x"></i>
+            <i class="color-blanco fab fa-bootstrap fa-3x"></i>
+            <i class="color-blanco fas fa-database fa-3x"></i>
+
           </div>
         </div>
 
@@ -57,10 +64,11 @@
 <script lang="ts" setup>
 import { defineEmits } from 'vue';
 
-const emit = defineEmits(['close'])
+// Emitimos la orden cerrar para que ejecuten la funcion cerrarModal
+const emit = defineEmits(['cerrar'])
 
 const closeModal =()=>{
-emit('close');
+emit('cerrar');
 }
 
 

@@ -91,21 +91,6 @@ const mostrarSobreMi = () => {
   width: 60%;
 }
 
-.button-contact {
-  width: 30%;
-  text-decoration: none;
-  text-align: center;
-  transition: all 400ms ease;
-  border: solid var(--negro) 3px;
-    animation: subir-bajar 1s infinite;
-}
-
-.button-contact:hover {
-  background-color: #f1f1f1;
-  color: var(--negro);
-  animation: none;
-}
-
 .sombra-img {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }

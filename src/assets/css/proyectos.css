@@ -1,3 +1,9 @@
+.mostrar{
+  visibility: visible;
+}
+.ocultar{
+  visibility: hidden;
+}
 
 .contenedor-de-tarjetas {
   height: auto;
