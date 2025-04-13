@@ -14,8 +14,8 @@ import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 import { onMounted } from 'vue';
 
-const { fetchData } = useFetch();
-const skills = fetchData();
+const { fetchDataTech } = useFetch();
+const skills = fetchDataTech();
 const ventanaStore = useVentanaStore();
 onMounted(()=>{
   const{ nombreVentana } = useWindowSize();

@@ -10,7 +10,7 @@
   padding: 7% 2% 2% 2%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
+  gap: 20px;
 }
 .centrar-column-flex{
   display: flex;
@@ -20,13 +20,13 @@
 }
 
 .tarjeta {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5) !important;
-  /* background-color: var(--amarillo); */
   overflow: hidden;
   border-radius: 0.8rem;
-  transition: 0.5s;
   border: solid rgba(0, 0, 0,0.4) 3px;
   box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
+  transition: 0.5s;
 
   }
 
@@ -70,13 +70,8 @@ background-color: var(--amarillo)  !important;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1033px) and (max-width: 1375px) {
-  .contenedor-de-tarjetas {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
-@media (min-width: 1375px){
+@media (min-width: 1033px){
   .contenedor-de-tarjetas {
     grid-template-columns: repeat(4, 1fr);
   }

@@ -20,7 +20,7 @@ const proyectos: IResponse = {
   data: [
     {
       id: 1,
-      name: 'Drive-Thrue',
+      name: 'Drive-Thrue Queretaro',
       description: 'jdkslajdklsajdklsajdkljsakldjaklsjdklasjkldjaklsjkl',
       carpeta: 'drive-thrue',
       img: [
@@ -99,12 +99,12 @@ const proyectos: IResponse = {
       description: 'jdkslajdklsajdklsajdkljsakldjaklsjdklasjkldjaklsjkl',
       carpeta: 'consultas-nip',
       img: [
-        'img-cero.jpeg',
-        'img-uno.jpeg',
-        'img-dos.jpeg',
-        'img-tres.jpeg',
-        'img-cuatro.jpeg',
-        'img-cinco.jpeg',
+        'img-cero.png',
+        'img-uno.png',
+        'img-dos.png',
+        'img-tres.png',
+        'img-cuatro.png',
+        'img-cinco.png',
       ],
       technologies: [
         {
@@ -138,14 +138,14 @@ const proyectos: IResponse = {
       id: 4,
       name: 'Sistemas de entrada',
       description: 'jdkslajdklsajdklsajdkljsakldjaklsjdklasjkldjaklsjkl',
-      carpeta: 'drive-thrue',
+      carpeta: 'ODM-Officedepot',
       img: [
-        'img-cero.jpeg',
-        'img-uno.jpeg',
-        'img-dos.jpeg',
-        'img-tres.jpeg',
-        'img-cuatro.jpeg',
-        'img-cinco.jpeg',
+        'img-cero.png',
+        'img-uno.png',
+        'img-dos.png',
+        'img-tres.png',
+        'img-cuatro.png',
+        'img-cinco.png',
       ],
       technologies: [
         {
@@ -178,4 +178,4 @@ const proyectos: IResponse = {
   ],
 }
 
-export { proyectos }
+export { proyectos, type IProyectos }
