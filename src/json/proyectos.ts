@@ -165,7 +165,11 @@ const proyectos: IResponse = {
           color:'color-blanco'
          },
          {
-          clase:'fa-node-js',
+          clase:'fa-php',
+          color:'color-blanco'
+         },
+         {
+          clase:'fa-laravel',
           color:'color-blanco'
          },
          {
@@ -178,4 +182,4 @@ const proyectos: IResponse = {
   ],
 }
 
-export { proyectos, type IProyectos }
+export { proyectos, type IProyectos , type Icons}

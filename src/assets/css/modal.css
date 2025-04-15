@@ -15,6 +15,9 @@
   /* contenedor */
   transform: translateY(0%) !important;
 }
+.altura-turnos{
+  height: 400px;
+}
 
 .fondo-modal {
   z-index: 3;
@@ -29,7 +32,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.9s;
 
 }
 
