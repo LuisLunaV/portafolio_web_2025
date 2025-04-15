@@ -1,6 +1,6 @@
 <template>
   <div class="modal-header px-3 py-2">
-          <h3 class="modal-title color-blanco">{{ name }}</h3>
+          <h3 class="modal-title color-blanco pt-2">{{ name }}</h3>
           <!-- Aqui va el slot -->
           <svg
             @click="$emit('closeModal')"

@@ -1,5 +1,5 @@
 <template>
-    <div v-for="project in projectArray" :key="project.id" class="tarjeta">
+    <div v-for="project in imprimirTarjetas" :key="project.id" class="tarjeta box-top">
       <div class="contenedor-tarjeta centrar-column-flex">
         <div class="imagen-proyecto">
           <img
@@ -25,14 +25,20 @@
 
 <script lang="ts" setup>
 import { type IProyectos } from '@/json/proyectos';
-import { ref } from 'vue';
-const projectArray = ref<IProyectos[]>([]);
+import { computed, ref } from 'vue';
+const mostrarTarjeta = ref(0);
+
 interface Props{
   projects:IProyectos[];
 }
 
 const props = defineProps<Props>();
-projectArray.value = props.projects;
+
+const imprimirTarjetas = computed(()=>{
+  const valor = props.projects.slice(0, mostrarTarjeta.value + 1);
+  return valor;
+})
+// projectArray.value = props.projects;
 
 const emit = defineEmits<{
   abrir:[text:string],
@@ -49,5 +55,12 @@ emit('idSeleccionado', id);
 emit('abrir', 'abrir');
 }
 
+const targetInterval = setInterval(()=>{
+if( mostrarTarjeta.value < props.projects.length - 1 ){
+  mostrarTarjeta.value ++;
+}else{
+  clearInterval( targetInterval );
+}
+},100)
 
 </script>

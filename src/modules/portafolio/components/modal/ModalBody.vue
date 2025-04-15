@@ -1,7 +1,9 @@
 <template>
   <div class="modal-body">
+
           <div :class="['modal-body-information px-3', id === 3 ? 'w-auto' : 'w-50']">
-            <p style="text-align: justify; color: #fff">{{ description }}</p>
+
+            <p style="text-align: justify; color: #fff" v-html="description"></p>
 
             <div class="modal-body-technology">
               <i
@@ -23,8 +25,13 @@
                 >
                   <img
                     :src="getImages(item)"
-                    :class="['d-block w-100', { 'altura-turnos': id === 2 }]"
-                    alt="..."
+                    :class="['d-block w-100',
+                    {
+                      'altura-drive': id === 1,
+                      'altura-turnos': id === 2,
+                      'altura-nips':   id === 3
+                    }]"
+                    alt="{{name}}"
                   />
                 </div>
               </div>
@@ -49,6 +56,7 @@
               </button>
             </div>
           </div>
+
         </div>
 </template>
 

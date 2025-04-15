@@ -15,10 +15,16 @@
   /* contenedor */
   transform: translateY(0%) !important;
 }
+.altura-drive{
+  max-width: 400px;
+}
 .altura-turnos{
   height: 400px;
 }
-
+.altura-nips{
+  height: 400px;
+  width: 600px !important;
+}
 .fondo-modal {
   z-index: 3;
   position: fixed;
@@ -61,13 +67,18 @@ align-items: center;
   display: flex;
   flex-direction: row;
 }
+
+.modal-body-information{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
 .modal-body-technology{
   display: flex;
   justify-content: space-evenly;
 }
 /* Este bloque controla el desplazamiento y tamano de las imagenes del carrusel */
 .modal-body-images img{
-  max-width: 400px;
   width: 100%;
   display: block;
   object-fit: cover;
