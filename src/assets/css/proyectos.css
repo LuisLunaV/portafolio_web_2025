@@ -10,7 +10,7 @@
   padding: 7% 2% 2% 2%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  gap: 40px;
 }
 .centrar-column-flex{
   display: flex;
@@ -20,6 +20,8 @@
 }
 
 .tarjeta {
+  /* margin: 0 auto; */
+  /* max-width: 500px; */
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5) !important;
   overflow: hidden;
@@ -27,7 +29,6 @@
   border: solid rgba(0, 0, 0,0.4) 3px;
   box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
   transition: 0.5s;
-
   }
 
 .contenedor-tarjeta {
@@ -73,6 +74,6 @@ background-color: var(--amarillo)  !important;
 
 @media (min-width: 1033px){
   .contenedor-de-tarjetas {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
  }

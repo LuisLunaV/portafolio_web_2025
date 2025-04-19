@@ -1,21 +1,23 @@
 <template>
   <div class="modal-body">
 
-          <div :class="['modal-body-information px-3', id === 3 ? 'w-auto' : 'w-50']">
+          <div :class="['modal-body-information p-4', id === 3 ? 'w-50' : 'w-50', {'w-100': isLegacy}]">
 
-            <p style="text-align: justify; color: #fff" v-html="description"></p>
+            <div :class="{'modal-body-information-p': id === 3 || id === 4}">
+              <p class="poppins-regular" style="text-align: justify; color: #fff" v-html="description"></p>
+            </div>
 
-            <div class="modal-body-technology">
+            <div class="modal-body-technology pt-3">
               <i
                 v-for="({ clase, color }, index) in technologies"
                 :key="index"
                 :class="[color, 'fab', clase, 'fa-3x']"
               ></i>
-              <i class="color-blanco fas fa-database fa-3x"></i>
+              <i v-if="dba" class="color-blanco fas fa-database fa-3x"></i>
             </div>
           </div>
 
-          <div :class="['modal-body-images', id === 3 ? 'w-auto' : 'w-50']">
+          <div v-if="!isLegacy" :class="['modal-body-images', id === 3 ? 'w-50' : 'w-50']">
             <div id="carouselExampleFade" class="carousel slide carousel-scale">
               <div class="carousel-inner py-3">
                 <div
@@ -27,7 +29,7 @@
                     :src="getImages(item)"
                     :class="['d-block w-100',
                     {
-                      'altura-drive': id === 1,
+                      'altura-drive':  id === 1,
                       'altura-turnos': id === 2,
                       'altura-nips':   id === 3
                     }]"
@@ -65,6 +67,8 @@ import { defineProps } from 'vue';
 import { type Icons } from '@/json/proyectos';
 interface Props{
   id:number;
+  dba:boolean;
+  isLegacy:boolean;
   description:string;
   technologies:Icons[];
   imagesItems:string[];

@@ -71,8 +71,14 @@ align-items: center;
 .modal-body-information{
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-between;
 }
+
+.modal-body-information-p{
+  overflow: scroll;
+  max-height: 340px;
+}
+
 .modal-body-technology{
   display: flex;
   justify-content: space-evenly;

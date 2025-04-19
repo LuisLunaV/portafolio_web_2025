@@ -1,7 +1,7 @@
 <template>
-  <div v-for="{ id, name, description, technologies } in info" :key="id" class="fondo-modal">
+  <div v-for="{ id, name, dba, isLegacy ,description, technologies } in info" :key="id" class="fondo-modal">
     <div class="dialog-modal">
-      <div class="contenedor-modal rounded-3 box-top">
+      <div :class="['contenedor-modal rounded-3 box-top', {'w-50':isLegacy}]">
 
         <!-- modal-header -->
          <ModalHeader :name="name" @close-modal="$emit('cerrar')" />
@@ -14,6 +14,8 @@
          :technologies="technologies"
          :images-items="imagesItems"
          :get-images="getImages"
+         :dba="dba"
+         :isLegacy="isLegacy"
          />
         <!-- -------- -->
 
