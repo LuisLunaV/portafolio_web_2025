@@ -1,0 +1,58 @@
+/* mis servicios */
+.pading-izq-der {
+  padding: 20px;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.altura-30 {
+  overflow: hidden;
+  height: 300px;
+}
+.sombre-de-texto {
+  text-shadow: -6px 1px 2px rgba(0, 0, 0, 0.58);
+}
+.sombra-de-texto-2rem {
+  text-shadow: -3px 0px 2px rgba(0, 0, 0, 0.58);
+}
+.mis-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-mis-servicios {
+  padding-top: 10%;
+
+  margin: 0 20px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  /* max-width: 130rem; */
+}
+
+.contenedor-de-servicio {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.contenedor-de-servicio .icono-servicio {
+  color: #fff;
+  text-shadow: -6px 1px 2px rgba(0, 0, 0, 0.58);
+}
+
+.contenedor-de-servicio:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-de-servicio:hover .icono-servicio {
+  color: #f1c40f;
+}
+
+.titulo-mis-servicios {
+  padding-top: 100px;
+}
