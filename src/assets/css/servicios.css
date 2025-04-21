@@ -36,6 +36,8 @@
 }
 
 .contenedor-de-servicio {
+  border: 1.5px solid var(--negro) !important;
+  border-radius: 0.8rem;
   background-color: rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 }

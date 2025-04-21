@@ -1,4 +1,5 @@
 interface IServicios{
+  clase_box:string;
   icon_class:string;
   nombre:string;
   description:string;
@@ -10,6 +11,7 @@ interface IResponse{
 const servicios:IResponse = {
 data:[
   {
+    clase_box:'box-uno',
     icon_class:'fa-code',
     nombre:'Front-end developer',
     description:`Te ofrezco seguridad y cumplimiento al crear, diseñar, actualizar
@@ -17,6 +19,7 @@ data:[
                  a través de: HTML5, CSS3, JavaScript y REACT JS. Te encantará tu
                  sitio web.`
   },{
+    clase_box:'box-dos',
     icon_class:'fa-mobile-alt',
     nombre:'Responsive web design',
     description:`Su sitio se mostrará correctamente en cualquier dispositivo,
@@ -25,6 +28,7 @@ data:[
                  clientes potenciales en su sitio, que es la cara digital de su
                  negocio.`
   },{
+    clase_box:'box-tres',
     icon_class:'fa-database',
     nombre:'Backend developer',
     description:`Como desarrollador backend, me he estado preparando para construir

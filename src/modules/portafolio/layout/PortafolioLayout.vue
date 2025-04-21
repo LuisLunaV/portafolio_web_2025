@@ -18,7 +18,6 @@ const ventanaStore = useVentanaStore();
 const routeName = ref('');
 watch(()=> ventanaStore.nombreVentana, ( newValue )=>{
   routeName.value = newValue;
-  console.log(routeName.value)
 })
 </script>
 

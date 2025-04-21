@@ -40,7 +40,6 @@ interface Props {
 const props = defineProps<Props>()
 
 carpeta.value = props.info[0];
-console.log(carpeta.value)
 // imagesItems.value = props.info[0];
 imagesItems.value = props.info[0].img.filter((value, index) => index != 0);
 
