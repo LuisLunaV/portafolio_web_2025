@@ -24,14 +24,15 @@
   align-items: center;
 }
 .contenedor-mis-servicios {
-  padding-top: 10%;
-
-  margin: 0 20px;
+  height: 82%;
+  padding-top: 6%;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 20px;
+  row-gap: 20px;
+
   /* max-width: 130rem; */
 }
 
@@ -58,3 +59,23 @@
 .titulo-mis-servicios {
   padding-top: 100px;
 }
+
+
+@media (min-width: 972px) and (max-width: 1032px) {
+  .contenedor-mis-servicios {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (min-width: 1033px) and (max-width: 1375px) {
+  .contenedor-mis-servicios {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+}
+
+@media (min-width: 1375px){
+  .contenedor-mis-servicios {
+      grid-template-columns: repeat(3, 1fr);
+
+  }
+ }

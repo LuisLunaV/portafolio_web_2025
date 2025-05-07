@@ -4,7 +4,8 @@
 @import url(./css/tecnologias.css);
 @import url(./css/proyectos.css);
 @import url(./css/modal.css);
-@import url(./css//servicios.css);
+@import url(./css/servicios.css);
+@import url(./css/footers.css);
 :root{
   --amarillo: #ffd25a;
   --morado:#be8dfb;
@@ -37,6 +38,7 @@ img {
 .principal{
   padding: 0;
  }
+
 /* Utils */
 
 .truncar-txt{

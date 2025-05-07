@@ -8,6 +8,7 @@ import ContactoView from '@/modules/portafolio/views/ContactoView.vue';
 
 const router = createRouter({
     history: createWebHistory( import.meta.env.BASE_URL),
+    // linkExactActiveClass: 'clase-activa',
     routes:[{
         path:'/',
         name:'portafolio',

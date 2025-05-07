@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">{ LuisLV }</a> -->
-      <h1 class="nombre-logo">{ LuisLV }</h1>
+      <h1 class="nombre-logo poppins-semibold">{ LuisLV }</h1>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,21 +17,21 @@
       <div :class="['collapse navbar-collapse',{flexEnd: activado}]" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'inicio' }"> Inicio </RouterLink>
+            <RouterLink class="nav-link poppins-bold" :to="{ name: 'inicio' }" exact-active-class="clase-activa"> Inicio </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'tecnologias' }"> Tecnologias </RouterLink>
+            <RouterLink class="nav-link poppins-bold" :to="{ name: 'tecnologias' }" exact-active-class="clase-activa"> Tecnologias </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'proyectos' }"> Proyectos </RouterLink>
+            <RouterLink class="nav-link poppins-bold" :to="{ name: 'proyectos' }" exact-active-class="clase-activa"> Proyectos </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'mis_servicios' }">
+            <RouterLink class="nav-link poppins-bold" :to="{ name: 'mis_servicios' }" exact-active-class="clase-activa">
               Mis servicios
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'contacto' }"> Contacto </RouterLink>
+            <RouterLink class="nav-link poppins-bold" :to="{ name: 'contacto' }" exact-active-class=""> Contacto </RouterLink>
           </li>
         </ul>
       </div>
@@ -74,6 +74,14 @@ onMounted(()=>{
 .nav-link {
   color:#ffffff;
   cursor: pointer;
+}
+.clase-activa{
+  color:#F6DD5E !important;
+ }
+.nav-link:hover{
+  /* color:#f0db4f; */
+  /* color:#ffc52d; */
+  color:#F6DD5E;
 }
 
 .flexEnd{
