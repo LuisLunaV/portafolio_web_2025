@@ -1,7 +1,7 @@
 <template>
   <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
     <div class="cont-inicio ps-5 d-flex flex-column justify-content-center">
-      <div class="box ps-2">
+      <div class="box">
         <span
           :class="[
             'poppins-extrabold fondo-negro color-blanco px-1',
@@ -16,7 +16,7 @@
           Hola, Soy Luis Luna Villa
         </span>
       </div>
-      <div class="box ps-2">
+      <div class="box">
         <span :class="['poppins-semibold color-negro',{
               'fs-1': dispositivo == 'grande',
               'fs-2': dispositivo == 'mediano',
@@ -24,7 +24,7 @@
               'fs-4': dispositivo == 'expequeno',
             }]"> Desarrollo Web </span>
       </div>
-      <div class="box ps-2">
+      <div class="box">
         <span :class="['poppins-semibold color-negro',{
               'fs-1': dispositivo == 'grande',
               'fs-2': dispositivo == 'mediano',
@@ -32,12 +32,19 @@
               'fs-4': dispositivo == 'expequeno',
             }]"> Front-End y Back-End </span>
       </div>
-      <button
+      <div class="box">
+        <button
         @click="mostrarSobreMi"
-        class="box fs-5 button-contact color-blanco fondo-negro rounded-3 poppins-bold mt-4 py-2"
-      >
+        class="fs-5 button-contact color-blanco fondo-negro rounded-3 poppins-bold mt-4 py-2"
+        >
         Sobre mi
       </button>
+    </div>
+    <div class="box d-flex flex-row mt-4">
+      <!-- Redes sociales y de contacto -->
+      <RedesSociales :distancia="(ventana === '/inicio')?'60px':''" :ventana="ventana" />
+    </div>
+
     </div>
     <div class="cont-img">
       <img
@@ -75,15 +82,29 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 import { useMedia } from '@/modules/composables/useMedia'
+import { useWindowSize } from '@/modules/composables/useWindowSize';
+import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 const { dispositivo, anchoVentana } = useMedia()
 const estaAbierto= ref<boolean>( false );
+const ventana = ref<string>('');
+
 anchoVentana()
 
 const mostrarSobreMi = () => {
   return estaAbierto.value = !estaAbierto.value;
 }
+
+onMounted(()=>{
+  const { nombreVentana } = useWindowSize();
+  const ventanaName = useVentanaStore();
+  ventanaName.setNombreVentana(nombreVentana());
+  ventana.value = ventanaName.nombreVentana;
+});
+
+
 </script>
 
 <style scope>

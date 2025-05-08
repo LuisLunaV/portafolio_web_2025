@@ -1,0 +1,59 @@
+.redes-div-i i{
+  cursor: pointer;
+}
+
+.redes-div-i{
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+
+  }
+
+  .redes-div-i:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+
+  .tooltip {
+    position: absolute;
+    /* bottom: 50px; */
+    opacity: 0;
+    background-color: #ffe53b;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -15%;
+    transition-duration: 0.3s;
+  }
+
+  .redes-div-i:hover .tooltip {
+    bottom: 80px;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }

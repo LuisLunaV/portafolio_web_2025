@@ -81,7 +81,7 @@ onMounted(()=>{
 .nav-link:hover{
   /* color:#f0db4f; */
   /* color:#ffc52d; */
-  color:#F6DD5E;
+  /* color:#F6DD5E; */
 }
 
 .flexEnd{
