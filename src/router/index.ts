@@ -3,8 +3,7 @@ import PortafolioLayout from '@/modules/portafolio/layout/PortafolioLayout.vue';
 import InicioView from '@/modules/portafolio/views/InicioView.vue';
 import TecnologiasView from '@/modules/portafolio/views/TecnologiasView.vue';
 import ProyectosView from '@/modules/portafolio/views/ProyectosView.vue';
-import MisServiciosView from '@/modules/portafolio/views/MisServiciosView.vue';
-import ContactoView from '@/modules/portafolio/views/ContactoView.vue';
+import ServiciosContactoView from '@/modules/portafolio/views/ServiciosContactoView.vue';
 
 const router = createRouter({
     history: createWebHistory( import.meta.env.BASE_URL),
@@ -27,13 +26,9 @@ const router = createRouter({
             name:'proyectos',
             component:ProyectosView
         },{
-            path:'/mis_servicios',
-            name:'mis_servicios',
-            component:MisServiciosView
-        },{
-            path:'/contacto',
-            name:'contacto',
-            component:ContactoView
+            path:'/servicios_y_contacto',
+            name:'servicios_y_contacto',
+            component:ServiciosContactoView
         }
        ]
     }]

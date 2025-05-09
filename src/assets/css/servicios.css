@@ -19,7 +19,7 @@
   align-items: center;
 }
 .contenedor-mis-servicios {
-  height: 82%;
+  height: 100vh;
   padding-top: 6%;
   display: grid;
   align-items: center;
