@@ -39,6 +39,8 @@ background-image: var(--fondoNegroMate) !important;
   text-shadow: -6px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .div-redes-contacto{
+  max-height: 50px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;

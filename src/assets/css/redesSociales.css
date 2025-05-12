@@ -40,6 +40,20 @@ font-size: 28px;
 
 .redes-div-sc{
 cursor:pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: #ffe53b; */
+}
+
+.redes-div-sc a{
+  transition: 0.3s;
+}
+.redes-div-sc a p{
+margin: 0;
+}
+.redes-div-sc a:hover{
+padding-bottom: 20px;
 }
 
   .tooltip {
