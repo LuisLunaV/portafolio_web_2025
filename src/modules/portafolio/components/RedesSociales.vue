@@ -3,7 +3,7 @@
   Es una forma rapida y comun de asegurar que un valor sea tratado como boolean.
   -->
       <div v-for="(value, index) in data" :class="activarDivClass(!!value.telefono)" :key="index">
-      <a :class="{'centrar':nameActive}" :href="value.url" target="_black">
+      <a :class="[{'shadow-drop-center':value.name==='Mensaje'}, {'centrar':nameActive}]" :href="value.url" target="_black">
         <i @click="()=>sendMessage(value.name)" :class="[ value.clase,'fa-2x', 'color-blanco', 'sombra-de-texto-3rem']">
         </i>
         <p v-if="nameActive" class="px-2 sombra-de-texto-3rem">{{value.name}}</p>
