@@ -5,7 +5,7 @@
      </div> -->
      <div class="pie-redes">
       <!-- Redes sociales y de contacto -->
-      <RedesSociales :distancia="(ventana === '/mis_servicios')?'80px':''" :ventana="ventana" />
+
      </div>
     </footer>
 </template>
@@ -14,7 +14,6 @@
 import { onMounted, ref } from 'vue';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
-import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 
 const ventana = ref<string>('');
 

@@ -14,17 +14,17 @@ const anchoVentana=()=>{
     ancho.value = window.innerWidth;
 
       if( ancho.value>1375){
-        dispositivo.value = Dispositivos.Grande;
+       return dispositivo.value = Dispositivos.Grande;
       }
        if( ancho.value>992 && ancho.value<1375){
-        dispositivo.value = Dispositivos.Mediano;
+        return dispositivo.value = Dispositivos.Mediano;
       }
       if( ancho.value>576 && ancho.value<992){
-        dispositivo.value = Dispositivos.Pequeno;
+         return dispositivo.value = Dispositivos.Pequeno;
       }
 
       if( ancho.value>300 && ancho.value<576 ){
-        dispositivo.value = Dispositivos.ExPequeno;
+        return dispositivo.value = Dispositivos.ExPequeno;
       }
 
   }

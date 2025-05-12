@@ -1,3 +1,21 @@
+.ocultar-icono{
+  display:none;
+}
+
+
+.centrar{
+  text-decoration: none;
+display: flex;
+flex-direction: row;
+/* align-items: center; */
+/* justify-content: center; */
+}
+
+.centrar p{
+  color: #fff;
+font-size: 28px;
+}
+
 .redes-div-i i{
   cursor: pointer;
 }
@@ -20,7 +38,9 @@
   }
 
 
-
+.redes-div-sc{
+cursor:pointer;
+}
 
   .tooltip {
     position: absolute;
@@ -57,3 +77,10 @@
     opacity: 1;
     transition-duration: 0.3s;
   }
+
+  /* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 103px) and (max-width: 859px) {
+.mostrar-icono{
+  display: block;
+}
+}

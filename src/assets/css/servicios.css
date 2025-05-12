@@ -55,7 +55,6 @@
   padding-top: 100px;
 }
 
-
 @media (min-width: 972px) and (max-width: 1032px) {
   .contenedor-mis-servicios {
     grid-template-columns: repeat(2, 1fr);

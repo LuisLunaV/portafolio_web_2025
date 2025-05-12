@@ -84,13 +84,13 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
-import { useMedia } from '@/modules/composables/useMedia'
+import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
-const { dispositivo, anchoVentana } = useMedia()
 const estaAbierto= ref<boolean>( false );
 const ventana = ref<string>('');
 
+const { dispositivo, anchoVentana } = useMedia()
 anchoVentana()
 
 const mostrarSobreMi = () => {
