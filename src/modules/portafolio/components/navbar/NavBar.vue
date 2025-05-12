@@ -85,7 +85,9 @@ window.onscroll = () => {
   opacity: 0;
 }
 .navbar{
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  /* background-color: rgba(0, 0, 0, 0.5) !important; */
+  background-color: #1E2A38 !important;
+
   position: fixed;
   z-index: 3;
   left: 0;
@@ -98,7 +100,11 @@ window.onscroll = () => {
   cursor: pointer;
 }
 .clase-activa{
-  color:#F6DD5E !important;
+  color:red !important;
+  text-shadow: -1.2px 0px 0px #ffffff;
+
+      /* filter: drop-shadow(0 0 5px #fff) */
+
  }
 .nav-link:hover{
   /* color:#f0db4f; */

@@ -10,11 +10,12 @@
 @import url(./css/navbars/navbaresponsive.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css");
 :root{
-  --amarillo: #ffd25a;
+  --amarillo: #FAF3E0;
   --morado:#be8dfb;
   --naranja:#ff8589;
   --azul:#87b6fa;
   --negro:#464546;
+  --negro-suave:#1E2A38;
   --fondoAmarillo:linear-gradient(62deg, #f0db4f 0%, #ffc52d 100%);
   --fondoNegroMate: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
@@ -42,6 +43,20 @@ img {
   padding: 0;
  }
 
+ .titulo-subtitulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ .titulo-subtitulo p{
+   /* background-color: var(--negro); */
+   font-size: 18px;
+   display: flex;
+justify-content: center;
+align-items: center;
+ }
+
 /* Utils */
 .sombre-de-texto {
   text-shadow: -6px 1px 2px rgba(0, 0, 0, 0.58);
@@ -54,17 +69,28 @@ img {
   text-shadow: -3px 0px 2px rgba(0, 0, 0, 0.70);
 }
 
+.sombra-marca-icon{
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
 .truncar-txt{
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .color-blanco{
-  color: #ffffff !important;
+  color: #f1f1f1 !important;
+}
+.color-negro-suave{
+  color: #1E2A38;
 }
 .color-negro{
   color:var(--negro)
 }
+.color-gris{
+  color:#e5e7e9;
+}
+
 .amarillo-mate{
   background-color: var(--amarillo);
 }
@@ -75,7 +101,9 @@ img {
 .fondo-negro{
   background-color: var(--negro);
 }
-
+.fondo-negro-suave{
+  background-color: #1E2A38;
+}
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;

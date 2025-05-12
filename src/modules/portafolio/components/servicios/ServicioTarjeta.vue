@@ -7,14 +7,14 @@
           <div class="titulo-servicio-dos centrar-column-flex">
             <i :class="['fas', value.icon_class ,'fa-2x icono-servicio']"></i>
             <h3
-              class="color-blanco poppins-semibold tamaño-de-fuente-3 sombre-de-texto pt-3"
+              class="color-blanco poppins-semibold tamaño-de-fuente-3 pt-3"
             >
             {{ value.nombre }}
             </h3>
           </div>
           <div class="informacion-del-servicio-dos centrar-margin px-2 pt-2">
             <p
-              class="color-blanco poppins-medium sombra-de-texto-2rem"
+              class="color-blanco  poppins-medium"
               style="text-align: justify;"
             >
             {{ value.description }}

@@ -17,20 +17,30 @@ footer p{
 
 .pie-mensaje{
   width: auto;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 .pie-mensaje p{
 margin: 0;
 padding: auto 0;
+font-size:15px;
+}
+
+.pie-mensaje i{
 font-size: 20px;
 }
 
-.pie-redes{
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  /* border-bottom: 2px solid #F6DD5E; */
+.icon-js{
+  color: #F6DD5E;
+}
+
+.icon-bts{
+  color: #742cfc;
+}
+.icon-vuejs{
+color:#40b882;
 }
 
 

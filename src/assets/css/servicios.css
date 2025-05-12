@@ -34,12 +34,11 @@
 .contenedor-de-servicio {
   border: 1.5px solid var(--negro) !important;
   border-radius: 0.8rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   transition: 0.5s;
 }
 .contenedor-de-servicio .icono-servicio {
   color: #fff;
-  text-shadow: -6px 1px 2px rgba(0, 0, 0, 0.58);
 }
 
 .contenedor-de-servicio:hover {

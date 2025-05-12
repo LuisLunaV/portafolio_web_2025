@@ -4,7 +4,7 @@
       <div class="box">
         <span
           :class="[
-            'poppins-extrabold fondo-negro color-blanco px-1',
+            'poppins-extrabold fondo-negro-suave color-blanco px-1',
             {
               'tamano-principal': dispositivo == 'grande',
               'fs-1': dispositivo == 'mediano',
@@ -35,7 +35,7 @@
       <div class="box">
         <button
         @click="mostrarSobreMi"
-        class="fs-5 button-contact color-blanco fondo-negro rounded-3 poppins-bold mt-4 py-2"
+        class="fs-5 button-contact color-blanco fondo-negro-suave rounded-3 poppins-bold mt-4 py-2"
         >
         Sobre mi
       </button>

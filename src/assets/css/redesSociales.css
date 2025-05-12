@@ -54,7 +54,9 @@ margin: 0;
 }
 .redes-div-sc a:hover{
 padding-bottom: 20px;
+animation: none;
 }
+
 
   .tooltip {
     position: absolute;

@@ -39,13 +39,13 @@
   text-decoration: none;
   text-align: center;
   transition: all 400ms ease;
-  border: solid var(--negro) 3px;
+  border: solid var(--negro-suave) 3px;
     animation: subir-bajar 1s infinite;
 }
 
 .button-contact:hover {
   background-color: #f1f1f1;
-  color: var(--negro) !important;
+  color: var(--negro-suave) !important;
   animation: none;
 }
 

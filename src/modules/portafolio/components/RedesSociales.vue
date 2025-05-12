@@ -3,8 +3,17 @@
   Es una forma rapida y comun de asegurar que un valor sea tratado como boolean.
   -->
       <div v-for="(value, index) in data" :class="[nameActive===false?'redes-div-i':'redes-div-sc',{'ocultar-icono':anchoVentana>700 && value.telefono}]" :key="index">
-      <a :class="[{'shadow-drop-center':value.name==='Mensaje'}, {'centrar':nameActive}]" :href="value.url" target="_black">
-        <i @click="()=>sendMessage(value.name)" :class="[ value.clase,'fa-2x', 'color-blanco', 'sombra-de-texto-3rem']">
+      <a
+      :class="[
+        (value.name==='Mensaje' && nameActive)
+        ?'shadow-drop-center'
+        :(value.name==='Mensaje')
+        ?'shake-left-right-inicio':null,
+        {'centrar':nameActive}]"
+
+      :href="value.url"
+      target="_black" >
+        <i @click="()=>sendMessage(value.name)" :class="[ value.clase,'fa-2x', 'color-gris', 'sombra-de-texto-3rem',{'sombra-marca-icon':nameActive===false}]">
         </i>
         <p v-if="nameActive" class="px-2 sombra-de-texto-3rem">{{value.name}}</p>
       </a>
@@ -24,19 +33,21 @@ data.value = redes.data;
 interface Props{
   distancia?:string;
   ventana?:string;
-  nameActive?:boolean;
+  nameActive?:boolean; //Si es la ventana de inicio es false, si es la ventana de servicio y contacto true.
 }
 
 withDefaults( defineProps<Props>(),{
   nameActive:false
 });
 
-
+//Al montar
 onMounted(()=>{
   window.addEventListener('resize',()=>{
     anchoVentana.value = window.innerWidth;
   });
-})
+});
+
+//Antes de desmontar
  onBeforeUnmount(() => {
     window.removeEventListener('resize', ()=>{
     anchoVentana.value = window.innerWidth;
