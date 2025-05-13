@@ -53,7 +53,7 @@
 
 .btn-info-proyect{
   background-color: #f4d03f !important;
-  border: solid var(--negro) 4px !important;
+  border: solid var(--negro-suave) 4px !important;
   box-shadow: 0 0 0 2.5px #ffffff;
 }
 .btn-info-proyect:hover{

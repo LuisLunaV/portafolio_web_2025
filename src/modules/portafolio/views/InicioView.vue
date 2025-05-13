@@ -47,12 +47,13 @@
 
     </div>
     <div class="cont-img">
-      <img
+      <ComputadoraPc/>
+      <!-- <img
         class="sombra-img img-fluid box-right"
         src="../../../assets/img/monitor-web-mod-dos.png"
         alt="imagen-inicial"
-      />
-      <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]">
+      /> -->
+      <!-- <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]">
         <p
           :class="[
             'p-sobre-mi text-center poppins-medium',
@@ -75,7 +76,7 @@
             Descarga mi CV
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- <div class="inicio-footer"></div> -->
@@ -84,6 +85,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
+import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';

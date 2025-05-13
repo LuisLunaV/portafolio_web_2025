@@ -100,7 +100,7 @@ window.onscroll = () => {
   cursor: pointer;
 }
 .clase-activa{
-  color:red !important;
+  color:#FF4B5C !important;
   text-shadow: -1.2px 0px 0px #ffffff;
 
       /* filter: drop-shadow(0 0 5px #fff) */
