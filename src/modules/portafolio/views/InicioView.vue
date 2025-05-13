@@ -47,36 +47,10 @@
 
     </div>
     <div class="cont-img">
-      <ComputadoraPc/>
-      <!-- <img
-        class="sombra-img img-fluid box-right"
-        src="../../../assets/img/monitor-web-mod-dos.png"
-        alt="imagen-inicial"
-      /> -->
-      <!-- <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]">
-        <p
-          :class="[
-            'p-sobre-mi text-center poppins-medium',
-            {
-              'fs-2': dispositivo == 'grande',
-              'fs-3': dispositivo == 'mediano',
-              'fs-4': dispositivo == 'pequeno'||'expequeno',
-            },
-          ]"
-        >
-          Sobre mi
-        </p>
-        <p class="poppins-medium text-start">
-          Desarrollador web con mas de tres años de experiencia, fan de Asimov y evangelista de
-          Linux. ¿Quieres saber más? Descarga mi CV.
-        </p>
-        <div class="div-btn-cv">
-          <button
-          class="button-animacion btn-cv rounded-3 poppins-bold">
-            Descarga mi CV
-          </button>
-        </div>
-      </div> -->
+      <ComputadoraPc
+      :dispositivo="dispositivo"
+      :estaAbierto="estaAbierto"
+      />
     </div>
   </div>
   <!-- <div class="inicio-footer"></div> -->

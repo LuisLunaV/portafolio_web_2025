@@ -1,5 +1,5 @@
 <template>
-  <div class="contenedor-pc">
+  <div class="contenedor-pc box-right">
     <div class="monitor">
       <div class="marco">
         <div class="pantalla">
@@ -8,6 +8,30 @@
             <div class="circulo"></div>
             <div class="circulo"></div>
           </div>
+            <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]">
+        <p
+          :class="[
+            'p-sobre-mi text-center poppins-medium',
+            {
+              'fs-2': dispositivo == 'grande',
+              'fs-3': dispositivo == 'mediano',
+              'fs-4': dispositivo == 'pequeno'||'expequeno',
+            },
+          ]"
+        >
+          Sobre mi
+        </p>
+        <p class="poppins-medium text-start">
+          Desarrollador web con mas de tres años de experiencia, fan de Asimov y evangelista de
+          Linux. ¿Quieres saber más? Descarga mi CV.
+        </p>
+        <div class="div-btn-cv">
+          <button
+          class="button-animacion btn-cv rounded-3 poppins-bold">
+            Descarga mi CV
+          </button>
+        </div>
+      </div>
         </div>
       </div>
     </div>
@@ -17,6 +41,14 @@
     </div>
   </div>
 </template>
+<script lang="ts" setup>
+interface Props{
+  dispositivo:string;
+  estaAbierto:boolean;
+}
+
+defineProps<Props>();
+</script>
 <style scoped>
 .contenedor-pc {
   width: 100%;
@@ -30,8 +62,10 @@
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
   overflow: hidden;
   background-color: #ccd4e1;
-  width: 500px;
-  height: 380px;
+  max-width: 500px;
+  max-height: 400px;
+  width:  100%;
+  height: 100%;
   border-radius: 20px;
 }
 .marco {
@@ -49,7 +83,7 @@
 
 .barra {
   width: 100%;
-  height: 20%;
+  height: 16%;
   background-color: #1E2A38;
 display: flex;
 flex-direction: row;
