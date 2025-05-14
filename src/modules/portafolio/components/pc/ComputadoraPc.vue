@@ -13,7 +13,7 @@
             <!-- <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]"> -->
             <p
               :class="[
-                'p-sobre-mi box-bottom text-center poppins-medium',
+                'p-sobre-mi box-bottom text-center poppins-semibold',
                 {
                   'fs-2': dispositivo == 'grande',
                   'fs-3': dispositivo == 'mediano',
@@ -24,15 +24,14 @@
               Sobre mi
             </p>
             <p class="poppins-medium text-center box-bottom">
-              Desarrollador web con mas de tres años de experiencia, fan de Asimov y evangelista de
-              Linux. ¿Quieres saber más? Descarga mi CV.
+              Desarrollador web con más de dos años de experiencia, actualmente desempeñándome en el desarrollo y mantenimiento de aplicaciones web en el sector restaurantero. Me considero fan de Asimov y un entusiasta del software libre y evangelista de Linux.
             </p>
             <!-- <div class="div-btn-cv box-bottom">
               <button class="button-animacion btn-cv rounded-3 poppins-bold">Descarga mi CV</button>
             </div> -->
           </div>
           <div v-else class="sobre-mi-logo">
-            <span class="poppins-bold">{{ logo }}</span>
+            <span class="box-top poppins-bold">{{ logo }}</span>
           </div>
         </div>
       </div>
