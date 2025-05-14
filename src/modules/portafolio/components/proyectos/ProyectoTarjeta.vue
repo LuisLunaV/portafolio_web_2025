@@ -61,6 +61,6 @@ if( mostrarTarjeta.value < props.projects.length - 1 ){
 }else{
   clearInterval( targetInterval );
 }
-},500)
+},350)
 
 </script>

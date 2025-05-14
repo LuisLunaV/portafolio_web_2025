@@ -45,5 +45,5 @@ if (mostrarTarjeta.value < props.servicios.length -1 ) {
 } else {
   clearInterval(targetInterval);
 }
-},500)
+},200)
 </script>

@@ -8,30 +8,32 @@
             <div class="circulo"></div>
             <div class="circulo"></div>
           </div>
-            <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]">
-        <p
-          :class="[
-            'p-sobre-mi text-center poppins-medium',
-            {
-              'fs-2': dispositivo == 'grande',
-              'fs-3': dispositivo == 'mediano',
-              'fs-4': dispositivo == 'pequeno'||'expequeno',
-            },
-          ]"
-        >
-          Sobre mi
-        </p>
-        <p class="poppins-medium text-start">
-          Desarrollador web con mas de tres años de experiencia, fan de Asimov y evangelista de
-          Linux. ¿Quieres saber más? Descarga mi CV.
-        </p>
-        <div class="div-btn-cv">
-          <button
-          class="button-animacion btn-cv rounded-3 poppins-bold">
-            Descarga mi CV
-          </button>
-        </div>
-      </div>
+
+          <div v-if="estaAbierto" class="sobre-mi-msg">
+            <!-- <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]"> -->
+            <p
+              :class="[
+                'p-sobre-mi box-bottom text-center poppins-medium',
+                {
+                  'fs-2': dispositivo == 'grande',
+                  'fs-3': dispositivo == 'mediano',
+                  'fs-4': dispositivo == 'pequeno' || 'expequeno',
+                },
+              ]"
+            >
+              Sobre mi
+            </p>
+            <p class="poppins-medium text-center box-bottom">
+              Desarrollador web con mas de tres años de experiencia, fan de Asimov y evangelista de
+              Linux. ¿Quieres saber más? Descarga mi CV.
+            </p>
+            <!-- <div class="div-btn-cv box-bottom">
+              <button class="button-animacion btn-cv rounded-3 poppins-bold">Descarga mi CV</button>
+            </div> -->
+          </div>
+          <div v-else class="sobre-mi-logo">
+            <span class="poppins-bold">{{ logo }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -42,12 +44,16 @@
   </div>
 </template>
 <script lang="ts" setup>
-interface Props{
-  dispositivo:string;
-  estaAbierto:boolean;
+import { ref } from 'vue'
+
+const logo = ref('</>')
+
+interface Props {
+  dispositivo: string
+  estaAbierto: boolean
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
 <style scoped>
 .contenedor-pc {
@@ -64,7 +70,7 @@ defineProps<Props>();
   background-color: #ccd4e1;
   max-width: 500px;
   max-height: 400px;
-  width:  100%;
+  width: 100%;
   height: 100%;
   border-radius: 20px;
 }
@@ -76,7 +82,8 @@ defineProps<Props>();
 }
 
 .pantalla {
-  background-color: #fbe14e;
+  overflow: hidden;
+  background-color: var(--amarillo);
   height: 100%;
   width: 100%;
 }
@@ -84,14 +91,14 @@ defineProps<Props>();
 .barra {
   width: 100%;
   height: 16%;
-  background-color: #1E2A38;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: flex-end;
+  background-color: #1e2a38;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.circulo{
+.circulo {
   margin: 0 6px;
   height: 15px;
   width: 15px;

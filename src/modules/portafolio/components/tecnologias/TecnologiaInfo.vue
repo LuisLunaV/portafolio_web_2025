@@ -45,6 +45,6 @@ onMounted(() => {
     } else {
       clearInterval(interval);
     }
-  }, 100);
+  }, 200);
 });
 </script>
