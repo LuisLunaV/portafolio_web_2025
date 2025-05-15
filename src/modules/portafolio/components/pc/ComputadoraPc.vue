@@ -23,12 +23,13 @@
             >
               Sobre mi
             </p>
-            <p class="poppins-medium text-center box-bottom">
+            <p class="poppins-medium text-center box-bottom mb-1">
               Desarrollador web con más de dos años de experiencia, actualmente desempeñándome en el desarrollo y mantenimiento de aplicaciones web en el sector restaurantero. Me considero fan de Asimov y un entusiasta del software libre y evangelista de Linux.
             </p>
-            <!-- <div class="div-btn-cv box-bottom">
-              <button class="button-animacion btn-cv rounded-3 poppins-bold">Descarga mi CV</button>
-            </div> -->
+            <a class="poppins-semibold btn-pdf pe-2 box-bottom" href="#">
+                <i class="bi bi-arrow-down-circle-fill mx-2"></i>
+                Descargar CV
+              </a>
           </div>
           <div v-else class="sobre-mi-logo">
             <span class="box-top poppins-bold">{{ logo }}</span>
@@ -68,7 +69,7 @@ defineProps<Props>()
   overflow: hidden;
   background-color: #ccd4e1;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 420px;
   width: 100%;
   height: 100%;
   border-radius: 20px;

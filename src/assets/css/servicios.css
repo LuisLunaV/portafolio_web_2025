@@ -1,7 +1,7 @@
 /* mis servicios */
-.pading-izq-der {
+/* .pading-izq-der {
   padding: 20px;
-}
+} */
 
 .centrar-texto {
   text-align: center;
@@ -13,16 +13,17 @@
 }
 
 .mis-servicios {
+  padding: 7% 0% 2% 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .contenedor-mis-servicios {
-  height: 100vh;
-  padding-top: 6%;
+  height: 60vh;
+  /* padding-top: 6%; */
   display: grid;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 20px;
@@ -32,25 +33,27 @@
 }
 
 .contenedor-de-servicio {
+  /* background-color: rgba(0, 0, 0, 0.8); */
   border: 1.5px solid var(--negro) !important;
   border-radius: 0.8rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--negro-suave);
   transition: 0.5s;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contenedor-de-servicio .icono-servicio {
   color: #fff;
-    transition: 0.5s ;
-
+  transition: 0.5s ;
 }
 
 .contenedor-de-servicio:hover {
-  background-color: rgba(0, 0, 0, 0.8);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 
 .contenedor-de-servicio:hover .icono-servicio {
   color: #FF4B5C;
-  text-shadow: -1px 0px 2px #f1f1f1;
+  /* text-shadow: -1px 0px 2px #f1f1f1; */
 
 }
 

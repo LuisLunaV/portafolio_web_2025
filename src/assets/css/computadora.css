@@ -1,0 +1,14 @@
+.btn-pdf{
+  background-color: var(--negro-suave);
+  color: #ffff;
+  text-decoration: none;
+  padding: 5px;
+  transition: .5s;
+  border-radius: 5px;
+  border: 2px solid var(--negro-suave);
+}
+
+.btn-pdf:hover{
+  background-color: #ffff;
+  color: var(--negro-suave);
+}
