@@ -13,7 +13,7 @@
             <!-- <div :class="['sobre-mi-msg',{'openBox':estaAbierto, 'closeBox':!estaAbierto}]"> -->
             <p
               :class="[
-                'p-sobre-mi box-bottom text-center poppins-semibold',
+                'p-sobre-mi box text-center poppins-semibold',
                 {
                   'fs-2': dispositivo == 'grande',
                   'fs-3': dispositivo == 'mediano',
@@ -23,10 +23,10 @@
             >
               Sobre mi
             </p>
-            <p class="poppins-medium text-center box-bottom mb-1">
+            <p class="poppins-medium text-center box mb-1">
               Desarrollador web con más de dos años de experiencia, actualmente desempeñándome en el desarrollo y mantenimiento de aplicaciones web en el sector restaurantero. Me considero fan de Asimov y un entusiasta del software libre y evangelista de Linux.
             </p>
-            <a class="poppins-semibold btn-pdf pe-2 box-bottom" href="#">
+            <a class="poppins-semibold btn-pdf pe-2 box" href="#">
                 <i class="bi bi-arrow-down-circle-fill mx-2"></i>
                 Descargar CV
               </a>
