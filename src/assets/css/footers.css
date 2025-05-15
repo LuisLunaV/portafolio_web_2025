@@ -3,7 +3,7 @@ footer{
   /* background-color: #7A6D22; */
   height: 20vh;
   /* margin-top: 20px; */
-  border-top:solid  #F6DD5E 5px;
+  border-top:solid var(--naranja) 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;

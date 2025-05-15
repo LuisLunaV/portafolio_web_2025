@@ -1,4 +1,10 @@
 <template>
+  <div class="mis-proyectos">
+    <TituloSubtitulo
+     :title="titulo"
+     :subtitle="subtitulo"
+     />
+  <div class="contenedor-de-tarjetas amarillo-mate">
     <div v-for="project in imprimirTarjetas" :key="project.id" class="tarjeta box-top">
       <div class="contenedor-tarjeta centrar-column-flex">
         <div class="imagen-proyecto">
@@ -21,12 +27,20 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 </template>
 
 <script lang="ts" setup>
+import TituloSubtitulo from '@/modules/portafolio/components/TituloSubtitulo.vue';
 import { type IProyectos } from '@/json/proyectos';
 import { computed, ref } from 'vue';
+
 const mostrarTarjeta = ref(0);
+const titulo = ref<string>('');
+const subtitulo = ref<string>('');
+titulo.value = 'Mi portafolio.';
+subtitulo.value = 'Siéntete libre de explorar mis proyectos y sus respectivas descripciones. Algunos de ellos incluyen acceso directo al repositorio para que puedas revisar el código fuente.';
 
 interface Props{
   projects:IProyectos[];

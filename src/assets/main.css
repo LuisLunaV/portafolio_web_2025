@@ -13,12 +13,12 @@
 :root{
   --amarillo: #FAF3E0;
   --morado:#be8dfb;
-  --naranja:#ff8589;
+  --naranja:#FF4B5C;
   --azul:#87b6fa;
   --negro:#464546;
   --negro-suave:#1E2A38;
   --fondoAmarillo:linear-gradient(62deg, #f0db4f 0%, #ffc52d 100%);
-  --fondoNegroMate: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  --fondoNegroMate: linear-gradient(62deg, #1E2A37 0%, #1E2A38 100%);
 }
 
 *,

@@ -1,8 +1,6 @@
 <template>
 <ModalPortafolio v-if="isVisible" :info="infoProject" @cerrar="cerrarModal"/>
-  <div class="contenedor-de-tarjetas amarillo-mate">
     <ProyectoTarjeta :projects="data" @id-seleccionado="idSelect" @abrir="mostrarModal"/>
-  </div>
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
@@ -14,6 +12,8 @@ import { useWindowSize } from '@/modules/composables/useWindowSize'
 import { useMostrarModal } from '@/modules/composables/useMostrarModal';
 
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store'
+
+
 
 const infoProject = ref<IProyectos[]>([]);
 const { fetchDataProyect } = useFetch();
