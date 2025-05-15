@@ -113,6 +113,21 @@ const tecnologias: IResponseData = {
         name: 'GitHub',
         categoria:'control',
         information: `Es una plataforma de desarrollo colaborativo basada en Git, que permite alojar, gestionar y compartir proyectos de código, facilitando el trabajo en equipo, el control de versiones y la integración continua.`,
+      },      {
+        img: 'ubuntu.svg',
+        name: 'Ubuntu',
+        categoria:'sistema_operativo',
+        information: `Es una plataforma de desarrollo colaborativo basada en Git, que permite alojar, gestionar y compartir proyectos de código, facilitando el trabajo en equipo, el control de versiones y la integración continua.`,
+      },      {
+        img: 'bash.svg',
+        name: 'Bash',
+        categoria:'control',
+        information: `Es una plataforma de desarrollo colaborativo basada en Git, que permite alojar, gestionar y compartir proyectos de código, facilitando el trabajo en equipo, el control de versiones y la integración continua.`,
+      },      {
+        img: 'debian.svg',
+        name: 'Debian',
+        categoria:'sistema_operativo',
+        information: `Es una plataforma de desarrollo colaborativo basada en Git, que permite alojar, gestionar y compartir proyectos de código, facilitando el trabajo en equipo, el control de versiones y la integración continua.`,
       },
     ],
   },
