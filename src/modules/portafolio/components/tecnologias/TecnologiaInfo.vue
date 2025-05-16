@@ -1,6 +1,6 @@
 <template>
-
-  <li v-for="({ information, name, img }, index) in filtrarSkill"
+    <div class="contenedor-de-tecnologias">
+  <div v-for="({ information, name, img }, index) in filtrarSkill"
   :key="index"
   class="card card-skills box-bottom"
   style="width: 20rem;"
@@ -12,7 +12,8 @@
     <h5 class="card-title poppins-bold">{{name}}</h5>
     <p class="card-text poppins-medium">{{information}}</p>
   </div>
-</li>
+</div>
+    </div>
 
 </template>
 
@@ -25,7 +26,6 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-
 const mostrarImagen = ref(0);
 
 // Computada para filtrar elementos según `mostrarImagen`

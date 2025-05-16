@@ -1,6 +1,6 @@
 <template>
-<div class="tech-logo-info">
-<i :class="['bi bi-microsoft', {
+  <div class="tech-logo-info">
+<i :class="['bi bi-tools', {
               'fs-1': dispositivo == 'grande',
               'fs-2': dispositivo == 'mediano',
               'fs-3': dispositivo == 'pequeno',
@@ -12,7 +12,7 @@
               'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]">
-   Sistemas operativos
+  Herramientas de Desarrollo
 </p>
 </div>
       <TecnologiaInfo :skills="data" />

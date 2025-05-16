@@ -16,6 +16,17 @@
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
+.tech-logo-info{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: 20px 0;
+}
+.tech-logo-info p{
+  padding-left: 10px;
+  margin: 0;
+}
 .card-skills{
   overflow: hidden;
   border: 3px solid var(--negro) !important;
