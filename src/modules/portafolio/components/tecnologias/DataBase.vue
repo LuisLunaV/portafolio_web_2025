@@ -1,4 +1,5 @@
 <template>
+  <div class="div-tech-logo-info">
   <div class="tech-logo-info">
 <i :class="['bi bi-database-fill', {
               'fs-1': dispositivo == 'grande',
@@ -12,11 +13,11 @@
               'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]">
-  Bases de datos
+  Bases de datos relacionales
 </p>
 </div>
       <TecnologiaInfo :skills="data" />
-
+</div>
   </template>
 <script lang="ts" setup>
 import TecnologiaInfo from '@/modules/portafolio/components/tecnologias/TecnologiaInfo.vue'

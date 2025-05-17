@@ -1,4 +1,5 @@
 <template>
+  <div class="div-tech-logo-info">
   <div class="tech-logo-info">
 <i :class="['bi bi-hdd-stack-fill', {
               'fs-1': dispositivo == 'grande',
@@ -12,10 +13,11 @@
               'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]">
-  Desarrollo BackEnd (lado del cliente)
+  Desarrollo BackEnd (lado del servidor)
 </p>
 </div>
-      <TecnologiaInfo :skills="data" />
+<TecnologiaInfo :skills="data" />
+</div>
 
   </template>
 <script lang="ts" setup>

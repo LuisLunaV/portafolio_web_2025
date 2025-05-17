@@ -100,6 +100,12 @@ const tecnologias: IResponseData = {
         categoria:'db',
         information: `SQL Server es un sistema de gestión de bases de datos relacional creado por Microsoft, diseñado para almacenar, recuperar y analizar datos de manera eficiente y segura ideal para aplicaciones empresariales.`,
       },
+       {
+        img: 'sqlite.svg',
+        name: 'SQLite',
+        categoria:'db',
+        information: `SQL Server es un sistema de gestión de bases de datos relacional creado por Microsoft, diseñado para almacenar, recuperar y analizar datos de manera eficiente y segura ideal para aplicaciones empresariales.`,
+      },
       {
         img: 'git.svg',
         name: 'Git',

@@ -1,4 +1,5 @@
 <template>
+  <div class="div-tech-logo-info">
   <div class="tech-logo-info">
   <i :class="['bi bi-grid-1x2-fill', {
               'fs-1': dispositivo == 'grande',
@@ -15,8 +16,8 @@
   Desarrollo FrontEnd (lado del cliente)
   </p>
 </div>
-
-      <TecnologiaInfo :skills="data" />
+<TecnologiaInfo :skills="data" />
+</div>
 
   </template>
 <script lang="ts" setup>

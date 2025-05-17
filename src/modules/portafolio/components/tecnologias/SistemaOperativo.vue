@@ -1,4 +1,5 @@
 <template>
+  <div class="div-tech-logo-info">
 <div class="tech-logo-info">
 <i :class="['bi bi-microsoft', {
               'fs-1': dispositivo == 'grande',
@@ -16,7 +17,7 @@
 </p>
 </div>
       <TecnologiaInfo :skills="data" />
-
+</div>
   </template>
 <script lang="ts" setup>
 import TecnologiaInfo from '@/modules/portafolio/components/tecnologias/TecnologiaInfo.vue'
