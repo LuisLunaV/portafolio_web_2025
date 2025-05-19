@@ -5,7 +5,7 @@
 <!-- <NavBarResponsive /> -->
 <!-- Contenedor pincipal -->
 <!-- <main :class="['principal', routeName == '/proyectos'?'negro-mate':'amarillo-mate']" style="height: 100%;"> -->
-<main class="principal amarillo-mate" style="height: 100%;">
+<main class="principal amarillo-mate" style="height: auto;">
     <RouterView />
 </main>
 </div>

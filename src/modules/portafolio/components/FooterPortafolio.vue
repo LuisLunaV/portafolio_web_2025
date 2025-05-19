@@ -1,19 +1,7 @@
 <template>
-      <footer class="pie-de-pagina">
-     <div class="pie-mensaje">
-       <p class="poppins-medium">
-      © 2025 - Luis Alfredo Luna Villa
-      </p>
-       <p class="poppins-medium">🛠️ Este portafolio fue desarrollado con las siguientes tecnologias:
-
-         <i class="fab fa-js ps-2 icon-js"></i>
-         <i class="fab fa-bootstrap px-2 icon-bts"></i>
-         <i class="fab fa-vuejs icon-vuejs"></i>
-
-       </p>
-
-     </div>
-
+    <footer class="pie-de-pagina">
+      <FooterContacto v-if="ventana === '/servicios_y_contacto'" />
+      <FooterProyectos v-if="ventana === '/proyectos'" />
     </footer>
 </template>
 
@@ -21,6 +9,9 @@
 import { onMounted, ref } from 'vue';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
+import FooterContacto from '@/modules/portafolio/components/footer/FooterContacto.vue';
+import FooterProyectos from '@/modules/portafolio/components/footer/FooterProyectos.vue';
+
 
 const ventana = ref<string>('');
 
@@ -29,6 +20,7 @@ onMounted(()=>{
   const ventanaName = useVentanaStore();
   ventanaName.setNombreVentana(nombreVentana());
   ventana.value = ventanaName.nombreVentana;
+  console.log(ventana.value)
 });
 </script>
 
