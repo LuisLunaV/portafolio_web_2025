@@ -21,9 +21,10 @@ import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store'
 
 const infoProject = ref<IProyectos[]>([]);
 const { fetchDataProyect } = useFetch();
-const data = fetchDataProyect();
 const ventanaStore = useVentanaStore();
 const { isVisible, cerrarModal, mostrarModal} = useMostrarModal();
+
+const data = fetchDataProyect();
 
 const idSelect=( id:number)=>{
   infoProject.value = data.filter(index=> index.id === id );
