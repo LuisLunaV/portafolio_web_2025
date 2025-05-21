@@ -13,14 +13,15 @@
         </h3>
       </div>
     <div class="div-redes-contacto mt-4">
-      <RedesSociales :name-active="true" />
+      <RedesSociales :name-active="true" @abrir-modal="$emit('abrir')" />
     </div>
 
   </div>
 </template>
 <script lang="ts" setup>
+import { defineEmits} from 'vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
-
+defineEmits(['abrir']);
 </script>
 <style scoped>
 .div_contacto{

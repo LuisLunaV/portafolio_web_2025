@@ -1,7 +1,9 @@
 <template>
-    <footer class="pie-de-pagina">
+    <footer class="pie-de-pagina"
+    :style="{ height: ventana === '/servicios_y_contacto' ? '20vh' : 'auto' }"
+    >
       <FooterContacto v-if="ventana === '/servicios_y_contacto'" />
-      <FooterProyectos v-if="ventana === '/proyectos'" />
+      <FooterProyectos v-if="ventana === '/proyectos'"  />
     </footer>
 </template>
 

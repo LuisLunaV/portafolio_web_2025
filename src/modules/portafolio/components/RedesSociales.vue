@@ -4,6 +4,7 @@
   -->
       <div v-for="(value, index) in data" :class="[nameActive===false?'redes-div-i':'redes-div-sc',{'ocultar-telefono':anchoVentana>700 && value.telefono }]" :key="index">
       <a
+      @click="value.name === 'Mensaje'? $emit('abrirModal'):null"
       :class="[
         (value.name==='Mensaje' && nameActive)
         ?'shadow-drop-center'
@@ -13,7 +14,7 @@
 
       :href="value.url"
       target="_black" >
-        <i @click="()=>sendMessage(value.name)" :class="[ value.clase,'fa-2x', 'color-gris', 'sombra-de-texto-3rem',{'sombra-marca-icon':nameActive===false}]">
+        <i :class="[ value.clase,'fa-2x', 'color-gris', 'sombra-de-texto-3rem',{'sombra-marca-icon':nameActive===false}]">
         </i>
         <p v-if="nameActive" class="px-2 sombra-de-texto-3rem">{{value.name}}</p>
       </a>
@@ -22,9 +23,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref, defineEmits } from 'vue';
 import { redes, type IRedes } from '@/json/redes';
-
 
 const data = ref<IRedes[]|null>(null);
 const anchoVentana = ref(window.innerWidth);
@@ -40,6 +40,7 @@ withDefaults( defineProps<Props>(),{
   nameActive:false
 });
 
+defineEmits(['abrirModal']);
 //Al montar
 onMounted(()=>{
   window.addEventListener('resize',()=>{
@@ -54,9 +55,9 @@ onMounted(()=>{
     });
   });
 
-const sendMessage=(message:string)=>{
-  console.log(message)
-}
+// const sendMessage=(message:string)=>{
+//   console.log(message)
+// }
 
 
 </script>

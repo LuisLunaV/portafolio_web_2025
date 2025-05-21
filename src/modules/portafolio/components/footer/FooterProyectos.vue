@@ -1,5 +1,8 @@
 <template>
-  <!-- <p>Companias</p> -->
+  <div class="div-footer-marcas">
+  <p class="text-center poppins-medium">
+    🛠️ Marcas que aplican mi trabajo en sus procesos 🛠️
+  </p>
   <div class="tag-list">
     <div class="inner">
       <div v-for="({ id, img}) in urlCompanies" :key="id" class="tag">
@@ -7,6 +10,7 @@
       </div>
     </div>
     <div class="fade"></div>
+</div>
 </div>
 </template>
 <script lang="ts" setup>
@@ -26,8 +30,11 @@ const urlImages =( data:string)=>{
 </script>
 
 <style scoped>
+.div-footer-marcas{
+  padding: 20px 0 30px 0;
+}
 .tag-list{
-  width: 60%;
+  width: auto;
   border-radius: 10px;
   background-color: rgba(255,255,255,0.8);
   padding: 15px;
@@ -41,12 +48,12 @@ const urlImages =( data:string)=>{
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  animation: loop 20s linear infinite;
+  animation: loop 15s linear infinite;
 }
 .tag{
 display:flex;
 align-items: center;
-/* gap: 0 0.2rem; */
+padding:0 10px
 }
 .tag img{
     max-height: 50px ;
@@ -59,8 +66,9 @@ align-items: center;
   opacity: 1;
   position:absolute;
   background: linear-gradient(90deg,
-  rgba(255,255,255,0.8), transparent 50%,
-  transparent 70%, rgba(255,255,255,0.8));
+  rgba(255,255,255,0.5), transparent 50%,
+  transparent 70%, rgba(255,255,255,1)
+  );
   inset:0;
   pointer-events: none;
 }

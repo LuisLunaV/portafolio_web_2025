@@ -23,13 +23,13 @@
 <script lang="ts" setup>
 import { ref, defineEmits } from 'vue'
 import { type IProyectos } from '@/json/proyectos'
-import ModalHeader from '@/modules/portafolio/components/modal/modal_proyectos/ModalHeader.vue';
+import ModalHeader from '@/modules/portafolio/components/modal/ModalHeader.vue';
 import ModalBody from '@/modules/portafolio/components/modal/modal_proyectos/ModalBody.vue';
 
 const carpeta = ref<IProyectos | null>(null);
 const imagesItems = ref<string[]>([])
 interface Props {
-  info: IProyectos[]
+  info: IProyectos[];
 }
 
 const props = defineProps<Props>()
