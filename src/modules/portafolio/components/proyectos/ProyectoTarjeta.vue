@@ -35,7 +35,9 @@
 import TituloSubtitulo from '@/modules/portafolio/components/TituloSubtitulo.vue';
 import { type IProyectos } from '@/json/proyectos';
 import { computed, ref } from 'vue';
+import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
 
+const { actionModal } = useModalStores();
 const mostrarTarjeta = ref(0);
 const titulo = ref<string>('');
 const subtitulo = ref<string>('');
@@ -55,7 +57,6 @@ const imprimirTarjetas = computed(()=>{
 // projectArray.value = props.projects;
 
 const emit = defineEmits<{
-  abrir:[text:string],
   idSeleccionado:[id:number]
 }>();
 
@@ -65,8 +66,8 @@ return url;
 }
 
 const getInfoProject=(id:number)=>{
+actionModal();
 emit('idSeleccionado', id);
-emit('abrir', 'abrir');
 }
 
 const targetInterval = setInterval(()=>{

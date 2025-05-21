@@ -15,7 +15,9 @@ import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue
 import { useFetch } from '@/modules/composables/useFetch';
 
 import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
-import { storeToRefs } from 'pinia'; // Añade esta importación
+
+import { storeToRefs } from 'pinia';
+
 const modalStore = useModalStores();
 const { isOpen } = storeToRefs(modalStore); // Usa storeToRefs aquí
 
