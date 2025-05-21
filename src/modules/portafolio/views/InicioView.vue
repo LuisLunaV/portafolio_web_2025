@@ -1,4 +1,5 @@
 <template>
+  <ModalPortafolio v-if="isVisible"  @cerrar="cerrarModal"/>
   <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
     <div class="cont-inicio ps-5 d-flex flex-column justify-content-center">
       <div class="box">
@@ -42,7 +43,7 @@
     </div>
     <div class="box d-flex flex-row mt-4">
       <!-- Redes sociales y de contacto -->
-      <RedesSociales :distancia="(ventana === '/inicio')?'60px':''" :ventana="ventana" />
+      <RedesSociales @abrirModal="mostrarModal" :distancia="(ventana === '/inicio')?'60px':''" :ventana="ventana" />
     </div>
 
     </div>
@@ -58,13 +59,17 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
+import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
+import { useMostrarModal } from '@/modules/composables/useMostrarModal';
 const estaAbierto= ref<boolean>( false );
 const ventana = ref<string>('');
+
+const { isVisible, cerrarModal, mostrarModal } = useMostrarModal();
 
 const { dispositivo, anchoVentana } = useMedia()
 anchoVentana()

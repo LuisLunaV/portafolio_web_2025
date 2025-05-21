@@ -10,7 +10,7 @@
         <textarea class="form-control" id="mensajeText" placeholder="Aqui va tu mensaje." rows="3"></textarea>
       </div>
       <div class="mb-2">
-         <button class="form-submit-btn" type="submit">Submit</button>
+         <button class="form-submit-btn" type="submit">Enviar mensaje</button>
       </div>
     </form>
   </div>
