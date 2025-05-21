@@ -15,6 +15,9 @@
     </form>
   </div>
 </template>
+<scritp lang="ts" setup>
+
+</scritp>
 <style scoped>
 label{
 color: #ffffff;

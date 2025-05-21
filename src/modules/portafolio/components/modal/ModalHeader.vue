@@ -3,7 +3,7 @@
           <h3 class="modal-title color-blanco pt-2 poppins-medium">{{ name }} <i v-if="icono" class="bi bi-cup-hot-fill px-2"></i></h3>
           <!-- Aqui va el slot -->
           <svg
-            @click="$emit('closeModal')"
+            @click="actionModal"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             class="bi bi-x-lg btn-cerrar"
@@ -18,8 +18,8 @@
         </template>
 
       <script lang="ts" setup>
+      import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
 
-      import { defineEmits } from 'vue'
 
       interface Props{
         name:string;
@@ -27,8 +27,8 @@
       }
       defineProps<Props>();
 
-      // Emitimos la orden cerrar para que ejecuten la funcion cerrarModal
-      defineEmits(['closeModal'])
+      const { actionModal } = useModalStores();
+
 
 
       </script>

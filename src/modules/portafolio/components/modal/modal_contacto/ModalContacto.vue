@@ -1,17 +1,16 @@
 <template>
   <div class="div-modal-contacto box-top">
-    <ModalHeader class="modalHeader" :name="title" :icono="true" @close-modal="$emit('cerrarModal')" />
+    <ModalHeader class="modalHeader" :name="title" :icono="true" />
     <ModalBody/>
   </div>
 </template>
 <script lang="ts" setup>
 import ModalHeader from '@/modules/portafolio/components/modal/ModalHeader.vue';
 import ModalBody from   '@/modules/portafolio/components/modal/modal_contacto/ModalBody.vue';
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 const title = ref<string>('');
 title.value = 'Yo pago el cafe';
 
-defineEmits(['cerrarModal']);
 </script>
 <style scoped>
 

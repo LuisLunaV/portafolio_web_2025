@@ -4,7 +4,7 @@
   -->
       <div v-for="(value, index) in data" :class="[nameActive===false?'redes-div-i':'redes-div-sc',{'ocultar-telefono':anchoVentana>700 && value.telefono }]" :key="index">
       <a
-      @click="value.name === 'Mensaje'? $emit('abrirModal'):null"
+      @click="value.name === 'Mensaje'? actionModal():null"
       :class="[
         (value.name==='Mensaje' && nameActive)
         ?'shadow-drop-center'
@@ -23,9 +23,9 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeUnmount, onMounted, ref, defineEmits } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { redes, type IRedes } from '@/json/redes';
-
+import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
 const data = ref<IRedes[]|null>(null);
 const anchoVentana = ref(window.innerWidth);
 data.value = redes.data;
@@ -40,7 +40,8 @@ withDefaults( defineProps<Props>(),{
   nameActive:false
 });
 
-defineEmits(['abrirModal']);
+const { actionModal } = useModalStores();
+
 //Al montar
 onMounted(()=>{
   window.addEventListener('resize',()=>{

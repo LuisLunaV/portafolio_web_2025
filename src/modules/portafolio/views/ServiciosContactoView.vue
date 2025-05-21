@@ -1,7 +1,9 @@
 <template>
-      <ModalPortafolio v-if="isVisible"  @cerrar="cerrarModal"/>
+      <ModalPortafolio v-if="isOpen"/>
+      <!-- <ModalPortafolio v-if="isVisible"  @cerrar="cerrarModal"/> -->
+
       <ServicioTarjeta :servicios="data"/>
-      <ContactoPortafolio @abrir="mostrarModal" />
+      <ContactoPortafolio />
       <FooterPortafolio/>
 </template>
 <script lang="ts" setup>
@@ -11,9 +13,12 @@ import ServicioTarjeta from '@/modules/portafolio/components/servicios/ServicioT
 
 import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import { useFetch } from '@/modules/composables/useFetch';
-import { useMostrarModal } from '@/modules/composables/useMostrarModal';
 
-const { isVisible, cerrarModal, mostrarModal } = useMostrarModal();
+import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
+import { storeToRefs } from 'pinia'; // Añade esta importación
+const modalStore = useModalStores();
+const { isOpen } = storeToRefs(modalStore); // Usa storeToRefs aquí
+
 
 const { fetchDataServices } = useFetch();
 const data = fetchDataServices();
