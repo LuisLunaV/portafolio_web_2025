@@ -26,16 +26,17 @@ const proyectos: IResponse = {
       dba: false,
       isLegacy: false,
       description: `
-       Shake Shack Order System es una aplicación web que permite a los clientes realizar pedidos de comida y bebida en un
-      restaurante Shake Shack. La aplicación utiliza una conexión socket.io para comunicarse entre el cliente y el servidor.
-      El cliente envía la información del pedido al servidor, y el servidor procesa el pedido y envía la información del pedido al
-      cliente.
+   Shake Shack Order System es una aplicación desarrollada para mejorar la experiencia del cliente en los restaurantes
+   Shake Shack al permitir que puedan seguir en tiempo real el estado de sus pedidos.
+    <br>
+      <br>
+   Este sistema permite a los empleados enviar información sobre los pedidos a una pantalla visible para los clientes,
+   donde estos pueden ver cómo va el progreso de su orden. La comunicación entre el personal y la pantalla se realiza
+   de forma inmediata, lo que ayuda a reducir confusiones, agiliza el servicio y mejora la satisfacción del cliente
       <br>
       <br>
-      El objetivo principal del proyecto fue desarrollar una solución intuitiva y eficiente que mejorara la interacción entre los clientes
-      y el sistema de pedidos, garantizando precisión y rapidez en cada transacción. El sistema incluye componentes clave
-      como una lista dinámica de pedidos, una modal de confirmación para revisión final y una modal de publicidad que aprovecha
-      espacios estratégicos para promover productos adicionales.
+   El proyecto esta enfocado en ofrecer una solución intuitiva,
+   confiable y útil tanto para el equipo del restaurante como para los clientes.
       `,
       carpeta: 'drive-thrue',
       img: [
@@ -86,15 +87,12 @@ const proyectos: IResponse = {
       <br>
       Los objetivos principales son minimizar las aglomeraciones del lugar, proporcionar tiempos de espera estimados más precisos
       y mejorar la eficiencia operativa de los restaurantes.
+       <br>
+       <br>
+       Este proyecto esta funcionando en tres aeropuertos de Mexico: Aeropuerto Internacional GDL, Aeropuerto Internacional GDL UM y Aeropuerto Internacional Tijuana.
       `,
       carpeta: 'turnos-shake',
-      img: [
-        'img-cero.jpg',
-        'img-uno.jpg',
-        'img-dos.jpg',
-        'img-tres.jpg',
-        'img-cuatro.png'
-      ],
+      img: ['img-cero.jpg', 'img-uno.jpg', 'img-dos.jpg', 'img-tres.jpg', 'img-cuatro.png'],
       technologies: [
         {
           clase: 'fa-html5',
