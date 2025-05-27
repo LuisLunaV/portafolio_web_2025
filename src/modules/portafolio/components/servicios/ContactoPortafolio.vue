@@ -13,7 +13,7 @@
         </h3>
       </div>
     <div class="div-redes-contacto mt-4">
-      <RedesSociales :name-active="true" @abrir-modal="$emit('abrir')" />
+      <RedesSociales :name-active="true" />
     </div>
 
   </div>

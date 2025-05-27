@@ -85,7 +85,6 @@ onMounted(()=>{
   const ventanaName = useVentanaStore();
   ventanaName.setNombreVentana(nombreVentana());
   ventana.value = ventanaName.nombreVentana;
-  console.log(dispositivo.value)
 });
 
 
