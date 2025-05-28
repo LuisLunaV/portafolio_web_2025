@@ -1,7 +1,9 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-export const useModalStores = defineStore('modal',()=>{
-const isOpen = ref<boolean>(false);
+
+const useModalStores = defineStore('modal',()=>{
+
+  const isOpen = ref<boolean>(false);
 function actionModal(){
    isOpen.value = !isOpen.value;
    if( isOpen.value ){
@@ -16,3 +18,22 @@ return{
   actionModal
 }
 });
+
+const useLoadingStore = defineStore('Loading',{
+state:()=>({
+  isLoading:false
+}),
+actions:{
+  activeLoader(){
+    this.isLoading = true;
+  },
+  stopLoader(){
+    this.isLoading = false
+  }
+}
+});
+
+export{
+  useModalStores,
+  useLoadingStore
+}

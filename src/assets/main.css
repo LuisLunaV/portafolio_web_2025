@@ -9,6 +9,7 @@
 @import url(./css/footers.css);
 @import url(./css/redesSociales.css);
 @import url(./css/navbars/navbaresponsive.css);
+@import url(./css//loader.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css");
 :root{
   --amarillo: #FAF3E0;

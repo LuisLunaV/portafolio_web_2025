@@ -7,8 +7,19 @@
 // export interface TopLevel {
 //   errors: Error[];
 // }
+ interface IRespMsg{
+  status: number;
+  create: string;
+  msg:    string;
+}
 
- interface IErrorMsg {
+
+
+//  interface IErrorMsg{
+//   errors: Error[];
+// }
+
+ interface IErrorMsg{
   type:     string;
   value:    string;
   msg:      string;
@@ -18,5 +29,6 @@
 
 export{
   type IMensajes,
-  type IErrorMsg
+  type IErrorMsg,
+  type IRespMsg
 }

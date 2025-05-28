@@ -11,7 +11,7 @@ const postMessages = async( payload:IMensajes )=>{
       }
     });
     if( !resp.ok ){
-      const { errors } = await resp.json();
+      const {errors} = await resp.json();
       throw errors[0];
     }
     const data = await resp.json();
