@@ -49,11 +49,16 @@
 
     </div>
     <div class="cont-img">
-      <ComputadoraPc
+      <LaptopPc
       @cerrarVentada="mostrarSobreMi"
       :dispositivo="dispositivo"
       :estaAbierto="estaAbierto"
       />
+      <!-- <ComputadoraPc
+      @cerrarVentada="mostrarSobreMi"
+      :dispositivo="dispositivo"
+      :estaAbierto="estaAbierto"
+      /> -->
     </div>
   </div>
   <!-- <div class="inicio-footer"></div> -->
@@ -63,7 +68,9 @@
 import { onMounted, ref, watchEffect } from 'vue';
 import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
-import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
+// import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
+import LaptopPc from '@/modules/portafolio/components/pc/LaptopPc.vue';
+
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
@@ -106,9 +113,7 @@ onMounted(()=>{
 </script>
 
 <style scope>
-.cont-inicio {
-  width: 60%;
-}
+
 
 .sombra-img {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));

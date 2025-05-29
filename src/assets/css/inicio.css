@@ -7,7 +7,7 @@
 }
 
 .cont-img {
-  max-width: 40%;
+  /* max-width: 40%; */
   width: 100%;
   height: auto;
   /* overflow: hidden; */
@@ -109,15 +109,33 @@ margin: 0 auto;
 }
 @media (min-width: 972px) and (max-width: 1032px) {
   /* Globales */
+  .cont-inicio {
+  width: 50%;
+}
+.cont-img {
+  max-width: 50%;
+}
 
 
 }
 /* //Resolcion para pc de escritorio: */
 @media (min-width: 1033px) and (max-width: 1375px) {
+  .cont-inicio {
+  width: 50%;
+}
+.cont-img {
+  max-width: 50%;
+}
 
 }
 
 @media (min-width: 1375px){
+  .cont-inicio {
+  width: 60%;
+}
+.cont-img {
+  max-width: 40%;
+}
 
 
 
