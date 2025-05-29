@@ -6,7 +6,7 @@
           <div class="barra">
             <div class="circulo"></div>
             <div class="circulo"></div>
-            <div class="circulo"></div>
+            <div v-on:click="(estaAbierto)?$emit('cerrarVentada'):''" :class="['circulo',{'redActive':estaAbierto}]"></div>
           </div>
 
           <div v-if="estaAbierto" class="sobre-mi-msg">
@@ -54,8 +54,14 @@ interface Props {
 }
 
 defineProps<Props>()
+defineEmits(['cerrarVentada']);
 </script>
 <style scoped>
+.redActive{
+  cursor: pointer;
+  background-color: red !important;
+}
+
 .contenedor-pc {
   width: 100%;
   height: 100%;

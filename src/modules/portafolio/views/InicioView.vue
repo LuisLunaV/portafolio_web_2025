@@ -50,6 +50,7 @@
     </div>
     <div class="cont-img">
       <ComputadoraPc
+      @cerrarVentada="mostrarSobreMi"
       :dispositivo="dispositivo"
       :estaAbierto="estaAbierto"
       />
