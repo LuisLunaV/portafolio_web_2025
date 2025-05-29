@@ -11,7 +11,7 @@
         placeholder="nombre@ejemplo.com"
         required
       />
-      <ErrorMessages v-if="errorMessage?.path === 'Msg_email'" :error="errorMessage"/>
+      <ErrorMessages v-if="errorMessage?.path === 'Msg_email'" :error="errorMessage" />
     </div>
     <div class="mb-3">
       <label for="mensajeText" class="form-label poppins-medium">Como puedo ayudarte?</label>
@@ -23,7 +23,7 @@
         rows="3"
         required
       ></textarea>
-      <ErrorMessages v-if="errorMessage?.path ==='Msg_texto'" :error="errorMessage"/>
+      <ErrorMessages v-if="errorMessage?.path === 'Msg_texto'" :error="errorMessage" />
     </div>
     <div class="mb-2">
       <button class="form-submit-btn" type="submit">Enviar mensaje</button>
@@ -32,45 +32,45 @@
 </template>
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { postMessages } from '@/modules/services/api-post';
-import { type IErrorMsg } from '@/modules/portafolio/interfaces/mensajes.interface';
+import { postMessages } from '@/modules/services/api-post'
+import { type IErrorMsg } from '@/modules/portafolio/interfaces/mensajes.interface'
 // composables
 // stores
-import { useLoadingStore } from '@/modules/portafolio/stores/modal.stores'
+import { useLoadingStore, useAlerts, useModalStores } from '@/modules/portafolio/stores/modal.stores'
 // components
-import ErrorMessages from '@/modules/portafolio/components/errors/ErrorMessages.vue';
+import ErrorMessages from '@/modules/portafolio/components/errors/ErrorMessages.vue'
 
 const formMessage = reactive({
   Msg_email: '',
   Msg_texto: '',
 })
 
-const loader = useLoadingStore()
-const errorMessage = ref< IErrorMsg| null >(null);
+const loader = useLoadingStore();
+const alertSucces = useAlerts();
+const { actionModal } = useModalStores();
+const errorMessage = ref<IErrorMsg | null>(null)
 
 const sendMessage = async (): Promise<void> => {
-
-
   await postMessages(formMessage)
-    .then(()=>{
-  loader.activeLoader()
-    })
-    .catch((err) => {
-      errorMessage.value = err;
-      setTimeout(()=>{
-      errorMessage.value = null;
-      },4000)
-      })
-    .finally(() => {
-      setTimeout(()=>{
+    .then(() => {
+      loader.activeLoader()
+       setTimeout(() => {
         loader.stopLoader()
         formMessage.Msg_email = ''
         formMessage.Msg_texto = ''
-      }, 3000);
-    });
+        actionModal();
+        alertSucces.showAlert();
+      }, 3000)
+    })
+    .catch((err) => {
+      errorMessage.value = err
+      setTimeout(() => {
+        errorMessage.value = null
+      }, 4000)
+    })
+    .finally(() => {
 
-
-
+    })
 }
 </script>
 

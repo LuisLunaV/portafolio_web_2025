@@ -29,8 +29,9 @@ import { useLoadingStore } from '@/modules/portafolio/stores/modal.stores';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 
 const ventana = ref<string>('');
+
 const { isLoading } = storeToRefs(useLoadingStore());
-console.log(isLoading.value)
+
 interface Props {
   info?: IProyectos[];
 }

@@ -1,4 +1,5 @@
 <template>
+      <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
   <ModalPortafolio v-if="isOpen"/>
   <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
     <div class="cont-inicio ps-5 d-flex flex-column justify-content-center">
@@ -58,15 +59,18 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
-import { storeToRefs } from 'pinia';
+import { onMounted, ref, watchEffect } from 'vue';
 import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
-import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
+import { useModalStores, useAlerts} from '@/modules/portafolio/stores/modal.stores';
+
+import AlertSucces from '@/modules/portafolio/components/alerts/AlertSucces.vue';
+import { storeToRefs } from 'pinia';
+
 const estaAbierto= ref<boolean>( false );
 const ventana = ref<string>('');
 
@@ -80,6 +84,16 @@ const mostrarSobreMi = () => {
 
 const { isOpen } = storeToRefs( useModalStores() );
 
+const alertSucces = useAlerts();
+const { isAlertSuccess } = storeToRefs(alertSucces);
+watchEffect(()=>{
+  if(isAlertSuccess.value){
+    setTimeout(()=>{
+      alertSucces.hiddenAlert();
+    },3000);
+
+  }
+});
 onMounted(()=>{
   const { nombreVentana } = useWindowSize();
   const ventanaName = useVentanaStore();

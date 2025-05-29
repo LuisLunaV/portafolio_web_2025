@@ -33,7 +33,23 @@ actions:{
 }
 });
 
+const useAlerts = defineStore('alerts',{
+  state:()=>({
+    isAlertSuccess: false
+  }),
+
+  actions:{
+    showAlert(){
+      this.isAlertSuccess = true;
+    },
+    hiddenAlert(){
+      this.isAlertSuccess = false;
+    }
+  }
+});
+
 export{
   useModalStores,
-  useLoadingStore
+  useLoadingStore,
+  useAlerts
 }
