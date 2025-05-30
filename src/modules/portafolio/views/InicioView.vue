@@ -1,7 +1,12 @@
 <template>
   <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
   <ModalPortafolio v-if="isOpen"/>
-  <CelularPc v-if="dispositivo == 'pequeno' || dispositivo == 'expequeno'"/>
+  <CelularPc
+  v-if="dispositivo == 'pequeno' && estaAbierto
+  || dispositivo == 'expequeno'&& estaAbierto"
+  :estaAbierto="estaAbierto"
+  @cerrarVentada="mostrarSobreMi"
+    />
   <div class="div-inicio d-flex flex-row vh-100 px-3">
     <div class="cont-inicio d-flex flex-column justify-content-center">
       <div class="box div-inicio-nombre">
