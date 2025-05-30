@@ -1,32 +1,34 @@
 <template>
-      <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
+  <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
   <ModalPortafolio v-if="isOpen"/>
-  <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
+  <CelularPc v-if="dispositivo == 'pequeno' || dispositivo == 'expequeno'"/>
+  <div class="div-inicio d-flex flex-row vh-100 px-3">
     <div class="cont-inicio d-flex flex-column justify-content-center">
-      <div class="box">
+      <div class="box div-inicio-nombre">
         <span
           :class="[
-            'div-inicio-nombre poppins-extrabold px-1',
+            'poppins-extrabold px-1',
             {
               'tamano-principal': dispositivo == 'grande',
-              'fs-1': dispositivo == 'mediano'||'expequeno',
+              'fs-1': dispositivo == 'mediano',
               'fs-2': dispositivo == 'pequeno',
+              'tamano-movil':dispositivo == 'expequeno'
             }
           ]"
         >
           Hola, Soy Luis Luna Villa
         </span>
       </div>
-      <div class="box">
-        <span :class="['poppins-semibold color-negro',{
+      <div class="box div-inicio-subtitulo">
+        <span :class="['poppins-semibold',{
               'fs-1': dispositivo == 'grande',
               'fs-2': dispositivo == 'mediano',
               'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]"> Desarrollo Web </span>
       </div>
-      <div class="box">
-        <span :class="['poppins-semibold color-negro',{
+      <div class="box div-inicio-subtitulo">
+        <span :class="['poppins-semibold',{
               'fs-1': dispositivo == 'grande',
               'fs-2': dispositivo == 'mediano',
               'fs-3': dispositivo == 'pequeno',
@@ -36,7 +38,7 @@
       <div class="box">
         <button
         @click="mostrarSobreMi"
-        class="fs-5 button-contact color-blanco fondo-negro-suave rounded-3 poppins-bold mt-4 py-2"
+        class="fs-5 button-contact rounded-3 poppins-bold mt-4 py-2"
         >
         Sobre mi
       </button>
@@ -72,6 +74,7 @@ import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
 import LaptopPc from '@/modules/portafolio/components/pc/LaptopPc.vue';
+import CelularPc from '@/modules/portafolio/components/pc/CelularPc.vue';
 
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';

@@ -1,3 +1,6 @@
+.div-inicio {
+  background-color: var(--negro-suave);
+}
 .nombre-logo {
   color: #ff4b5c;
   /* font-size: 4rem; */
@@ -54,14 +57,11 @@
   width: 100%;
   text-decoration: none;
   text-align: center;
+  background-color: var(--naranja);
+  color: #f1f1f1;
   border: solid var(--negro-suave) 3px;
 }
 
-.button-contact:hover {
-  background-color: #f1f1f1;
-  color: var(--negro-suave) !important;
-  animation: none;
-}
 
 .div-btn-cv {
   max-width: 45%;
@@ -89,13 +89,31 @@
   .cont-inicio {
     width: 100%;
   }
+  .div-inicio-nombre {
+    color: var(--naranja);
+    text-shadow:
+    /* -3px 2px 0 white, */ -3px 2px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  .div-inicio-subtitulo {
+    color: #f1f1f1;
+    text-align: center;
+  }
+
+  .tamano-movil {
+    font-size: 55px;
+  }
   .cont-img {
     display: none !important;
   }
   .div-redes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+   .button-contact:active {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+}
 }
 
 /* //Resolcion para dispositivos moviles pequeños: */
@@ -103,14 +121,33 @@
   /* Globales */
   .cont-inicio {
     width: 100%;
+    background-color: var(--negro-suave);
+  }
+  .div-inicio-nombre {
+    text-align: center;
+    color: var(--naranja);
+    text-shadow:
+    /* -3px 2px 0 white, */ -3px 2px 0 rgba(0, 0, 0, 0.9);
+  }
+  .div-inicio-subtitulo {
+    color: #f1f1f1;
+    text-align: center;
+  }
+
+  .tamano-movil {
+    font-size: 65px;
   }
   .cont-img {
     display: none !important;
   }
   .div-redes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+   .button-contact:active {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+}
 }
 
 /* //Resolcion para dispositivos moviles medianos: */
@@ -118,9 +155,25 @@
   .cont-inicio {
     width: 100%;
   }
+  .div-inicio-nombre {
+    text-align: center;
+    color: var(--naranja);
+    text-shadow:
+    /* -3px 2px 0 white, */ -3px 2px 0 rgba(0, 0, 0, 0.9);
+  }
+  .div-inicio-subtitulo {
+    color: #f1f1f1;
+    text-align: center;
+  }
+
   .cont-img {
     display: none !important;
   }
+
+  .button-contact:active {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+}
 }
 
 /* //Resolcion para tablets: */
@@ -130,6 +183,9 @@
 /* Resolcion para pc de Laptops: */
 
 @media (min-width: 972px) and (max-width: 1032px) {
+  .div-inicio {
+    background-color: var(--amarillo);
+  }
   /* Globales */
   .cont-inicio {
     width: 50%;
@@ -138,6 +194,9 @@
   .div-inicio-nombre {
     background-color: var(--negro-suave);
     color: #ffffff;
+  }
+  .div-inicio-subtitulo {
+    color: var(--negro);
   }
   .cont-img {
     max-width: 50%;
@@ -149,13 +208,24 @@
   }
   .button-contact {
     width: 30%;
+    background-color: var(--negro-suave);
+    color: #f1f1f1;
     transition: all 400ms ease;
     animation: subir-bajar 1s infinite;
   }
+
+  .button-contact:hover {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+  animation: none;
+}
 }
 
 /* Resolcion para pc de escritorio: */
 @media (min-width: 1033px) and (max-width: 1375px) {
+  .div-inicio {
+    background-color: var(--amarillo);
+  }
   .cont-inicio {
     width: 50%;
     padding-left: 3rem;
@@ -164,6 +234,9 @@
     background-color: var(--negro-suave);
     color: #ffffff;
   }
+  .div-inicio-subtitulo {
+    color: var(--negro);
+  }
   .cont-img {
     max-width: 40%;
     width: 100%;
@@ -175,12 +248,23 @@
   }
   .button-contact {
     width: 30%;
+    background-color: var(--negro-suave);
+    color: #f1f1f1;
     transition: all 400ms ease;
     animation: subir-bajar 1s infinite;
   }
+
+  .button-contact:hover {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+  animation: none;
+}
 }
 
 @media (min-width: 1375px) {
+  .div-inicio {
+    background-color: var(--amarillo);
+  }
   .cont-inicio {
     width: 60%;
     padding-left: 3rem;
@@ -189,6 +273,9 @@
     background-color: var(--negro-suave);
     color: #ffffff;
   }
+  .div-inicio-subtitulo {
+    color: var(--negro);
+  }
   .cont-img {
     max-width: 40%;
     width: 100%;
@@ -201,7 +288,15 @@
 
   .button-contact {
     width: 30%;
+    background-color: var(--negro-suave);
+    color: #f1f1f1;
     transition: all 400ms ease;
     animation: subir-bajar 1s infinite;
   }
+
+  .button-contact:hover {
+  background-color: #f1f1f1;
+  color: var(--negro-suave) !important;
+  animation: none;
+}
 }

@@ -10,7 +10,9 @@
 	transform:translate3d(0, 0, 0);
 	-webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 	transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	z-index:1002;
+	/* z-index:1002; */
+	z-index:3;
+
 	cursor:pointer;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -21,7 +23,7 @@
   background-color:none;
 }
 ._layer{
-	background:var(--negro-suave);
+	background:#f1f1f1;
 	margin-bottom:4px;
 	border-radius:2px;
 	width:28px;

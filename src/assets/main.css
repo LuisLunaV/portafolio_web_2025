@@ -142,3 +142,75 @@ align-items: center;
   font-style: normal;
 }
 
+@media (min-width: 100px) and (max-width: 375px) {
+  main {
+    background-color: var(--negro-suave);
+  }
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+  /* Globales */
+  main {
+    background-color: var(--negro-suave);
+  }
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+  main {
+    background-color: var(--negro-suave);
+  }
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+  /* Globales */
+}
+/* Resolcion para pc de Laptops: */
+
+@media (min-width: 972px) and (max-width: 1032px) {
+  .div-inicio {
+    background-color: var(--amarillo);
+  }
+  /* Globales */
+  .cont-inicio {
+    width: 50%;
+    padding-left: 3rem;
+  }
+  .div-inicio-nombre {
+    background-color: var(--negro-suave);
+    color: #ffffff;
+  }
+  .div-inicio-subtitulo {
+    color: var(--negro);
+  }
+  .cont-img {
+    max-width: 50%;
+    width: 100%;
+  }
+  .div-redes {
+    display: flex;
+    flex-direction: row;
+  }
+  .button-contact {
+    width: 30%;
+    background-color: var(--negro-suave);
+    color: #f1f1f1;
+    transition: all 400ms ease;
+    animation: subir-bajar 1s infinite;
+  }
+}
+
+/* Resolcion para pc de escritorio: */
+@media (min-width: 1033px) and (max-width: 1375px) {
+  main {
+    background-color: var(--amarillo);
+  }
+}
+
+@media (min-width: 1375px) {
+  main {
+    background-color: var(--amarillo);
+  }
+}
