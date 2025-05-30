@@ -1,11 +1,11 @@
 <template>
   <div class="menu-responsive">
-    <div @click="toggleMenu" class="hamburger" :class="{ 'is-active': isMenuActive }">
-      <div class="_layer -top"></div>
-      <div class="_layer -mid"></div>
-      <div class="_layer -bottom"></div>
+    <div @click="toggleMenu" class="hamburger" :class="{ 'is-active': isMenuActive }" >
+      <div :class="['_layer -top',{'button-active':isMenuActive}]"></div>
+      <div :class="['_layer -mid',{'button-active':isMenuActive}]"></div>
+      <div :class="['_layer -bottom',{'button-active':isMenuActive}]"></div>
     </div>
-    <nav class="menuppal">
+    <nav :class="['menuppal', (isMenuActive )?'mostrar-menu':'ocultar-menu']">
       <ul>
         <li class="nav-item">
           <RouterLink
@@ -55,15 +55,37 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
+import { useScroll } from '@/modules/portafolio/stores/modal.stores';
+const scrollActive = useScroll();
 const isMenuActive = ref<boolean>(false)
 const toggleMenu = () => {
-  return (isMenuActive.value = !isMenuActive.value)
+  isMenuActive.value = !isMenuActive.value
+  if(isMenuActive.value){
+    scrollActive.activarScroll();
+  }else{
+    scrollActive.desactivarScroll();
+  }
 }
+
 </script>
 <style scoped>
 .nav-item i {
   font-size: 20px;
   margin-right: 20px;
   /* font-weight: 800; */
+}
+.button-active{
+  background:#fff !important;
+}
+.mostrar-menu{
+
+  opacity: 1;
+  transform: translateX(0%);
+
+}
+.ocultar-menu{
+  opacity: 0;
+  transform: translateX(-110%);
+
 }
 </style>

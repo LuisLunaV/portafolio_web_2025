@@ -21,7 +21,7 @@
   background-color:none;
 }
 ._layer{
-	background:#fff;
+	background:var(--negro-suave);
 	margin-bottom:4px;
 	border-radius:2px;
 	width:28px;
@@ -58,14 +58,14 @@
 }
 
 .menuppal{
+    z-index: 3;
+  position:fixed;
   background-color: rgba(0, 0, 0, .95) !important;
   height: 100%;
   width: 90%;
   padding-top: 15%;
   padding-right: 20px;
-  position:absolute;
-  z-index: 3;
-
+  transition: 1s;
   /* justify-content: space-around; */
 }
 

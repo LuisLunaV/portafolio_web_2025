@@ -2,7 +2,12 @@
   <!-- Nota: Los dos !! se usan para convertir un valor cualquiera en su equivalente booleano (true/false).
   Es una forma rapida y comun de asegurar que un valor sea tratado como boolean.
   -->
-      <div v-for="(value, index) in data" :class="[nameActive===false?'redes-div-i':'redes-div-sc',{'ocultar-telefono':anchoVentana>700 && value.telefono }]" :key="index">
+      <div
+      v-for="(value, index) in data"
+      :class="[nameActive===false?'redes-div-i':'redes-div-sc',
+      {'ocultar-telefono':anchoVentana>700 && value.telefono }]"
+      :key="index"
+      >
       <a
       @click="value.name === 'Mensaje'? actionModal():null"
       :class="[

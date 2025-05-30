@@ -74,11 +74,14 @@ defineEmits(['cerrarVentada']);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
   overflow: hidden;
   background-color: #ccd4e1;
-  width: 500px;
-  height: 360px;
+  max-width: 500px;
+  max-height: 360px;
+  width: 100%;
+  height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 .marco {
   background-color: #435d76;
   height: 93%;

@@ -80,6 +80,7 @@ defineEmits(['cerrarVentada']);
   height: 100%;
   border-radius: 20px;
 }
+
 .marco {
   background-color: #435d76;
   height: 82%;

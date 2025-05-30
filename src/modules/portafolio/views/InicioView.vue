@@ -2,16 +2,15 @@
       <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
   <ModalPortafolio v-if="isOpen"/>
   <div class="div-inicio amarillo-mate d-flex flex-row vh-100 px-3">
-    <div class="cont-inicio ps-5 d-flex flex-column justify-content-center">
+    <div class="cont-inicio d-flex flex-column justify-content-center">
       <div class="box">
         <span
           :class="[
-            'poppins-extrabold fondo-negro-suave color-blanco px-1',
+            'div-inicio-nombre poppins-extrabold px-1',
             {
               'tamano-principal': dispositivo == 'grande',
-              'fs-1': dispositivo == 'mediano',
+              'fs-1': dispositivo == 'mediano'||'expequeno',
               'fs-2': dispositivo == 'pequeno',
-              'fs-3': dispositivo == 'expequeno',
             }
           ]"
         >
@@ -42,23 +41,26 @@
         Sobre mi
       </button>
     </div>
-    <div class="box d-flex flex-row mt-4">
+    <div class="box div-redes mt-4">
       <!-- Redes sociales y de contacto -->
       <RedesSociales :distancia="(ventana === '/inicio')?'60px':''" :ventana="ventana" />
     </div>
 
     </div>
     <div class="cont-img">
-      <LaptopPc
+       <ComputadoraPc
+       v-if="dispositivo == 'grande'"
       @cerrarVentada="mostrarSobreMi"
       :dispositivo="dispositivo"
       :estaAbierto="estaAbierto"
       />
-      <!-- <ComputadoraPc
+      <LaptopPc
+      v-if="dispositivo == 'mediano'"
       @cerrarVentada="mostrarSobreMi"
       :dispositivo="dispositivo"
       :estaAbierto="estaAbierto"
-      /> -->
+      />
+
     </div>
   </div>
   <!-- <div class="inicio-footer"></div> -->
@@ -68,7 +70,7 @@
 import { onMounted, ref, watchEffect } from 'vue';
 import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
-// import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
+import ComputadoraPc from '@/modules/portafolio/components/pc/ComputadoraPc.vue';
 import LaptopPc from '@/modules/portafolio/components/pc/LaptopPc.vue';
 
 import { useMedia } from '@/modules/composables/useMedia';
