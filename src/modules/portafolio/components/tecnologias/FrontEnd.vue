@@ -13,7 +13,10 @@
               'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]">
-  Desarrollo FrontEnd (lado del cliente)
+  Desarrollo FrontEnd
+    <span v-if="dispositivo === 'grande' || dispositivo === 'mediano'">
+          (lado del cliente)
+        </span>
   </p>
 </div>
 <TecnologiaInfo :skills="data" />

@@ -2,15 +2,15 @@
   height: auto;
   padding: 12% 0% 2% 0;
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
-.div-tech-logo-info{
+.div-tech-logo-info {
   min-height: 450px;
 }
 .contenedor-de-tecnologias {
@@ -18,22 +18,23 @@
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-.tech-logo-info{
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-margin: 20px 0;
+.tech-logo-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
 }
-.tech-logo-info p{
+.tech-logo-info p {
   padding-left: 10px;
   margin: 0;
+  color: var(--negro-suave);
 }
-.card-skills{
+.card-skills {
   overflow: hidden;
   border: 3px solid var(--negro) !important;
   border-radius: 10px !important;
-  box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
+  box-shadow: 1px 1px 6px 5px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
 }
@@ -54,7 +55,7 @@ margin: 20px 0;
   transition: all 1s ease-out;
 }
 
-.card-skills:hover > .card-skills-bootom{
+.card-skills:hover > .card-skills-bootom {
   opacity: 1;
   visibility: visible;
 }
@@ -90,29 +91,85 @@ margin: 20px 0;
   color:#ffffff !important;
 } */
 
-@media (min-width: 972px) and (max-width: 1032px) {
-  .contenedor-de-tecnologias {
-    grid-template-columns: repeat(2, 1fr);
-}
-.mis-tecnologias {
-  padding: 9% 7% 2% 7%;
+@media (min-width: 100px) and (max-width: 375px) {
+  .mis-tecnologias {
+    background-color: var(--negro-suave) !important;
   }
-}
-@media (min-width: 1033px) and (max-width: 1375px) {
-  .contenedor-de-tecnologias {
-    grid-template-columns: repeat(3, 1fr);
-}
-.mis-tecnologias {
-  padding: 7% 0% 2% 0;
+  .div-tech-logo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech-logo-info p,i{
+      color: #f1f1f1;
   }
 }
 
-@media (min-width: 1375px){
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+  .mis-tecnologias {
+    background-color: var(--negro-suave) !important;
+  }
+  .div-tech-logo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   .tech-logo-info p,i{
+      color: #f1f1f1;
+  }
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+  .mis-tecnologias {
+    background-color: var(--negro-suave) !important;
+  }
+  .div-tech-logo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .tech-logo-info p, i{
+      color: #f1f1f1;
+  }
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+  /* Globales */
+}
+/* Resolcion para pc de Laptops: */
+
+@media (min-width: 972px) and (max-width: 1032px) {
   .contenedor-de-tecnologias {
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mis-tecnologias {
+    padding: 9% 7% 2% 7%;
+  }
+}
+
+/* Resolcion para pc de escritorio: */
+@media (min-width: 1033px) and (max-width: 1375px) {
+  .contenedor-de-tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mis-tecnologias {
+    padding: 7% 0% 2% 0;
+  }
+}
+
+@media (min-width: 1375px) {
+  .contenedor-de-tecnologias {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .mis-tecnologias {
     padding: 7% 0% 2% 0;
-    }
- }
+  }
+}
