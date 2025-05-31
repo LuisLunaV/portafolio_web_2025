@@ -4,7 +4,7 @@
      :title="titulo"
      :subtitle="subtitulo"
      />
-  <div class="contenedor-de-tarjetas amarillo-mate">
+  <div class="contenedor-de-tarjetas">
     <div v-for="project in imprimirTarjetas" :key="project.id" class="tarjeta box-top">
       <div class="contenedor-tarjeta centrar-column-flex">
         <div class="imagen-proyecto">

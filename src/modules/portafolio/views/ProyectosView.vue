@@ -34,10 +34,4 @@ onMounted(() => {
   ventanaStore.setNombreVentana(nombreVentana())
 })
 </script>
-<style scoped>
-.div-project-footer{
-  display:flex;
-  flex-direction: column;
 
-}
-</style>

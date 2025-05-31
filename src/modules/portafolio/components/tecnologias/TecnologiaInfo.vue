@@ -3,7 +3,7 @@
   <div v-for="({ information, name, img }, index) in filtrarSkill"
   :key="index"
   class="card card-skills box-bottom"
-  style="width: 20rem;"
+  style="width: 20rem; height: 20rem;"
   >
   <div class="card-skills-img">
     <img :src="getImages(img)" :alt="name"  class="card-img-top" />
