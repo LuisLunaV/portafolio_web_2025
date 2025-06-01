@@ -1,5 +1,11 @@
 <template>
-  <div v-for="{ id, name, dba, isLegacy ,description, technologies } in info" :key="id" :class="['contenedor-modal rounded-3 box-top', {'w-50':isLegacy}]">
+  <div v-for="{ id, name, dba, isLegacy ,description, technologies } in info"
+  :key="id"
+  :class="['contenedor-modal rounded-3 box-top',
+  (dispositivos.includes(dispositivo) && id===1)?'padding-top-550'
+  :(dispositivos.includes(dispositivo))&& id!=1 && !isLegacy?'padding-top-200':null,
+  (dispositivos.includes(dispositivo))&&isLegacy?'w-100'
+  :isLegacy?'w-50':null]">
 
         <!-- modal-header -->
          <ModalHeader :name="name" @close-modal="$emit('cerrarModal')" />
@@ -8,12 +14,14 @@
         <!-- modal-body -->
          <ModalBody
          :id="id"
+         :name="name"
          :description="description"
          :technologies="technologies"
          :images-items="imagesItems"
          :get-images="getImages"
          :dba="dba"
          :isLegacy="isLegacy"
+         :dispositivo="dispositivo"
          />
         <!-- -------- -->
 
@@ -25,9 +33,14 @@ import { ref, defineEmits } from 'vue'
 import { type IProyectos } from '@/json/proyectos'
 import ModalHeader from '@/modules/portafolio/components/modal/ModalHeader.vue';
 import ModalBody from '@/modules/portafolio/components/modal/modal_proyectos/ModalBody.vue';
+import { useMedia } from '@/modules/composables/useMedia';
+const { dispositivo, anchoVentana } = useMedia()
+anchoVentana();
 
 const carpeta = ref<IProyectos | null>(null);
-const imagesItems = ref<string[]>([])
+const imagesItems = ref<string[]>([]);
+const dispositivos:string[] = ['pequeno','expequeno'];
+
 interface Props {
   info: IProyectos[];
 }

@@ -47,7 +47,6 @@ const urlImages =( data:string)=>{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
   animation: loop 15s linear infinite;
 }
 .tag{
@@ -80,5 +79,54 @@ padding:0 10px
     transform: translateX(-100%);
   }
 
+}
+
+/* Celular */
+
+
+@media (min-width: 100px) and (max-width: 375px) {
+.div-footer-marcas p{
+  font-size: 12px;
+}
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+.div-footer-marcas p{
+  font-size: 12px;
+}
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+.div-footer-marcas p{
+  font-size: 12px;
+}
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+  /* Globales */
+
+}
+/* Resolcion para pc de Laptops: */
+
+@media (min-width: 972px) and (max-width: 1032px) {
+.inner{
+  flex-wrap: wrap;
+}
+}
+
+/* Resolcion para pc de escritorio: */
+@media (min-width: 1033px) and (max-width: 1375px) {
+.inner{
+  flex-wrap: wrap;
+}
+}
+
+@media (min-width: 1375px) {
+.inner{
+  flex-wrap: wrap;
+}
 }
 </style>

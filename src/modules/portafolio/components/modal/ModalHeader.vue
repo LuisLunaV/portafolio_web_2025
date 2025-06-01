@@ -1,6 +1,7 @@
 <template>
   <div class="modal-header px-3 py-2">
-          <h3 class="modal-title color-blanco pt-2 poppins-medium">{{ name }} <i v-if="icono" class="bi bi-cup-hot-fill px-2"></i></h3>
+          <h3 class="modal-title color-blanco pt-2 poppins-medium">{{ name }}
+             <i v-if="icono" class="bi bi-cup-hot-fill px-2"></i></h3>
           <!-- Aqui va el slot -->
           <svg
             @click="actionModal"
@@ -26,6 +27,7 @@
         icono?:boolean;
       }
       defineProps<Props>();
+
 
       const { actionModal } = useModalStores();
 

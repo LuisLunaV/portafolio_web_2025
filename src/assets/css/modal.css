@@ -83,6 +83,7 @@ justify-content: space-between;
   display: flex;
   justify-content: space-evenly;
 }
+
 /* Este bloque controla el desplazamiento y tamano de las imagenes del carrusel */
 .modal-body-images img{
   width: 100%;
@@ -131,5 +132,81 @@ justify-content: space-between;
   }
 }
 
+.padding-top-550{
+  padding-top: 550px;
+}
+
+.padding-top-200{
+  padding-top: 350px;
+}
+
+@media (min-width: 100px) and (max-width: 375px) {
+  .dialog-modal{
+    overflow: scroll;
+  }
+.modal-body{
+flex-direction: column-reverse;
+}
+.modal-body-technology{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+.dialog-modal{
+    overflow: scroll;
+  }
+  .modal-body{
+flex-direction: column-reverse;
+}
+.modal-body-technology{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+.dialog-modal{
+    overflow: scroll;
+  }
+  .modal-body{
+flex-direction: column-reverse;
+}
+.modal-body-technology{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+
+}
+/* Resolcion para pc de Laptops: */
+
+@media (min-width: 972px) and (max-width: 1032px) {
+
+}
+
+/* Resolcion para pc de escritorio: */
+@media (min-width: 1033px) and (max-width: 1375px) {
+
+}
+
+@media (min-width: 1375px) {
+
+}
 
 

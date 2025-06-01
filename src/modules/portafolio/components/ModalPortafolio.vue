@@ -24,9 +24,9 @@ import ModalContacto from    '@/modules/portafolio/components/modal/modal_contac
 import LoaderPortafolio from '@/modules/portafolio/components/loader/LoaderPortafolio.vue';
 import { type IProyectos } from '@/json/proyectos'
 import { useWindowSize } from '@/modules/composables/useWindowSize';
+import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 
 import { useLoadingStore } from '@/modules/portafolio/stores/modal.stores';
-import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 
 const ventana = ref<string>('');
 

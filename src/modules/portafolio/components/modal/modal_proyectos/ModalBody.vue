@@ -1,7 +1,10 @@
 <template>
-  <div class="modal-body">
+  <div class="modal-body" :id="idProyecto">
 
-          <div :class="['modal-body-information p-4', id === 3 ? 'w-50' : 'w-50', {'w-100': isLegacy}]">
+          <div :class="['modal-body-information p-4',
+          (dispositivos.includes(dispositivo))?'w-50':'w-100',
+          {'w-100': isLegacy}]"
+          >
 
             <div :class="{'modal-body-information-p': id === 3 || id === 4}">
               <p class="poppins-regular" style="text-align: justify; color: #fff" v-html="description"></p>
@@ -17,7 +20,7 @@
             </div>
           </div>
 
-          <div v-if="!isLegacy" :class="['modal-body-images', id === 3 ? 'w-50' : 'w-50']">
+          <div v-if="!isLegacy" :class="['modal-body-images',  (dispositivos.includes(dispositivo))?'w-50':'w-100']">
             <div id="carouselExampleFade" class="carousel slide carousel-scale">
               <div class="carousel-inner py-3">
                 <div
@@ -33,7 +36,7 @@
                       'altura-turnos': id === 2,
                       'altura-nips':   id === 3
                     }]"
-                    alt="{{name}}"
+                    :alt="name"
                   />
                 </div>
               </div>
@@ -65,17 +68,23 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
 import { type Icons } from '@/json/proyectos';
+
+
 interface Props{
   id:number;
+  name:string;
   dba:boolean;
   isLegacy:boolean;
   description:string;
   technologies:Icons[];
   imagesItems:string[];
+  dispositivo:string;
   getImages: (img:string)=>string;
 }
+const props = defineProps<Props>();
 
-defineProps<Props>();
+const dispositivos:string[] = ['grande','mediano'];
+const idProyecto:string = JSON.stringify(props.id);
 
 
 </script>
