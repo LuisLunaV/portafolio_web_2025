@@ -2,8 +2,8 @@
   <div v-for="{ id, name, dba, isLegacy ,description, technologies } in info"
   :key="id"
   :class="['contenedor-modal rounded-3 box-top',
-  (dispositivos.includes(dispositivo) && id===1)?'padding-top-550'
-  :(dispositivos.includes(dispositivo))&& id!=1 && !isLegacy?'padding-top-200':null,
+  (dispositivos.includes(dispositivo) && ids550.includes(id))?'padding-top-550'
+  :(dispositivos.includes(dispositivo))&& !ids550.includes(id) && !isLegacy?'padding-top-200':null,
   (dispositivos.includes(dispositivo))&&isLegacy?'w-100'
   :isLegacy?'w-50':null]">
 
@@ -46,7 +46,7 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-
+const ids550:number[] = [1];
 carpeta.value = props.info[0];
 // imagesItems.value = props.info[0];
 imagesItems.value = props.info[0].img.filter((value, index) => index != 0);

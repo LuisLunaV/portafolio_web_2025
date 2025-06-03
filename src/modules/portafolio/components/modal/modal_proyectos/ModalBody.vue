@@ -6,7 +6,7 @@
           {'w-100': isLegacy}]"
           >
 
-            <div :class="{'modal-body-information-p': id === 3 || id === 4}">
+            <div :class="[{'modal-body-information-p': id === 3 || id === 4},{'modal-body-information-p':!dispositivos.includes(dispositivo)}]">
               <p class="poppins-regular" style="text-align: justify; color: #fff" v-html="description"></p>
             </div>
 

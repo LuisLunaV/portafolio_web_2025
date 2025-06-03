@@ -35,7 +35,6 @@ const urlImages =( data:string)=>{
 }
 .tag-list{
   width: auto;
-  border-radius: 10px;
   background-color: rgba(255,255,255,0.8);
   padding: 15px;
   position:relative;
@@ -115,6 +114,9 @@ padding:0 10px
 .inner{
   flex-wrap: wrap;
 }
+.tag-list{
+  border-radius: 10px;
+}
 }
 
 /* Resolcion para pc de escritorio: */
@@ -122,11 +124,17 @@ padding:0 10px
 .inner{
   flex-wrap: wrap;
 }
+.tag-list{
+  border-radius: 10px;
+}
 }
 
 @media (min-width: 1375px) {
 .inner{
   flex-wrap: wrap;
+}
+.tag-list{
+  border-radius: 10px;
 }
 }
 </style>

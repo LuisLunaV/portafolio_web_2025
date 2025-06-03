@@ -133,11 +133,11 @@ justify-content: space-between;
 }
 
 .padding-top-550{
-  padding-top: 550px;
+  padding-top: 450px;
 }
 
 .padding-top-200{
-  padding-top: 350px;
+  padding-top: 360px;
 }
 
 @media (min-width: 100px) and (max-width: 375px) {
