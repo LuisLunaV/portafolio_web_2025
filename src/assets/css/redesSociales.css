@@ -41,8 +41,7 @@ font-size: 28px;
 .redes-div-sc{
 cursor:pointer;
 display: flex;
-justify-content: center;
-align-items: center;
+
 /* background-color: #ffe53b; */
 }
 
@@ -100,3 +99,27 @@ animation: none;
   display: block;
 }
 }
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+
+}
+@media (min-width: 972px) and (max-width: 1032px) {
+.redes-div-sc{
+  justify-content: center;
+align-items: center;
+}
+}
+@media (min-width: 1033px) and (max-width: 1375px) {
+.redes-div-sc{
+  justify-content: center;
+align-items: center;
+}
+}
+
+@media (min-width: 1375px){
+.redes-div-sc{
+  justify-content: center;
+align-items: center;
+}
+ }

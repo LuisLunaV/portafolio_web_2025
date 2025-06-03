@@ -61,6 +61,52 @@
 .titulo-mis-servicios {
   padding-top: 100px;
 }
+ @media (min-width: 100px) and (max-width: 375px) {
+.mis-servicios{
+   height:auto;
+}
+.contenedor-mis-servicios {
+  height: auto;
+  padding:20px 0;
+}
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+.mis-servicios{
+   height:auto;
+}
+.contenedor-mis-servicios {
+  height: auto;
+  padding:20px 0;
+
+}
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+.mis-servicios{
+   height:auto;
+}
+.contenedor-mis-servicios {
+  height: auto;
+  padding:20px 0;
+
+}
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+.mis-servicios{
+   height:auto;
+}
+.contenedor-mis-servicios {
+  height: auto;
+  padding:20px 0;
+}
+}
+
+
 
 @media (min-width: 972px) and (max-width: 1032px) {
   .contenedor-mis-servicios {
@@ -80,3 +126,4 @@
 
   }
  }
+
