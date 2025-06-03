@@ -43,4 +43,30 @@ onMounted(()=>{
   width: 100% !important;
 }
 
+ @media (min-width: 100px) and (max-width: 375px) {
+.div-modal-contacto{
+  max-width: 95%;
+}
+}
+
+/* //Resolcion para dispositivos moviles pequeños: */
+@media (min-width: 376px) and (max-width: 602px) {
+.div-modal-contacto{
+  max-width: 95%;
+}
+}
+
+/* //Resolcion para dispositivos moviles medianos: */
+@media (min-width: 603px) and (max-width: 859px) {
+.div-modal-contacto{
+  max-width: 95%;
+}
+}
+
+/* //Resolcion para tablets: */
+@media (min-width: 860px) and (max-width: 972px) {
+.div-modal-contacto{
+  max-width: 95%;
+}
+}
 </style>

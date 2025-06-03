@@ -69,6 +69,11 @@
   height: auto;
   padding:20px 0;
 }
+.contenedor-de-servicio{
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 }
 
 /* //Resolcion para dispositivos moviles pequeños: */
@@ -80,6 +85,11 @@
   height: auto;
   padding:20px 0;
 
+}
+.contenedor-de-servicio{
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 }
 
@@ -93,6 +103,11 @@
   padding:20px 0;
 
 }
+.contenedor-de-servicio{
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 }
 
 /* //Resolcion para tablets: */
@@ -103,6 +118,11 @@
 .contenedor-mis-servicios {
   height: auto;
   padding:20px 0;
+}
+.contenedor-de-servicio{
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 }
 
