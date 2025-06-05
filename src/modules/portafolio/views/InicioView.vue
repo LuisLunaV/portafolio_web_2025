@@ -16,8 +16,8 @@
             {
               'tamano-principal': dispositivo == 'grande',
               'fs-1': dispositivo == 'mediano',
-              'fs-2': dispositivo == 'pequeno',
-              'tamano-movil':dispositivo == 'expequeno'
+              'tamano-movil':dispositivo == 'pequeno'
+              || dispositivo == 'expequeno'
             }
           ]"
         >
@@ -26,17 +26,17 @@
       </div>
       <div class="box div-inicio-subtitulo">
         <span :class="['poppins-semibold',{
-              'fs-1': dispositivo == 'grande',
+              'fs-1': dispositivo == 'grande'
+              || dispositivo == 'pequeno',
               'fs-2': dispositivo == 'mediano',
-              'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]"> Desarrollo Web </span>
       </div>
       <div class="box div-inicio-subtitulo">
         <span :class="['poppins-semibold',{
-              'fs-1': dispositivo == 'grande',
+              'fs-1': dispositivo == 'grande'
+               || dispositivo == 'pequeno',
               'fs-2': dispositivo == 'mediano',
-              'fs-3': dispositivo == 'pequeno',
               'fs-4': dispositivo == 'expequeno',
             }]"> Front-End y Back-End </span>
       </div>

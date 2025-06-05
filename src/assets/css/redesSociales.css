@@ -101,9 +101,9 @@ animation: none;
 }
 
 /* //Resolcion para tablets: */
-@media (min-width: 860px) and (max-width: 972px) {
+/* @media (min-width: 860px) and (max-width: 972px) {
 
-}
+} */
 @media (min-width: 972px) and (max-width: 1032px) {
 .redes-div-sc{
   justify-content: center;

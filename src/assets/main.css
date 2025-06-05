@@ -226,13 +226,7 @@ align-items: center;
     width: 50%;
     padding-left: 3rem;
   }
-  .div-inicio-nombre {
-    background-color: var(--negro-suave);
-    color: #ffffff;
-  }
-  .div-inicio-subtitulo {
-    color: var(--negro);
-  }
+
   .cont-img {
     max-width: 50%;
     width: 100%;

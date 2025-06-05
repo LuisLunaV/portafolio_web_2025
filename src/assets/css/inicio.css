@@ -152,6 +152,9 @@
 
 /* //Resolcion para dispositivos moviles medianos: */
 @media (min-width: 603px) and (max-width: 859px) {
+  .tamano-movil {
+    font-size: 65px;
+  }
   .cont-inicio {
     width: 100%;
   }
@@ -174,15 +177,40 @@
   background-color: #f1f1f1;
   color: var(--negro-suave) !important;
 }
+ .div-redes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* //Resolcion para tablets: */
 @media (min-width: 860px) and (max-width: 972px) {
+  .tamano-movil {
+    font-size: 65px;
+  }
   /* Globales */
+  .div-inicio-nombre {
+    /* background-color: var(--negro-suave); */
+    color: var(--naranja);
+  }
+  .div-inicio-subtitulo {
+       color: #f1f1f1;
+  }
+.cont-inicio {
+    width: 100%;
+  }
+   .cont-img {
+    display: none !important;
+  }
+
+   .div-redes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 /* Resolcion para pc de Laptops: */
 
-@media (min-width: 972px) and (max-width: 1032px) {
+@media (min-width: 973px) and (max-width: 1032px) {
   .div-inicio {
     background-color: var(--amarillo);
   }
@@ -192,11 +220,11 @@
     padding-left: 3rem;
   }
   .div-inicio-nombre {
-    background-color: var(--negro-suave);
-    color: #ffffff;
+    /* background-color: var(--negro-suave); */
+    color: var(--naranja);
   }
   .div-inicio-subtitulo {
-    color: var(--negro);
+    color: var(--negro-suave);
   }
   .cont-img {
     max-width: 50%;
@@ -231,11 +259,13 @@
     padding-left: 3rem;
   }
   .div-inicio-nombre {
-    background-color: var(--negro-suave);
-    color: #ffffff;
+    /* background-color: var(--negro-suave);
+    color: #ffffff; */
+    color:var(--naranja)
+
   }
   .div-inicio-subtitulo {
-    color: var(--negro);
+    color: var(--negro-suave);
   }
   .cont-img {
     max-width: 40%;
@@ -270,11 +300,12 @@
     padding-left: 3rem;
   }
   .div-inicio-nombre {
-    background-color: var(--negro-suave);
-    color: #ffffff;
+    /* background-color: var(--negro-suave);
+    color: #ffffff; */
+    color:var(--naranja)
   }
   .div-inicio-subtitulo {
-    color: var(--negro);
+    color: var(--negro-suave);
   }
   .cont-img {
     max-width: 40%;
