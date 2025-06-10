@@ -10,7 +10,7 @@
   </div>
   <div class="card-body card-skills-bootom">
     <h5 class="card-title poppins-bold">{{name}}</h5>
-    <p class="card-text poppins-medium">{{information}}</p>
+    <p class="card-text poppins-semibold">{{information}}</p>
   </div>
 </div>
     </div>

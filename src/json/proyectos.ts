@@ -1,4 +1,5 @@
 interface Icons {
+  name:string
   clase: string
   color: string
   url?: string
@@ -49,26 +50,32 @@ const proyectos: IResponse = {
       ],
       technologies: [
         {
+                    name:'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
+                    name:'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
+                    name:'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
+                    name:'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
+                    name:'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
+                    name:'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -95,26 +102,32 @@ const proyectos: IResponse = {
       img: ['img-cero.jpg', 'img-uno.jpg', 'img-dos.jpg', 'img-tres.jpg', 'img-cuatro.png'],
       technologies: [
         {
+                    name:'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
+                    name:'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
+                    name:'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
+                    name:'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
+                              name:'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
+                    name:'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -146,26 +159,32 @@ const proyectos: IResponse = {
       ],
       technologies: [
         {
+                    name:'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
+                    name:'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
+                    name:'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
+                    name:'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
+                              name:'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
+                    name:'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -207,33 +226,38 @@ la estabilidad y rendimiento del sistema.
       img: ['img-cero.png', 'img-uno.png', 'img-tres.png', 'img-cuatro.png'],
       technologies: [
         {
+          name:'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
+          name:'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
-        },
-        {
+        },{
+          name:'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
+          name:'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
+          name:'PHP',
           clase: 'fa-php',
           color: 'color-blanco',
         },
         {
+          name:'Laravel',
           clase: 'fa-laravel',
           color: 'color-blanco',
         },
         {
+          name:'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
-          url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
         },
       ],
     },

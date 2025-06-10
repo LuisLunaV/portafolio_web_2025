@@ -19,7 +19,7 @@ import NavBar from '@/modules/portafolio/components/navbar/NavBar.vue';
 import NavBarResponsive from '@/modules/portafolio/components/navbar/NavBarResponsive.vue';
 import { useMedia } from '@/modules/composables/useMedia';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
-import {  ref, watch } from 'vue';
+import {  onMounted, ref, watch } from 'vue';
 const ventanaStore = useVentanaStore();
 const routeName = ref('');
 const { dispositivo, anchoVentana } = useMedia()
@@ -27,6 +27,10 @@ anchoVentana()
 
 watch(()=> ventanaStore.nombreVentana, ( newValue )=>{
   routeName.value = newValue;
+})
+onMounted(()=>{
+  const userAgent = navigator.userAgent;
+  console.log(userAgent);
 })
 </script>
 
