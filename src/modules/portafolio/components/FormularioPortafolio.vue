@@ -19,7 +19,7 @@
         v-model="formMessage.Msg_texto"
         class="form-control"
         id="mensajeText"
-        placeholder="Aqui va tu mensaje."
+        placeholder="Tu mensaje + número de contacto (opcional)"
         rows="3"
         required
       ></textarea>
@@ -36,7 +36,12 @@ import { postMessages } from '@/modules/services/api-post'
 import { type IErrorMsg } from '@/modules/portafolio/interfaces/mensajes.interface'
 // composables
 // stores
-import { useLoadingStore, useAlerts, useModalStores } from '@/modules/portafolio/stores/modal.stores'
+import {
+  useLoadingStore,
+  useAlerts,
+  useModalStores,
+  useErrorEscudos,
+} from '@/modules/portafolio/stores/modal.stores'
 // components
 import ErrorMessages from '@/modules/portafolio/components/errors/ErrorMessages.vue'
 
@@ -45,32 +50,35 @@ const formMessage = reactive({
   Msg_texto: '',
 })
 
-const loader = useLoadingStore();
-const alertSucces = useAlerts();
-const { actionModal } = useModalStores();
+const loader = useLoadingStore()
+const alertSucces = useAlerts()
+const errorEscudos = useErrorEscudos()
+const { actionModal } = useModalStores()
 const errorMessage = ref<IErrorMsg | null>(null)
 
 const sendMessage = async (): Promise<void> => {
-  await postMessages(formMessage)
-    .then(() => {
+  try {
+    if (await postMessages(formMessage)) {
       loader.activeLoader()
-       setTimeout(() => {
+      setTimeout(() => {
         loader.stopLoader()
         formMessage.Msg_email = ''
         formMessage.Msg_texto = ''
-        actionModal();
-        alertSucces.showAlert();
+        actionModal()
+        alertSucces.showAlert()
       }, 3000)
-    })
-    .catch((err) => {
-      errorMessage.value = err
-      setTimeout(() => {
-        errorMessage.value = null
-      }, 4000)
-    })
-    .finally(() => {
+    }
+  } catch (error: any) {
+    if (error.value != formMessage.Msg_texto) {
+      actionModal();
+      errorEscudos.showErrorEsc()
+    }
 
-    })
+    errorMessage.value = error
+    setTimeout(() => {
+      errorMessage.value = null
+    }, 4000)
+  }
 }
 </script>
 

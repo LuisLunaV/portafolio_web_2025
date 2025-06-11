@@ -1,5 +1,5 @@
 <template>
-    <span class="tooltip">{{ name }}</span>
+    <span class="tooltip poppins-semibold">{{ name }}</span>
 </template>
 <script lang="ts" setup>
 interface Props{
@@ -15,7 +15,7 @@ defineProps<Props>();
   opacity: 0;
   background-color: #f1f1f1;
   /* background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%); */
-  color: var(--negro);
+  color: var(--negro-suave);
   padding: 5px 10px;
   border-radius: 5px;
   display: flex;

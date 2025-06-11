@@ -1,5 +1,6 @@
 <template>
       <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
+        <ErrorEscudos :class="(isErrorEscudos)?'mostrarError':'ocultarError'"/>
       <ModalPortafolio v-if="isOpen"/>
       <ServicioTarjeta :servicios="data"/>
       <ContactoPortafolio />
@@ -14,13 +15,18 @@ import AlertSucces from '@/modules/portafolio/components/alerts/AlertSucces.vue'
 import ModalPortafolio from '@/modules/portafolio/components/ModalPortafolio.vue';
 import { useFetch } from '@/modules/composables/useFetch';
 
-import { useModalStores, useAlerts } from '@/modules/portafolio/stores/modal.stores';
+import ErrorEscudos from '@/modules/portafolio/components/errors/ErrorEscudos.vue';
+
+import { useModalStores, useAlerts, useErrorEscudos} from '@/modules/portafolio/stores/modal.stores';
 import { storeToRefs } from 'pinia';
 
 const modalStore = useModalStores();
 const { isOpen } = storeToRefs(modalStore); // Usa storeToRefs aquí
 const alertSucces = useAlerts();
+const errorEscudos = useErrorEscudos();
+
 const { isAlertSuccess } = storeToRefs(alertSucces);
+const { isErrorEscudos } = storeToRefs(errorEscudos);
 
 const { fetchDataServices } = useFetch();
 const data = fetchDataServices();
@@ -29,8 +35,14 @@ watchEffect(()=>{
   if(isAlertSuccess.value){
     setTimeout(()=>{
       alertSucces.hiddenAlert();
-    },3000);
+    },6000);
 
+  }
+
+    if(isErrorEscudos.value){
+    setTimeout(()=>{
+      errorEscudos.hiddenErrorEsc();
+    },8000);
   }
 });
 

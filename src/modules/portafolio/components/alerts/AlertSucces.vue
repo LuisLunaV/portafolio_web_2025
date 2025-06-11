@@ -3,7 +3,7 @@
         <div class="alert alert-success notification-failure d-flex justify-content-center align-items-center w-75 h-50" role="alert">
         <div class="poppins-semibold">
             <i class="fas fa-envelope me-2"></i>
-            <span>Mensaje enviado correctamente.</span>
+            <span>Mensaje enviado correctamente. Yo me comunicare contigo!</span>
         </div>
     </div>
 </div>

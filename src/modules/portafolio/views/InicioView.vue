@@ -1,5 +1,6 @@
 <template>
   <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
+  <ErrorEscudos :class="(isErrorEscudos)?'mostrarError':'ocultarError'"/>
   <ModalPortafolio v-if="isOpen"/>
   <CelularPc
   v-if="dispositivo == 'pequeno' && estaAbierto
@@ -84,9 +85,11 @@ import CelularPc from '@/modules/portafolio/components/pc/CelularPc.vue';
 import { useMedia } from '@/modules/composables/useMedia';
 import { useWindowSize } from '@/modules/composables/useWindowSize';
 import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
-import { useModalStores, useAlerts} from '@/modules/portafolio/stores/modal.stores';
+import { useModalStores, useAlerts, useErrorEscudos} from '@/modules/portafolio/stores/modal.stores';
 
 import AlertSucces from '@/modules/portafolio/components/alerts/AlertSucces.vue';
+import ErrorEscudos from '@/modules/portafolio/components/errors/ErrorEscudos.vue';
+
 import { storeToRefs } from 'pinia';
 
 const estaAbierto= ref<boolean>( false );
@@ -103,13 +106,21 @@ const mostrarSobreMi = () => {
 const { isOpen } = storeToRefs( useModalStores() );
 
 const alertSucces = useAlerts();
+const errorEscudos = useErrorEscudos();
 const { isAlertSuccess } = storeToRefs(alertSucces);
+const { isErrorEscudos } = storeToRefs(errorEscudos);
+
 watchEffect(()=>{
   if(isAlertSuccess.value){
     setTimeout(()=>{
       alertSucces.hiddenAlert();
-    },3000);
+    },6000);
+  }
 
+  if(isErrorEscudos.value){
+    setTimeout(()=>{
+      errorEscudos.hiddenErrorEsc();
+    },8000);
   }
 });
 onMounted(()=>{

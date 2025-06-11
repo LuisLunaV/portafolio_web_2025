@@ -42,7 +42,7 @@ const useLoadingStore = defineStore('Loading', {
       this.isLoading = false
     },
   },
-})
+});
 
 const useAlerts = defineStore('alerts', {
   state: () => ({
@@ -57,6 +57,21 @@ const useAlerts = defineStore('alerts', {
       this.isAlertSuccess = false
     },
   },
+});
+
+const useErrorEscudos = defineStore('errorEscudos', {
+  state: () => ({
+    isErrorEscudos: false,
+  }),
+
+  actions: {
+    showErrorEsc() {
+      this.isErrorEscudos = true
+    },
+    hiddenErrorEsc() {
+      this.isErrorEscudos = false
+    },
+  },
 })
 
-export { useModalStores, useLoadingStore, useAlerts, useScroll }
+export { useModalStores, useLoadingStore, useAlerts, useScroll, useErrorEscudos }
