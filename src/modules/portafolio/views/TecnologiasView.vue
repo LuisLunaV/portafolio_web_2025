@@ -10,7 +10,8 @@
      <DataBase :data="technologies[2]"/>
      <SistemaOperativo :data="technologies[3]"/>
      <HerramientasDesarrollo :data="technologies[4]"/>
-  </div>
+    </div>
+    <FooterPortafolio />
 </template>
 <script lang="ts" setup>
 import { useFetch } from '@/modules/composables/useFetch';
@@ -23,6 +24,7 @@ import BackEnd from '../components/tecnologias/BackEnd.vue';
 import DataBase from '../components/tecnologias/DataBase.vue';
 import SistemaOperativo from '../components/tecnologias/SistemaOperativo.vue';
 import HerramientasDesarrollo from '../components/tecnologias/HerramientasDesarrollo.vue';
+import FooterPortafolio from '@/modules/portafolio/components/FooterPortafolio.vue';
 
 
 const titulo = ref<string>('');
