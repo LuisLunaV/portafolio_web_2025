@@ -1,7 +1,7 @@
 <template>
       <div class="pie-mensaje">
        <p class="poppins-medium">
-      © 2025 - Luis Alfredo Luna Villa
+      © 2025 - Luis Alfredo Luna Villa - México 
       </p>
        <p class="poppins-medium">🛠️ Este portafolio fue desarrollado con las siguientes tecnologias:
 

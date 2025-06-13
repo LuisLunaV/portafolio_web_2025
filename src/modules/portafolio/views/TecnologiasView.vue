@@ -49,3 +49,21 @@ onMounted(() => {
   ventanaStore.setNombreVentana(nombreVentana())
 })
 </script>
+<style scoped>
+footer{
+  background-image: var(--fondoNegroMate) !important;
+  /* background-color: #7A6D22; */
+
+  /* margin-top: 20px; */
+  border-top:solid var(--naranja) 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  align-items: center;
+}
+
+footer p{
+  color: #fff;
+}
+
+</style>
