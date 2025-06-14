@@ -18,7 +18,7 @@
               desarrollo y mantenimiento de aplicaciones web en el sector restaurantero. Me
               considero fan de Asimov y un entusiasta del software libre y evangelista de Linux.
             </p>
-            <a class="poppins-semibold btn-pdf pe-2 box-bottom" href="#">
+            <a class="poppins-semibold btn-pdf pe-2 box-bottom" :href="archivoCV" download="LuisLunaVilla-CV">
               <i class="bi bi-arrow-down-circle-fill mx-2"></i>
               Descargar CV
             </a>
@@ -32,6 +32,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import archivoCV from '@/assets/pdf/LuisLunaVilla-CV.pdf';
 interface Props {
   estaAbierto: boolean
 }
