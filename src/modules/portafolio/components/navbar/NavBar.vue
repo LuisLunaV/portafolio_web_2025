@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" :class="{'opaciti-0':ocultar, 'desactivar-barra':desactivar }">
+  <nav :class="['navbar navbar-expand-lg bg-body-tertiary',{'opaciti-0':ocultar }]">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">{ LuisLV }</a> -->
       <h1 class="nombre-logo poppins-semibold">{ LuisLV }</h1>
@@ -29,8 +29,6 @@
 import { onMounted, ref } from 'vue';
 const anchoPantalla = ref(window.innerWidth);
 const activado = ref<boolean>(false);
-const ocultar = ref<boolean>(false);
-const desactivar = ref<boolean>(false);
 
 const anchoVentana=()=>{
   anchoPantalla.value = window.innerWidth;
@@ -42,36 +40,23 @@ const anchoVentana=()=>{
 }
 anchoVentana();
 
+const ocultar = ref<boolean|null>(null);
 onMounted(()=>{
+
   window.addEventListener('resize',()=>{
    anchoVentana();
   });
 
-  //Ocultamos la barra de navegacion cuando demos scroll hacia abajo.
-    let tempo: ReturnType<typeof setTimeout> | null = null;
-    const tiempoOcultarBarra = 800;
-
-window.onscroll = () => {
+window.addEventListener('scroll',()=> {
   const y = window.scrollY;
 
   if (y > 200) {
     //Ocultamos con opacity desde css.
     ocultar.value = true;
-
-    if(tempo) clearTimeout(tempo); //Si el tempo tiene algun valor lo limpiamos.
-
-    tempo = setTimeout(() => {
-      //Desactivamos el display de la barra de navegacion
-    desactivar.value = true;
-    }, tiempoOcultarBarra);
   } else {
-
-    if(tempo) clearTimeout(tempo); //Si el tempo tiene algun valor lo limpiamos
-
-    desactivar.value = false;
     ocultar.value = false;
   }
-};
+});
 
 });
 
@@ -83,6 +68,7 @@ window.onscroll = () => {
 }
 .opaciti-0{
   opacity: 0;
+  overflow: hidden;
 }
 .navbar{
   /* background-color: rgba(0, 0, 0, 0.5) !important; */

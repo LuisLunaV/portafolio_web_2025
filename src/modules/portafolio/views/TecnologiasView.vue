@@ -12,6 +12,7 @@
      <HerramientasDesarrollo :data="technologies[4]"/>
     </div>
     <FooterPortafolio />
+    <BotonTop />
 </template>
 <script lang="ts" setup>
 import { useFetch } from '@/modules/composables/useFetch';
@@ -25,10 +26,11 @@ import DataBase from '../components/tecnologias/DataBase.vue';
 import SistemaOperativo from '../components/tecnologias/SistemaOperativo.vue';
 import HerramientasDesarrollo from '../components/tecnologias/HerramientasDesarrollo.vue';
 import FooterPortafolio from '@/modules/portafolio/components/FooterPortafolio.vue';
-
+import BotonTop from '@/modules/portafolio/components/BotonTop.vue';
 
 const titulo = ref<string>('');
 const subtitulo = ref<string>('');
+
 titulo.value = 'Conocimientos técnicos y habilidades.';
 subtitulo.value = 'Aquí puedes encontrar las tecnologías que he ido desarrollando a lo largo de mi experiencia laboral y mis proyectos personales.';
 
@@ -45,11 +47,12 @@ const technologies = computed(()=>{
     skills.filter(index => index.categoria === 'control')];
 })
 onMounted(() => {
-  const { nombreVentana } = useWindowSize()
+  const { nombreVentana } = useWindowSize();
   ventanaStore.setNombreVentana(nombreVentana())
 })
 </script>
 <style scoped>
+
 footer{
   background-image: var(--fondoNegroMate) !important;
   /* background-color: #7A6D22; */
