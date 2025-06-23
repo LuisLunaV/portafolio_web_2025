@@ -1,10 +1,10 @@
-import contactoApi from './api'
+import { mensajesApi } from './api'
 import { type IMensajes } from '@/modules/portafolio/interfaces/mensajes.interface'
 
 const postMessages = async (payload: IMensajes) => {
   try {
-    console.log(contactoApi)
-    const resp = await fetch(`${contactoApi}/form-messages/send`, {
+    console.log(mensajesApi)
+    const resp = await fetch(`${mensajesApi}/form-messages/send`, {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: {
