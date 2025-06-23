@@ -3,7 +3,7 @@ import { type IMensajes } from '@/modules/portafolio/interfaces/mensajes.interfa
 
 const postMessages = async (payload: IMensajes) => {
   try {
-    console.log(mensajesApi)
+
     const resp = await fetch(`${mensajesApi}/form-messages/send`, {
       method: 'POST',
       body: JSON.stringify(payload),
