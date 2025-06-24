@@ -19,7 +19,7 @@
         v-model="formMessage.Msg_texto"
         class="form-control"
         id="mensajeText"
-        placeholder="Tu mensaje + número de contacto (opcional)"
+        placeholder="Agrega tu mensaje mas numero de contacto (opcional)"
         rows="3"
         required
       ></textarea>

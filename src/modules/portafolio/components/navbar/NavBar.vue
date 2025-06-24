@@ -6,16 +6,16 @@
           <div :class="['collapse navbar-collapse',{'flexEnd': activado}]" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'inicio' }" exact-active-class="clase-activa"> Inicio </RouterLink>
+            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'inicio' }" exact-active-class="clase-activa"> Inicio </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'tecnologias' }" exact-active-class="clase-activa"> Tecnologias </RouterLink>
+            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'tecnologias' }" exact-active-class="clase-activa"> Tecnologias </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'proyectos' }" exact-active-class="clase-activa"> Proyectos </RouterLink>
+            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar}]" :to="{ name: 'proyectos' }" exact-active-class="clase-activa"> Proyectos </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link poppins-bold" :to="{ name: 'servicios_y_contacto' }" exact-active-class="clase-activa">
+            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'servicios_y_contacto' }" exact-active-class="clase-activa">
               Servicios y contacto
             </RouterLink>
           </li>
@@ -41,6 +41,9 @@ const anchoVentana=()=>{
 anchoVentana();
 
 const ocultar = ref<boolean|null>(null);
+
+
+
 onMounted(()=>{
 
   window.addEventListener('resize',()=>{
@@ -69,6 +72,10 @@ window.addEventListener('scroll',()=> {
 .opaciti-0{
   opacity: 0;
   overflow: hidden;
+}
+
+.desactivar-links{
+  pointer-events: none;
 }
 .navbar{
   /* background-color: rgba(0, 0, 0, 0.5) !important; */

@@ -14,7 +14,7 @@ import { useVentanaStore } from '@/modules/portafolio/stores/ventana.store';
 const ventana = ref<string>('');
 const isIcono =ref<boolean>(false);
 const title = 'Yo pago el cafe';
-const titleInicio = 'Contactándome desde el inicio. Me agradas.';
+const titleInicio = 'Comunicate conmigo.';
 
 onMounted(()=>{
   const { nombreVentana } = useWindowSize();
