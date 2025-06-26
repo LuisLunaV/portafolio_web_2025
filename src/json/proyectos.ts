@@ -253,12 +253,7 @@ la estabilidad y rendimiento del sistema.
           name:'Laravel',
           clase: 'fa-laravel',
           color: 'color-blanco',
-        },
-        {
-          name:'GitHub',
-          clase: 'fa-github',
-          color: 'color-blanco',
-        },
+        }
       ],
     },
   ],

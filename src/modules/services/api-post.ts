@@ -9,6 +9,7 @@ const postMessages = async (payload: IMensajes) => {
       body: JSON.stringify(payload),
       headers: {
         'Content-Type': 'application/json',
+        "Bypass-Tunnel-Reminder": "true"
       },
     })
     if (!resp.ok) {
