@@ -2,6 +2,7 @@
   <AlertOnlyne :class="isOnline ? 'mostrarAlert' : 'ocultarAlert'" />
   <RouterView />
 </template>
+
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import AlertOnlyne from './modules/portafolio/components/alerts/AlertOnlyne.vue'

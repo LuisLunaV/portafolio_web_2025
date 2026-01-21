@@ -77,6 +77,7 @@
           type="button"
           data-bs-target="#carouselExampleFade"
           data-bs-slide="next"
+          style='background-color: red !important;'
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>

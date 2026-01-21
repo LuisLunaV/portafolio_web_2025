@@ -1,21 +1,43 @@
 <template>
-  <nav :class="['navbar navbar-expand-lg bg-body-tertiary',{'opaciti-0':ocultar }]">
+  <nav :class="['navbar navbar-expand-lg bg-body-tertiary', { 'opaciti-0': ocultar }]">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">{ LuisLV }</a> -->
       <h1 class="nombre-logo poppins-semibold">{ LuisLV }</h1>
-          <div :class="['collapse navbar-collapse',{'flexEnd': activado}]" id="navbarSupportedContent">
+      <div :class="['collapse navbar-collapse', { flexEnd: activado }]" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'inicio' }" exact-active-class="clase-activa"> Inicio </RouterLink>
+            <RouterLink
+              :class="['nav-link poppins-bold', { 'desactivar-links': ocultar }]"
+              :to="{ name: 'inicio' }"
+              exact-active-class="clase-activa"
+            >
+              Inicio
+            </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'tecnologias' }" exact-active-class="clase-activa"> Tecnologias </RouterLink>
+            <RouterLink
+              :class="['nav-link poppins-bold', { 'desactivar-links': ocultar }]"
+              :to="{ name: 'tecnologias' }"
+              exact-active-class="clase-activa"
+            >
+              Tecnologias
+            </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar}]" :to="{ name: 'proyectos' }" exact-active-class="clase-activa"> Proyectos </RouterLink>
+            <RouterLink
+              :class="['nav-link poppins-bold', { 'desactivar-links': ocultar }]"
+              :to="{ name: 'proyectos' }"
+              exact-active-class="clase-activa"
+            >
+              Proyectos
+            </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink :class="['nav-link poppins-bold',{'desactivar-links':ocultar }]" :to="{ name: 'servicios_y_contacto' }" exact-active-class="clase-activa">
+            <RouterLink
+              :class="['nav-link poppins-bold', { 'desactivar-links': ocultar }]"
+              :to="{ name: 'servicios_y_contacto' }"
+              exact-active-class="clase-activa"
+            >
               Servicios y contacto
             </RouterLink>
           </li>
@@ -26,60 +48,54 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
-const anchoPantalla = ref(window.innerWidth);
-const activado = ref<boolean>(false);
+import { onMounted, ref } from 'vue'
+const anchoPantalla = ref(window.innerWidth)
+const activado = ref<boolean>(false)
 
-const anchoVentana=()=>{
-  anchoPantalla.value = window.innerWidth;
-    if( anchoPantalla.value>992){
-      activado.value = true;
-    }else{
-      activado.value = false;
-    }
-}
-anchoVentana();
-
-const ocultar = ref<boolean|null>(null);
-
-
-
-onMounted(()=>{
-
-  window.addEventListener('resize',()=>{
-   anchoVentana();
-  });
-
-window.addEventListener('scroll',()=> {
-  const y = window.scrollY;
-
-  if (y > 200) {
-    //Ocultamos con opacity desde css.
-    ocultar.value = true;
+const anchoVentana = () => {
+  anchoPantalla.value = window.innerWidth
+  if (anchoPantalla.value > 992) {
+    activado.value = true
   } else {
-    ocultar.value = false;
+    activado.value = false
   }
-});
+}
+anchoVentana()
 
-});
+const ocultar = ref<boolean | null>(null)
 
+onMounted(() => {
+  window.addEventListener('resize', () => {
+    anchoVentana()
+  })
 
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY
+
+    if (y > 200) {
+      //Ocultamos con opacity desde css.
+      ocultar.value = true
+    } else {
+      ocultar.value = false
+    }
+  })
+})
 </script>
 <style scoped>
-.desactivar-barra{
-  display:none;
+.desactivar-barra {
+  display: none;
 }
-.opaciti-0{
+.opaciti-0 {
   opacity: 0;
   overflow: hidden;
 }
 
-.desactivar-links{
+.desactivar-links {
   pointer-events: none;
 }
-.navbar{
+.navbar {
   /* background-color: rgba(0, 0, 0, 0.5) !important; */
-  background-color: #1E2A38 !important;
+  background-color: #1e2a38 !important;
 
   position: fixed;
   z-index: 3;
@@ -89,24 +105,23 @@ window.addEventListener('scroll',()=> {
   transition: 500ms;
 }
 .nav-link {
-  color:#ffffff;
+  color: #ffffff;
   cursor: pointer;
 }
-.clase-activa{
-  color:#FF4B5C !important;
+.clase-activa {
+  color: #ff4b5c !important;
   text-shadow: -1.2px 0px 0px #ffffff;
 
-      /* filter: drop-shadow(0 0 5px #fff) */
-
- }
-.nav-link:hover{
+  /* filter: drop-shadow(0 0 5px #fff) */
+}
+.nav-link:hover {
   /* color:#f0db4f; */
   /* color:#ffc52d; */
   /* color:#F6DD5E; */
 }
 
-.flexEnd{
-display: flex;
-justify-content: end;
+.flexEnd {
+  display: flex;
+  justify-content: end;
 }
 </style>

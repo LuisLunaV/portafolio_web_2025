@@ -5,8 +5,8 @@ const isApiOnline = async() => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      "Bypass-Tunnel-Reminder": "true"
     },
+    credentials: 'include',
   });
 
   if( !resp.ok){
