@@ -274,8 +274,8 @@ la estabilidad y rendimiento del sistema.
       carpeta: 'NETWEB',
       img: [
         'IMG-CERO.png',
-        'IMG-FORM.png',
         'IMG-UNO.png',
+        'IMG-FORM.png',
         'IMG-DOS.png',
         'IMG-TRES.png',
         'IMG-CUATRO.png',
@@ -297,16 +297,6 @@ la estabilidad y rendimiento del sistema.
         {
           name: 'JavaScript',
           clase: 'fa-js',
-          color: 'color-blanco',
-        },
-        {
-          name: 'Bootstrap',
-          clase: 'fa-bootstrap',
-          color: 'color-blanco',
-        },
-        {
-          name: 'Node.js',
-          clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {

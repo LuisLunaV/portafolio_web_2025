@@ -73,7 +73,7 @@
   width: 100%;
   max-width: 22rem;
   margin: auto;
-  text-align: start;
+  text-align: justify;
 }
 
 .card-skills:hover > .card-skills-bootom h5 {

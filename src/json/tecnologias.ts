@@ -73,6 +73,12 @@ const tecnologias: IResponseData = {
         information: `Express.js es un framework minimalista y flexible para Node.js, ideal para crear APIs y aplicaciones web rápidas y escalables con enrutamiento y middleware eficientes.`,
       },
       {
+        img: 'nest.svg',
+        name: 'NestJS',
+        categoria: 'back',
+        information: `NestJS: Framework Node.js progresivo para construir aplicaciones backend eficientes y escalables usando TypeScript, con soporte nativo para arquitectura modular.`,
+      },
+      {
         img: 'php.svg',
         name: 'PHP',
         categoria: 'back',
@@ -84,6 +90,12 @@ const tecnologias: IResponseData = {
         name: 'Laravel',
         categoria: 'back',
         information: `Laravel es un framework PHP moderno y elegante, ideal para crear aplicaciones web con enrutamiento, autenticación y bases de datos simplificados.`,
+      },
+      {
+        img: 'csharp.svg',
+        name: 'C# (C SHARP)',
+        categoria: 'back',
+        information: `C# es un lenguaje de programación moderno, orientado a objetos y con seguridad de tipos, creado por Microsoft para desarrollar aplicaciones robustas.`,
       },
       {
         img: 'mysql.svg',
@@ -131,6 +143,21 @@ const tecnologias: IResponseData = {
         `,
       },
       {
+        img: 'debian.svg',
+        name: 'Debian',
+        categoria: 'sistema_operativo',
+        information: `
+      Debian es un sistema operativo libre y estable basado en Linux, conocido por su fiabilidad, seguridad y amplio soporte para múltiples arquitecturas.
+       Es ampliamente utilizada en servidores, sistemas embebidos y por usuarios que valoran el control y la personalización.
+        `,
+      },
+      {
+        img: 'windowsserver.svg',
+        name: 'Windows Server',
+        categoria: 'sistema_operativo',
+        information: `Windows Server es un sistema operativo de Microsoft diseñado para gestionar redes empresariales, alojar servicios críticos y administrar recursos centralizados como usuarios y datos.`,
+      },
+      {
         img: 'bash.svg',
         name: 'Bash',
         categoria: 'control',
@@ -140,12 +167,11 @@ Es una herramienta fundamental para la gestión del sistema y el desarrollo en e
         `,
       },
       {
-        img: 'debian.svg',
-        name: 'Debian',
-        categoria: 'sistema_operativo',
+        img: 'postman.png',
+        name: 'Postman',
+        categoria: 'control',
         information: `
-      Debian es un sistema operativo libre y estable basado en Linux, conocido por su fiabilidad, seguridad y amplio soporte para múltiples arquitecturas.
-       Es ampliamente utilizada en servidores, sistemas embebidos y por usuarios que valoran el control y la personalización.
+Postman es una plataforma colaborativa para desarrollo de APIs. Permite diseñar, probar, documentar y monitorear solicitudes HTTP de forma intuitiva.
         `,
       },
     ],

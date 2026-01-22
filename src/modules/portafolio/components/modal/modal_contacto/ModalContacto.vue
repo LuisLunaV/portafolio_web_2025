@@ -35,9 +35,7 @@ onMounted(() => {
 })
 </script>
 <style scoped>
-.traslate-y {
-  transform: translateY(0%) !important;
-}
+
 .div-modal-contacto {
   border: 1px solid var(--amarillo);
   border-radius: 10px;

@@ -10,11 +10,10 @@
 .ocultar{
   visibility: hidden;
 }
-
-.tranformY-0{
-  /* contenedor */
+.traslate-y {
   transform: translateY(0%) !important;
 }
+
 .altura-drive{
   max-width: 400px;
 }
@@ -59,6 +58,8 @@ align-items: center;
   height: auto;
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 1px 1px 6px 5px rgba(0, 0, 0,0.4);
+  /* transition: transform 0.5s ease;
+  transform: translateY(-10%); */
 }
 .modal-header{
   display: flex;
