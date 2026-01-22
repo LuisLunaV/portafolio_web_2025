@@ -1,5 +1,5 @@
 interface Icons {
-  name:string
+  name: string
   clase: string
   color: string
   url?: string
@@ -50,32 +50,32 @@ const proyectos: IResponse = {
       ],
       technologies: [
         {
-                    name:'HTML',
+          name: 'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
-                    name:'CSS',
+          name: 'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
-                    name:'JavaScript',
+          name: 'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
-                    name:'Bootstrap',
+          name: 'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
-                    name:'Node.js',
+          name: 'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
-                    name:'GitHub',
+          name: 'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -102,32 +102,32 @@ const proyectos: IResponse = {
       img: ['img-cero.jpg', 'img-uno.jpg', 'img-dos.jpg', 'img-tres.jpg', 'img-cuatro.png'],
       technologies: [
         {
-                    name:'HTML',
+          name: 'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
-                    name:'CSS',
+          name: 'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
-                    name:'JavaScript',
+          name: 'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
-                    name:'Bootstrap',
+          name: 'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
-                              name:'Node.js',
+          name: 'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
-                    name:'GitHub',
+          name: 'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -159,32 +159,32 @@ const proyectos: IResponse = {
       ],
       technologies: [
         {
-                    name:'HTML',
+          name: 'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
-                    name:'CSS',
+          name: 'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
         },
         {
-                    name:'JavaScript',
+          name: 'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
-                    name:'Bootstrap',
+          name: 'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
-                              name:'Node.js',
+          name: 'Node.js',
           clase: 'fa-node-js',
           color: 'color-blanco',
         },
         {
-                    name:'GitHub',
+          name: 'GitHub',
           clase: 'fa-github',
           color: 'color-blanco',
           url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
@@ -226,34 +226,95 @@ la estabilidad y rendimiento del sistema.
       img: ['img-cero.png', 'img-uno.png', 'img-tres.png', 'img-cuatro.png'],
       technologies: [
         {
-          name:'HTML',
+          name: 'HTML',
           clase: 'fa-html5',
           color: 'color-blanco',
         },
         {
-          name:'CSS',
+          name: 'CSS',
           clase: 'fa-css3',
           color: 'color-blanco',
-        },{
-          name:'JavaScript',
+        },
+        {
+          name: 'JavaScript',
           clase: 'fa-js',
           color: 'color-blanco',
         },
         {
-          name:'Bootstrap',
+          name: 'Bootstrap',
           clase: 'fa-bootstrap',
           color: 'color-blanco',
         },
         {
-          name:'PHP',
+          name: 'PHP',
           clase: 'fa-php',
           color: 'color-blanco',
         },
         {
-          name:'Laravel',
+          name: 'Laravel',
           clase: 'fa-laravel',
           color: 'color-blanco',
-        }
+        },
+      ],
+    },
+    {
+      id: 5,
+      name: 'Landing page - Netweb',
+      dba: false,
+      isLegacy: false,
+      description: `
+      Este proyecto consiste en una aplicación web diseñada para gestionar la distribución de Números de Identificación Personal (NIP) a clientes con membresías activas, permitiéndoles acceder a beneficios exclusivos en reconocidas cadenas de restaurantes como Panda Express, Toks, Shake Shack, El Farolito y Beer Factory . La plataforma integra funcionalidades clave, como registro de usuarios, autenticación segura y gestión de consultas, bajo una interfaz intuitiva y fácil de usar.
+      <br>
+      <br>
+      Los clientes reciben códigos únicos en sus dispositivos móviles para canjear descuentos, promociones u otros beneficios en los establecimientos asociados. La plataforma optimiza la experiencia del cliente al ofrecer un sistema ágil y seguro que vincula sus membresías con ventajas en tiempo real, mejorando la interacción con las marcas del grupo de restaurantes.
+      <br>
+      <br>
+      Este proyecto no solo resuelve una necesidad práctica, sino que también fortalece la relación entre las marcas y sus clientes, impulsando el engagement y la fidelización a través de un servicio innovador y confiable.
+      `,
+      carpeta: 'NETWEB',
+      img: [
+        'IMG-CERO.png',
+        'IMG-FORM.png',
+        'IMG-UNO.png',
+        'IMG-DOS.png',
+        'IMG-TRES.png',
+        'IMG-CUATRO.png',
+        'IMG-CINCO.png',
+
+        'IMG-SIETE.png',
+      ],
+      technologies: [
+        {
+          name: 'HTML',
+          clase: 'fa-html5',
+          color: 'color-blanco',
+        },
+        {
+          name: 'CSS',
+          clase: 'fa-css3',
+          color: 'color-blanco',
+        },
+        {
+          name: 'JavaScript',
+          clase: 'fa-js',
+          color: 'color-blanco',
+        },
+        {
+          name: 'Bootstrap',
+          clase: 'fa-bootstrap',
+          color: 'color-blanco',
+        },
+        {
+          name: 'Node.js',
+          clase: 'fa-node-js',
+          color: 'color-blanco',
+        },
+        {
+          name: 'GitHub',
+          clase: 'fa-github',
+          color: 'color-blanco',
+          url: 'https://github.com/LuisLunaV/Pedidos-drivethru-shake-shack',
+        },
       ],
     },
   ],

@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 import { type IProyectos } from '@/json/proyectos'
 import ModalHeader from '@/modules/portafolio/components/modal/ModalHeader.vue';
 import ModalBody from '@/modules/portafolio/components/modal/modal_proyectos/ModalBody.vue';

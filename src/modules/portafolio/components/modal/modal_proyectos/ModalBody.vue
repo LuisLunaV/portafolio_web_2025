@@ -9,7 +9,7 @@
     >
       <div
         :class="[
-          { 'modal-body-information-p': id === 3 || id === 4 },
+          { 'modal-body-information-p': id === 3 || id === 4 || id === 5 }, //->Aqui agregamos scroll al proyecto por id
           { 'modal-body-information-p': !dispositivos.includes(dispositivo) },
         ]"
       >
@@ -39,7 +39,7 @@
 
     <div
       v-if="!isLegacy"
-      :class="['modal-body-images', dispositivos.includes(dispositivo) ? 'w-50' : 'w-100']"
+      :class="['modal-body-images',{ 'max-15': id === 5 }, dispositivos.includes(dispositivo) ? 'w-50' : 'w-100']"
     >
       <div id="carouselExampleFade" class="carousel slide carousel-scale">
         <div class="carousel-inner py-3">
@@ -77,7 +77,6 @@
           type="button"
           data-bs-target="#carouselExampleFade"
           data-bs-slide="next"
-          style='background-color: red !important;'
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
@@ -88,7 +87,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue'
 import { type Icons } from '@/json/proyectos'
 import TooltipName from '@/modules/portafolio/components/alerts/TooltipName.vue';
 interface Props {
@@ -115,5 +113,8 @@ a{
 i{
   display: flex;
   justify-content: center;
+}
+.max-15{
+  max-height: 15rem !important;
 }
 </style>
