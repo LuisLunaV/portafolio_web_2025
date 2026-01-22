@@ -37,7 +37,7 @@ import { type IProyectos } from '@/json/proyectos';
 import { computed, ref } from 'vue';
 import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
 
-const { actionModal } = useModalStores();
+const { modificarValor } = useModalStores();
 const mostrarTarjeta = ref(0);
 const titulo = ref<string>('');
 const subtitulo = ref<string>('');
@@ -66,7 +66,7 @@ return url;
 }
 
 const getInfoProject=(id:number)=>{
-actionModal();
+modificarValor();
 emit('idSeleccionado', id);
 }
 

@@ -19,7 +19,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineEmits} from 'vue';
 import RedesSociales from '@/modules/portafolio/components/RedesSociales.vue';
 defineEmits(['abrir']);
 </script>

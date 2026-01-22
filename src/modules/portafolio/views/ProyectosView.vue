@@ -1,5 +1,6 @@
 <template>
-<ModalPortafolio v-if="isOpen" :info="infoProject" />
+  <ModalPortafolio v-if="!isClosed" :class="isClosed?'ocultar-modal':'mostrar-modal'" :info="infoProject"/>
+
 <div class="div-project-footer">
   <ProyectoTarjeta :projects="data" @id-seleccionado="idSelect" />
   <FooterPortafolio />
@@ -20,10 +21,11 @@ import { useModalStores } from '@/modules/portafolio/stores/modal.stores';
 
 
 const infoProject = ref<IProyectos[]>([]);
+
 const { fetchDataProyect } = useFetch();
 const ventanaStore = useVentanaStore();
 
-const { isOpen } = storeToRefs( useModalStores() );
+const { isClosed } = storeToRefs( useModalStores() );
 const data = fetchDataProyect();
 
 const idSelect=( id:number)=>{

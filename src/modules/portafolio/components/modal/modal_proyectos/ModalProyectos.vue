@@ -47,9 +47,10 @@ interface Props {
 
 const props = defineProps<Props>()
 const ids550:number[] = [1];
-carpeta.value = props.info[0];
-// imagesItems.value = props.info[0];
-imagesItems.value = props.info[0].img.filter((value, index) => index != 0);
+if (props.info.length > 0 && props.info[0].img) {
+  carpeta.value = props.info[0];
+  imagesItems.value = props.info[0].img.filter((_, index) => index !== 0);
+}
 
 const getImages = (image: string) => {
   const urlImage = new URL(
@@ -59,6 +60,5 @@ const getImages = (image: string) => {
   return urlImage
 }
 
-defineEmits(['cerrarModal'])
 
 </script>

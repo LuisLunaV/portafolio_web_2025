@@ -1,7 +1,7 @@
 <template>
       <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
         <ErrorEscudos :class="(isErrorEscudos)?'mostrarError':'ocultarError'"/>
-      <ModalPortafolio v-if="isOpen"/>
+      <ModalPortafolio :class="isClosed?'ocultar-modal':'mostrar-modal'"/>
       <ServicioTarjeta :servicios="data"/>
       <ContactoPortafolio />
       <FooterPortafolio/>
@@ -20,8 +20,7 @@ import ErrorEscudos from '@/modules/portafolio/components/errors/ErrorEscudos.vu
 import { useModalStores, useAlerts, useErrorEscudos} from '@/modules/portafolio/stores/modal.stores';
 import { storeToRefs } from 'pinia';
 
-const modalStore = useModalStores();
-const { isOpen } = storeToRefs(modalStore); // Usa storeToRefs aquí
+const { isClosed } = storeToRefs(useModalStores()); // Usa storeToRefs aquí
 const alertSucces = useAlerts();
 const errorEscudos = useErrorEscudos();
 

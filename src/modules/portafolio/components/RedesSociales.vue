@@ -62,7 +62,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const esMiServicios = props.ventana === '/mis_servicios';
-const { actionModal } = useModalStores()
+const { modificarValor } = useModalStores()
 
 function iconoMensaje(value: string):string|null {
   return value === 'Mensaje' && props.nameActive
@@ -74,7 +74,7 @@ function iconoMensaje(value: string):string|null {
 
 function activarModalMensaje(ventana: string) {
 
-  return ventana === 'Mensaje' ? actionModal() : null;
+  return ventana === 'Mensaje' ? modificarValor() : null;
 }
 //Al montar
 onMounted(() => {

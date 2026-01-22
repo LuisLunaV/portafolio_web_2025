@@ -4,7 +4,7 @@
              <i v-if="icono" class="bi bi-cup-hot-fill px-2"></i></h3>
           <!-- Aqui va el slot -->
           <svg
-            @click="actionModal"
+            @click="modificarValor()"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             class="bi bi-x-lg btn-cerrar"
@@ -29,7 +29,7 @@
       defineProps<Props>();
 
 
-      const { actionModal } = useModalStores();
+      const { modificarValor } = useModalStores();
 
 
 

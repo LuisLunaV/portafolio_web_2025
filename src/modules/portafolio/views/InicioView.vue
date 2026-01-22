@@ -1,7 +1,7 @@
 <template>
   <AlertSucces :class="(isAlertSuccess)?'mostrarAlert':'ocultarAlert'" />
   <ErrorEscudos :class="(isErrorEscudos)?'mostrarError':'ocultarError'"/>
-  <ModalPortafolio v-if="isOpen"/>
+  <ModalPortafolio :class="isClosed?'ocultar-modal':'mostrar-modal'"/>
   <CelularPc
   v-if="dispositivo == 'pequeno' && estaAbierto
   || dispositivo == 'expequeno'&& estaAbierto"
@@ -103,7 +103,7 @@ const mostrarSobreMi = () => {
   return estaAbierto.value = !estaAbierto.value;
 }
 
-const { isOpen } = storeToRefs( useModalStores() );
+const { isClosed } = storeToRefs( useModalStores() );
 
 const alertSucces = useAlerts();
 const errorEscudos = useErrorEscudos();

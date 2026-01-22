@@ -53,7 +53,7 @@ const formMessage = reactive({
 const loader = useLoadingStore()
 const alertSucces = useAlerts()
 const errorEscudos = useErrorEscudos()
-const { actionModal } = useModalStores()
+const { modificarValor } = useModalStores()
 const errorMessage = ref<IErrorMsg | null>(null)
 
 const sendMessage = async (): Promise<void> => {
@@ -64,13 +64,13 @@ const sendMessage = async (): Promise<void> => {
         loader.stopLoader()
         formMessage.Msg_email = ''
         formMessage.Msg_texto = ''
-        actionModal()
+        modificarValor()
         alertSucces.showAlert()
       }, 3000)
     }
   } catch (error: any) {
     if (error.value != formMessage.Msg_texto) {
-      actionModal();
+      modificarValor();
       errorEscudos.showErrorEsc()
     }
 

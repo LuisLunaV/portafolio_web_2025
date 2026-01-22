@@ -25,7 +25,6 @@ onMounted(()=>{
   const ventanaName = useVentanaStore();
   ventanaName.setNombreVentana(nombreVentana());
   ventana.value = ventanaName.nombreVentana;
-  console.log(ventana.value)
 });
 </script>
 
