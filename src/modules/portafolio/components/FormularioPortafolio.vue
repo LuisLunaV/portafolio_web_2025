@@ -84,7 +84,6 @@ const sendMessage = async (): Promise<void> => {
       }, 3000)
     }
   } catch (error: unknown) {
-    console.log(error)
     //Instancias de error generales (debemos mejorarlo)
     if (error instanceof Error) {
       modificarValor()
@@ -104,7 +103,6 @@ const sendMessage = async (): Promise<void> => {
     if (typeof error == 'object') {
       const { errors } = error as IErrors
       errors.forEach((index) => (errorMessage.value = index))
-      console.log(errorMessage.value)
       setTimeout(() => {
         errorMessage.value = null
       }, 4000)
