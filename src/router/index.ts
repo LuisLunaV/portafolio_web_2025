@@ -4,7 +4,7 @@ import InicioView from '@/modules/portafolio/views/InicioView.vue';
 import TecnologiasView from '@/modules/portafolio/views/TecnologiasView.vue';
 import ProyectosView from '@/modules/portafolio/views/ProyectosView.vue';
 import ServiciosContactoView from '@/modules/portafolio/views/ServiciosContactoView.vue';
-
+import NotFound from '@/modules/portafolio/views/NotFound.vue';
 const router = createRouter({
     history: createWebHistory( import.meta.env.BASE_URL),
     // linkExactActiveClass: 'clase-activa',
@@ -31,7 +31,11 @@ const router = createRouter({
             component:ServiciosContactoView
         }
        ]
-    }]
+    },//404 Not found
+        {
+            path: '/:pathMatch(.*)*',
+            component: NotFound
+        }]
 });
 
 export default router;

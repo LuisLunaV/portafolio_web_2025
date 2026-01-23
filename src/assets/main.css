@@ -32,6 +32,7 @@ html,body{
   height: auto;
   scroll-behavior: smooth;
   /* overflow: hidden; */
+    min-height: 100vh;
 }
 img {
   max-width: 100%;
