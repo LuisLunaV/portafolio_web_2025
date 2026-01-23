@@ -30,7 +30,6 @@ onMounted(() => {
   const ventanaName = useVentanaStore()
   ventanaName.setNombreVentana(nombreVentana())
   ventana.value = ventanaName.nombreVentana
-  console.log(ventana.value)
   isIcono.value = ventana.value === '/inicio' ? false : true
 })
 </script>

@@ -2,8 +2,6 @@ import { mensajesApi } from './api'
 import { type IMensajes } from '@/modules/portafolio/interfaces/mensajes.interface'
 
 const postMessages = async (payload: IMensajes) => {
-  console.log(mensajesApi)
-  try {
 
     const resp = await fetch(`${mensajesApi}/form-messages/send`, {
       method: 'POST',
@@ -19,8 +17,6 @@ const postMessages = async (payload: IMensajes) => {
     }
     const data = await resp.json()
     return data
-  } catch (error:unknown) {
-    throw error;
-  }
+
 }
 export { postMessages }

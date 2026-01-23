@@ -23,7 +23,7 @@
         placeholder="Indica el asunto aqui..."
         required
       />
-      <ErrorMessages v-if="errorMessage?.path === 'Msg_email'" :error="errorMessage" />
+      <ErrorMessages v-if="errorMessage?.path === 'Msg_asunto'" :error="errorMessage" />
     </div>
     <div class="mb-3">
       <label for="mensajeText" class="form-label poppins-medium">Como puedo ayudarte?</label>
@@ -84,22 +84,31 @@ const sendMessage = async (): Promise<void> => {
       }, 3000)
     }
   } catch (error: unknown) {
+    console.log(error)
     //Instancias de error generales (debemos mejorarlo)
     if (error instanceof Error) {
       modificarValor()
       errorEscudos.showErrorEsc()
-      return;
+      return
+    }
+    //El operador in chequea si la propiedad statusCode existe en el objeto y tambien la agrega
+    if (typeof error == 'object' && 'status' in error! && 'message' in error!) {
+      if (error.status == 400) {
+        //Pendiente de crear mensaje personalizado
+        alert(error.message)
+        return
+      }
     }
 
     //Recibe errores personalisados
     if (typeof error == 'object') {
       const { errors } = error as IErrors
       errors.forEach((index) => (errorMessage.value = index))
+      console.log(errorMessage.value)
       setTimeout(() => {
         errorMessage.value = null
       }, 4000)
     }
-
   }
 }
 </script>

@@ -10,7 +10,6 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 function scrollTopSmoth() {
-  console.log('active')
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
