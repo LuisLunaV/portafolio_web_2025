@@ -26,7 +26,7 @@
 
       <!-- Información adicional -->
       <div class="additional-info">
-        <p>Si crees que esto es un error, por favor contacta con nuestro equipo de soporte.</p>
+        <!-- <p>Si crees que esto es un error, por favor contacta con nuestro equipo de soporte.</p> -->
         <p>Error 404 - Recurso no encontrado</p>
       </div>
     </div>

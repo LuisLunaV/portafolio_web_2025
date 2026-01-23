@@ -14,13 +14,13 @@ const postMessages = async (payload: IMensajes) => {
           credentials: 'include',
     })
     if (!resp.ok) {
-      const { errors } = await resp.json()
-      throw errors[0]
+      const errors  = await resp.json()
+      throw errors;
     }
     const data = await resp.json()
     return data
-  } catch (error) {
-    throw error
+  } catch (error:unknown) {
+    throw error;
   }
 }
 export { postMessages }

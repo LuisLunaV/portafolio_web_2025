@@ -1,7 +1,7 @@
 <template>
   <form v-on:submit.prevent="sendMessage" class="form-modal-msg">
     <div class="mb-3">
-      <label for="email" class="form-label poppins-medium">Agrega tu email</label>
+      <label for="email" class="form-label poppins-medium">*Agrega tu email</label>
       <input
         v-model="formMessage.Msg_email"
         type="email"
@@ -9,6 +9,18 @@
         id="email"
         name=""
         placeholder="nombre@ejemplo.com"
+        required
+      />
+      <ErrorMessages v-if="errorMessage?.path === 'Msg_email'" :error="errorMessage" />
+    </div>
+    <div class="mb-3">
+      <label for="asunto" class="form-label poppins-medium">*Asunto</label>
+      <input
+        v-model="formMessage.Msg_asunto"
+        type="text"
+        class="form-control"
+        id="asunto"
+        placeholder="Indica el asunto aqui..."
         required
       />
       <ErrorMessages v-if="errorMessage?.path === 'Msg_email'" :error="errorMessage" />
@@ -34,6 +46,7 @@
 import { reactive, ref } from 'vue'
 import { postMessages } from '@/modules/services/api-post'
 import { type IErrorMsg } from '@/modules/portafolio/interfaces/mensajes.interface'
+import { type IErrors } from '@/modules/common/interfaces/IErrors'
 // composables
 // stores
 import {
@@ -47,6 +60,7 @@ import ErrorMessages from '@/modules/portafolio/components/errors/ErrorMessages.
 
 const formMessage = reactive({
   Msg_email: '',
+  Msg_asunto: '',
   Msg_texto: '',
 })
 
@@ -63,21 +77,29 @@ const sendMessage = async (): Promise<void> => {
       setTimeout(() => {
         loader.stopLoader()
         formMessage.Msg_email = ''
+        formMessage.Msg_asunto = ''
         formMessage.Msg_texto = ''
         modificarValor()
         alertSucces.showAlert()
       }, 3000)
     }
-  } catch (error: any) {
-    if (error.value != formMessage.Msg_texto) {
-      modificarValor();
+  } catch (error: unknown) {
+    //Instancias de error generales (debemos mejorarlo)
+    if (error instanceof Error) {
+      modificarValor()
       errorEscudos.showErrorEsc()
+      return;
     }
 
-    errorMessage.value = error
-    setTimeout(() => {
-      errorMessage.value = null
-    }, 4000)
+    //Recibe errores personalisados
+    if (typeof error == 'object') {
+      const { errors } = error as IErrors
+      errors.forEach((index) => (errorMessage.value = index))
+      setTimeout(() => {
+        errorMessage.value = null
+      }, 4000)
+    }
+
   }
 }
 </script>
