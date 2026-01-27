@@ -7,10 +7,13 @@
     v-for="(value, index) in data"
     :key="index"
     :class="[
-      ventana === '/tecnologias'? 'redes-div-tech':
-      nameActive === false && ventana != '/tecnologias'? 'redes-div-i' : 'redes-div-sc',
+      ventana === '/tecnologias'
+        ? 'redes-div-tech'
+        : nameActive === false && ventana != '/tecnologias'
+          ? 'redes-div-i'
+          : 'redes-div-sc',
       { 'ocultar-icono': anchoVentana > 700 && value.telefono },
-      {'ocultar-icono': value.name === 'Mensaje' && ventana === '/tecnologias'}
+      { 'ocultar-icono': value.name === 'Mensaje' && ventana === '/tecnologias' },
     ]"
   >
     <a
@@ -18,23 +21,21 @@
       :class="[iconoMensaje(value.name), { centrar: nameActive }]"
       :href="value.url"
       target="_black"
-      style="text-decoration: none;"
+      style="text-decoration: none"
     >
       <i
         :class="[
           value.clase,
-          'fa-2x',
           'color-gris',
           'sombra-de-texto-3rem',
           { 'sombra-marca-icon': nameActive === false },
         ]"
       >
       </i>
-      <p v-if="nameActive && ventana!='/tecnologias'" class="px-2 sombra-de-texto-3rem">{{ value.name }}</p>
-      <span v-else-if="nameActive"
-      class="p-tech"
-      style="color: #f1f1f1;"
-      >{{ value.name }}</span>
+      <p v-if="nameActive && ventana != '/tecnologias'" class="px-2 sombra-de-texto-3rem">
+        {{ value.name }}
+      </p>
+      <span v-else-if="nameActive" class="p-tech" style="color: #f1f1f1">{{ value.name }}</span>
     </a>
 
     <span v-if="esMiServicios" class="tooltip" :style="{ bottom: distancia }">{{
@@ -61,20 +62,19 @@ const props = withDefaults(defineProps<Props>(), {
   nameActive: false,
 })
 
-const esMiServicios = props.ventana === '/mis_servicios';
+const esMiServicios = props.ventana === '/mis_servicios'
 const { modificarValor } = useModalStores()
 
-function iconoMensaje(value: string):string|null {
+function iconoMensaje(value: string): string | null {
   return value === 'Mensaje' && props.nameActive
     ? 'shadow-drop-center'
     : value === 'Mensaje'
       ? 'shake-left-right-inicio'
-      : null;
+      : null
 }
 
 function activarModalMensaje(ventana: string) {
-
-  return ventana === 'Mensaje' ? modificarValor() : null;
+  return ventana === 'Mensaje' ? modificarValor() : null
 }
 //Al montar
 onMounted(() => {
@@ -91,13 +91,23 @@ onBeforeUnmount(() => {
 })
 </script>
 <style scoped>
-
-
 .p-tech {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px !important;
-  padding:0 10px 0 10px !important;
+  font-size: 12px !important;
+  padding: 0 10px 0 10px !important;
+}
+i {
+  font-size: 3em;
+}
+
+@media (min-width: 780px) {
+  .p-tech {
+    font-size: 15px !important;
+  }
+  i {
+    font-size: 2em;
+  }
 }
 </style>

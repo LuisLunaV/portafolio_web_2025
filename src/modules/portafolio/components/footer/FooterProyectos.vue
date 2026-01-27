@@ -1,7 +1,7 @@
 <template>
   <div class="div-footer-marcas">
   <p class="text-center poppins-medium">
-    🛠️ Marcas que aplican mi trabajo en sus procesos 🛠️
+    Marcas que aplican mi trabajo en sus procesos
   </p>
   <div class="tag-list">
     <div class="inner">

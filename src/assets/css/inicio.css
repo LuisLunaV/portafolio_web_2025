@@ -106,10 +106,7 @@
   .cont-img {
     display: none !important;
   }
-  .div-redes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+
    .button-contact:active {
   background-color: #f1f1f1;
   color: var(--negro-suave) !important;
@@ -140,10 +137,7 @@
   .cont-img {
     display: none !important;
   }
-  .div-redes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+
    .button-contact:active {
   background-color: #f1f1f1;
   color: var(--negro-suave) !important;
@@ -177,10 +171,7 @@
   background-color: #f1f1f1;
   color: var(--negro-suave) !important;
 }
- .div-redes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+
 }
 
 /* //Resolcion para tablets: */
@@ -203,10 +194,7 @@
     display: none !important;
   }
 
-   .div-redes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+
 }
 /* Resolcion para pc de Laptops: */
 
@@ -230,10 +218,7 @@
     max-width: 50%;
     width: 100%;
   }
-  .div-redes {
-    display: flex;
-    flex-direction: row;
-  }
+
   .button-contact {
     width: 30%;
     background-color: var(--negro-suave);
@@ -271,11 +256,7 @@
     max-width: 40%;
     width: 100%;
   }
-  .div-redes {
-    display: flex;
 
-    flex-direction: row;
-  }
   .button-contact {
     width: 30%;
     background-color: var(--negro-suave);
@@ -310,11 +291,6 @@
   .cont-img {
     max-width: 40%;
     width: 100%;
-  }
-  .div-redes {
-    display: flex;
-
-    flex-direction: row;
   }
 
   .button-contact {

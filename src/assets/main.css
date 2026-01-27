@@ -233,10 +233,7 @@ align-items: center;
     max-width: 50%;
     width: 100%;
   }
-  .div-redes {
-    display: flex;
-    flex-direction: row;
-  }
+
   .button-contact {
     width: 30%;
     background-color: var(--negro-suave);

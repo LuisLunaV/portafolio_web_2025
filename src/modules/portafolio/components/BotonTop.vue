@@ -1,9 +1,9 @@
 <template>
   <button
     @click="scrollTopSmoth()"
-    :class="['scroll-top-btn bola link', { 'ocultar': ocultarButton }]"
+    :class="['scroll-top-btn bola link', { ocultar: ocultarButton }]"
   >
-    ⬆
+    <i class="bi bi-arrow-up"></i>
   </button>
 </template>
 
@@ -17,18 +17,20 @@ function scrollTopSmoth() {
 }
 const ocultarButton = ref<boolean>(true)
 onMounted(() => {
-  window.addEventListener('scroll',()=> {
-    const y = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY
     if (y > 600) {
       ocultarButton.value = false
     } else {
       ocultarButton.value = true
-      }
-  });
+    }
+  })
 })
 </script>
 <style scoped>
-
+i{
+  color:var(--naranja);
+}
 .ocultar {
   opacity: 0;
   visibility: hidden;
